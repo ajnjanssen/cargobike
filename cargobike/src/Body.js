@@ -1,10 +1,12 @@
 import React from 'react'
-import OndReservering from './OndReservering'
+import OndDashboard from './OndDashboard'
+// import OndReservering from './OndReservering'
 
 function Body() {
     return (
         <div>
-            <OndReservering />
+            {/* <OndReservering /> */}
+            <OndDashboard />
         
         </div>
     )

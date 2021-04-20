@@ -1,5 +1,7 @@
 .Header {
     margin-bottom: -100px;
+    position:fixed;
+    
 }
 
 .Header_bg {
