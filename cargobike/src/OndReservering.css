@@ -48,6 +48,26 @@ h3 {
     background-color: white;
 }
 
+.Card_bezorgingen {
+    padding: 20px;
+    position:relative;
+    z-index:1;
+    border-radius: 20px;
+    height: 200px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+
+.Bezorging_title {
+    font-size: 32px;
+}
+
+.Title_dash {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
 
 .box {
     box-shadow:
