@@ -13,6 +13,7 @@ function OndReservering() {
              <Container>
              <div className="Card_First_Delivery box">
          <Row>
+
              <Col xs={10}>
                      <h1 className="Card_title">Volgende bezorging</h1> 
                </Col>
@@ -21,6 +22,26 @@ function OndReservering() {
                       <MdDelete />
                      </IconContext.Provider>
                </Col>
+
+               <Col xs={10} className="Cargobike_type_det">
+                     <h1 className="Cargobike_type_title">Cargobike Standard</h1> 
+                     <h2 className="Cargobike_res_date">Gereserveerd op: 03-03-2021</h2> 
+               </Col>
+
+               <Col xs={8} className="Cargobike_res_details">
+                     <h1 className="Cargobike_type_title">P+R Reitdiep</h1> 
+                     <h2 className="Cargobike_res_adress">Friesestraatweg 152</h2>
+                     <h3 className="Cargobike_res_pak">34 pakketten</h3>  
+               </Col>
+               <Col xs={4} className="Cargobike_res_details">
+                     <h1 className="Cargobike_type_title">Do: 01-04</h1> 
+                     <h2 className="Cargobike_res_date">12:00</h2>
+               </Col>
+
+               <Col xs={8}>
+                     <h1 className="Cargobike_res_wijzigen">Reservering wijzigen</h1> 
+               </Col>
+
             </Row>
             </div>
         </Container>
