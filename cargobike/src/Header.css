@@ -1,0 +1,47 @@
+.Header {
+    margin-bottom: -100px;
+}
+
+.Header_bg {
+    width: 100vw;
+    height: 40vh;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: 200% 620px;
+}
+
+.logo {
+    width: 150%;
+    height: 150%;
+}
+
+.Header_logo {
+    width: 150px;
+    margin-top: 1.75rem;
+}
+
+.Menu_icon {
+    margin-top: 1rem;
+}
+
+.Info_icon {
+    margin-top: 1.5rem;
+}
+
+.Header_title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+}
+
+.Header_desc {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: white;
+}
+
+.Dash_greet {
+    margin-top: 8vh;
+}
