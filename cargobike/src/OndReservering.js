@@ -9,10 +9,22 @@ import { MdDelete } from "react-icons/md";
 
 function OndReservering() {
     return (
-        <div>
+        <div className="ondReservering">
+            <Container className="DasboardGreeting">
+                <Row>
+                    <Col xs={12} md={8}>
+                        <div className="Dash_greet"></div>
+                        <h1 className="Header_title">Mijn bezorgingen</h1>
+                    </Col>
+                    <Col xs={12} md={8}>
+                        <h1 className="Header_desc">Een overzicht van alle bezorgingen.</h1>
+                    </Col>
+                </Row>
+            </Container>
+
              <Container>
              <div className="Card_First_Delivery box">
-         <Row>
+            <Row>
 
              <Col xs={10}>
                      <h1 className="Card_title">Volgende bezorging</h1> 

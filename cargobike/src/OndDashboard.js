@@ -1,5 +1,5 @@
 import React from 'react'
-import './OndDashboard.css';
+
 import { Col, Container, Row } from 'react-bootstrap'
 
 function OndDashboard() {

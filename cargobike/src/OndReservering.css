@@ -54,6 +54,9 @@
 
 .Card_First_Delivery {
     padding: 20px;
+    /* margin-top:300px; */
+    position:relative;
+    z-index:1;
     border-radius: 20px;
     height: 27vh;
     background-color: white;

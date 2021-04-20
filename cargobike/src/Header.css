@@ -1,12 +1,13 @@
 .Header {
-
+    position:fixed;
     margin-bottom: -120px;
+
 
 }
 
 .Header_bg {
     width: 100vw;
-    height: 40vh;
+    min-height: 380px;
     margin: auto;
     background-repeat: no-repeat;
     background-size: 200% 620px;
@@ -45,5 +46,6 @@
 }
 
 .Dash_greet {
-    margin-top: 8vh;
+    margin-top: 80px;
+    
 }

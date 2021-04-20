@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './OndDashboard.css';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -38,9 +39,6 @@ function Header() {
                  </Col>
                 </Row>
           </Container>
-
-       
-
 
          </div>
      </div>
