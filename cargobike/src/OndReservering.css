@@ -5,12 +5,60 @@
     color: #838383;
 }
 
+.Cargobike_type_title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    color: #838383;
+    margin-bottom: 3px;
+}
+
+.Cargobike_res_date {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #88C053;
+}
+
+.Cargobike_res_adress {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #838383;
+    margin-bottom: 3px;
+}
+
+.Cargobike_res_wijzigen {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #838383;
+    margin-bottom: 3px;
+    margin-top: 0.5rem;
+}
+
+.Cargobike_res_pak {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #88C053;
+}
+
+.Cargobike_res_details {
+    margin-top: 0.5rem;
+}
+
+.Cargobike_type_det {
+    margin-top: 0.5rem;
+}
+
 .Card_First_Delivery {
     padding: 20px;
     border-radius: 20px;
-    height: 25vh;
+    height: 27vh;
     background-color: white;
 }
+
 
 .box {
     box-shadow:
