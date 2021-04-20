@@ -2,3 +2,26 @@
   font-family: 'Poppins' sans-serif;
   src: local('Poppins'), url(/src/fonts/Poppins-Regular.ttf) format('truetype');
 }
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  color: #838383;
+  margin-bottom: 3px;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #88C053;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #838383;
+  margin-bottom: 3px;
+}
