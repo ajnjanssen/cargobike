@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './OndDashboard.css';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -38,19 +39,6 @@ function Header() {
                  </Col>
                 </Row>
           </Container>
-
-        <Container>
-         <Row>
-             <Col xs={12} md={8}>
-                 <div className="Dash_greet"></div>
-             <h1 className="Header_title">Mijn bezorgingen</h1>
-             </Col>
-             <Col xs={12} md={8}>
-             <h1 className="Header_desc">Een overzicht van alle bezorgingen.</h1>
-             </Col>
-             </Row>
-        </Container>
-
 
          </div>
      </div>

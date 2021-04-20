@@ -1,6 +1,6 @@
 import './App.css';
-import Body from './Body';
 import Header from "./Header"
+import Body from './Body';
 
 
 function App() {
