@@ -9,8 +9,8 @@ function Body() {
     return (
         <div>
             {/* <OndReservering /> */}
-            <OndDashboard />
-            {/* <BezDashboard /> */}
+            {/* <OndDashboard /> */}
+            <BezDashboard />
         
         </div>
     )
