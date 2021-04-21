@@ -5,7 +5,7 @@ import { BsDot } from "react-icons/bs";
 import { IconContext } from 'react-icons/lib';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
-import placeholder from './img/ph.png';
+import placeholder from './img/Placeholder.png';
 
 // css apart maken voor dit component
 import './OndReservering.css';
