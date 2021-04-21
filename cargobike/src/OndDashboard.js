@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Col, Container, Row } from 'react-bootstrap'
+import { Card, Col, Container, Row } from 'react-bootstrap'
 import { BsDot } from "react-icons/bs";
 import { IconContext } from 'react-icons/lib';
 import { AiOutlineArrowRight } from 'react-icons/ai';
@@ -66,69 +66,59 @@ function OndDashboard() {
             </div>
         </Container>
             
-            <div className="Rent">
-                <h1>Huur een CargoBike, bekijk onze modellen</h1>
-                <div className="RentItems">
-                <Row>
-                    <Col>
-                    <h2>Cargobike</h2>
-                    <h6>Standard</h6>
-                        <Row>
-                            <Col>
-                                <div className="RentItemsDesc">
-                                    <Row>
-                                        <b>RADIUS</b>
-                                    </Row>
-                                    <Row>
-                                        40KM
-                                    </Row>
-                                </div>
-                            </Col>
-                            <Col>
-                                <Row>
-                                    <b>CAPACITEIT</b>
-                                </Row>
-                                <Row>
-                                    120 LITER
-                                </Row>
-                            </Col>
-                        </Row>
-                    <img className="placeholder" src={placeholder} alt=""></img>
-                    </Col>                   
-                
-                
-                    <Col>
-                    <h2>Cargobike</h2>
-                    <h6>Standard</h6>
-                        <Row>
-                            <Col>
-                                <div className="RentItemsDesc">
-                                    <Row>
-                                        <b>RADIUS</b>
-                                    </Row>
-                                    <Row>
-                                        40KM
-                                    </Row>
-                                </div>
-                            </Col>
-                            <Col>
-                                <Row>
-                                    <b>CAPACITEIT</b>
-                                </Row>
-                                <Row>
-                                    120 LITER
-                                </Row>
-                            </Col>
-                        </Row>
-                    <img className="placeholder" src={placeholder} alt=""></img>
-                    </Col>                   
-                
-                </Row>
-            </div>
-        </div>            
-        <div className="cta">
-        <Button variant="outline-primary"><b>Pakketen verzenden</b></Button>{' '}
-        </div>
+
+
+<Container>
+
+    <Row>
+
+    <Card style={{ width: '22rem' }} className="Cargobike_box box">
+        <Card.Body>
+        <h1 className="Cargobike_title">Cargobike</h1> 
+        <h2>Standard</h2> 
+
+        <Row className="Cargobike_spec_box">
+            <Col className="Cargo_specs">
+            <h2 className="Cargo_spec_text">Radius</h2>
+            <h3 className="Cargo_spec_det">40 Kilometer</h3>
+            </Col>
+            <Col className="Cargo_specs">
+            <h2 className="Cargo_spec_text">Capaciteit</h2>
+            <h3 className="Cargo_spec_det">120 Liter</h3>
+            </Col>
+        </Row>
+
+        </Card.Body>
+        <Card.Img variant="top" src={placeholder} />
+    </Card>
+
+    <Card style={{ width: '22rem' }} className="Cargobike_box box">
+        <Card.Body>
+        <h1 className="Cargobike_title">Cargobike</h1> 
+        <h2>Standard</h2> 
+
+        <Row className="Cargobike_spec_box">
+            <Col className="Cargo_specs">
+            <h2 className="Cargo_spec_text">Radius</h2>
+            <h3 className="Cargo_spec_det">40 Kilometer</h3>
+            </Col>
+            <Col className="Cargo_specs">
+            <h2 className="Cargo_spec_text">Capaciteit</h2>
+            <h3 className="Cargo_spec_det">120 Liter</h3>
+            </Col>
+        </Row>
+
+        </Card.Body>
+        <Card.Img variant="top" src={placeholder} />
+    </Card>
+    
+    </Row>
+
+</Container>
+
+
+
+
             </div>
 
             
