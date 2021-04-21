@@ -1,0 +1,29 @@
+.Card_route {
+    padding: 20px;
+    position:relative;
+    z-index:1;
+    border-radius: 20px;
+    height: 310px;
+    background-color: white;
+    width: 375px;
+}
+
+.Route_img {
+    width: 95%;
+    margin-left: 9px;
+    height: 60%;
+}
+
+.Res_wijzigen {
+    margin-top: 18px;
+}
+
+.Card_agenda {
+    padding: 20px;
+    position:relative;
+    z-index:1;
+    border-radius: 20px;
+    height: 400px;
+    background-color: white;
+    margin-top: 20px;
+}
