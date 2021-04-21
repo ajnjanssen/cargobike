@@ -25,3 +25,7 @@ h3 {
   color: #838383;
   margin-bottom: 3px;
 }
+
+body {
+  overflow-x: hidden;
+}

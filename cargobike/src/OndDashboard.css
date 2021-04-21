@@ -3,3 +3,50 @@
     padding-bottom:60px;
     /* position: fixed; */
 }
+
+.wijzigen{
+    display:flex;
+}
+
+.Rent{
+    margin-top: 25px;
+    padding-left:4rem;
+}
+
+.RentItems{
+    padding:10px;
+    /* background-color: black; */
+    margin-top:25px;
+    width: 300px;
+   /* background-color: grey; */
+   margin-left:1rem;
+   margin-right:1rem;
+   z-index:2;
+   box-shadow:
+   0 2.8px 2.2px rgba(0, 0, 0, 0.010),
+   0 6.7px 5.3px rgba(0, 0, 0, 0.010),
+   0 12.5px 10px rgba(0, 0, 0, 0.06),
+   0 22.3px 17.9px rgba(0, 0, 0, 0.010),
+   0 41.8px 33.4px rgba(0, 0, 0, 0.010),
+   0 100px 80px rgba(0, 0, 0, 0.020)
+ ;
+}
+
+.RentItemsDesc{
+    margin-left:15px;
+}
+
+.placeholder{
+    margin-top:20px;
+    width:100%;
+    border-radius: 5%;
+}
+
+.cta{
+    position:sticky;
+    display:flex;
+    justify-content: center;
+    bottom:70px;
+    z-index:999;
+}
+

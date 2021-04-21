@@ -1,5 +1,5 @@
 .Header {
-    position:fixed;
+    position:absolute;
     margin-bottom: -120px;
 
     
@@ -47,5 +47,4 @@
 
 .Dash_greet {
     margin-top: 80px;
-    
 }
