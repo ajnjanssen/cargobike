@@ -1,10 +1,13 @@
 import './App.css';
-import Header from "./Header"
+import Header from "./Header";
 import Body from './Body';
-import React from 'react'
+import React from 'react';
+
 
 
 function App() {
+
+
   return (
     <div className="App">
 

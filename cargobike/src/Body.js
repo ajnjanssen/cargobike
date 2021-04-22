@@ -4,6 +4,7 @@ import OndReservering from './OndReservering'
 import OndDashboard from './OndDashboard'
 import BezDashboard from './BezDashboard'
 import Registration from './components/Registration';
+import Login from './components/Login';
 // import OndReservering from './OndReservering'
 
 function Body() {
@@ -13,6 +14,7 @@ function Body() {
             {/* <OndDashboard /> */}
             {/* <BezDashboard /> */}
             <Registration />
+            {/* <Login /> */}
         
         </div>
     )
