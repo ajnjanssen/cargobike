@@ -5,7 +5,12 @@ import CurrentRoute from './components/CurrentRoute';
 import SaleModels from './components/SaleModels';
 import DashboardGreeting from './components/user/DashboardGreeting';
 
+
+
+
 function OndDashboard() {
+
+    
     return (
         <div>
             {/* Dashboard begroeting voor de gebruiker met reserveringen */}

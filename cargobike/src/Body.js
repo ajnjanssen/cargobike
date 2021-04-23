@@ -13,12 +13,12 @@ function Body() {
     return (
         <div>
             {/* <OndReservering /> */}
-            {/* <OndDashboard /> */}
+            <OndDashboard />
             {/* <BezDashboard /> */}
-            <Registration />
-            {/* <Login /> */}
             {/* <OndZending /> */}
-        
+            {/* <Registration/>  */}
+            {/* <Login /> */}
+
         </div>
     )
 }

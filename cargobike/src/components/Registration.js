@@ -3,6 +3,8 @@ import './Registration.css';
 import React, {useState, useEffect} from "react";
 import {auth} from './firebase/Firebase';
 import CssBaseline from '@material-ui/core/CssBaseline';
+// import {db} from './firebase/Firebase';
+
 import {
     Avatar,
     Box,
@@ -17,6 +19,17 @@ import {
 import {makeStyles} from '@material-ui/core/styles';
 
 function Registration() {
+
+    // const [ondernemers, setOndernemers] = useState([
+    //     {
+    //         fName: "",
+    //         lName: "",
+    //         email: "",
+    //         password: "",
+    //         user: null
+    //     }
+    // ]);
+
     const [fName,
         setFName] = useState('');
     const [lName,
@@ -28,6 +41,7 @@ function Registration() {
     const [user,
         setUser] = useState(null);
 
+        
     useEffect(() => {
         auth.onAuthStateChanged((authUser) => {
             if (authUser) {

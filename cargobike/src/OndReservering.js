@@ -40,11 +40,11 @@ function OndReservering() {
 
             {/* For Loop voor alle bezorgingen gekoppeld aan user */}
             <NextInQueueDelivery />
+            {/* <NextInQueueDelivery />
             <NextInQueueDelivery />
-            <NextInQueueDelivery />
-            <NextInQueueDelivery />
+            <NextInQueueDelivery /> */}
 
- 
+            {/* Isa: refraseer of hoe je dat spelt */}
         </div>
     )
 }
