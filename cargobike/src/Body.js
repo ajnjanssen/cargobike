@@ -10,10 +10,10 @@ import Login from './components/Login';
 function Body() {
     return (
         <div>
-            {/* <OndReservering /> */}
+            <OndReservering />
             {/* <OndDashboard /> */}
             {/* <BezDashboard /> */}
-            <Registration />
+            {/* <Registration /> */}
             {/* <Login /> */}
         
         </div>
