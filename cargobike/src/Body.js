@@ -15,9 +15,9 @@ function Body() {
             {/* <OndReservering /> */}
             {/* <OndDashboard /> */}
             {/* <BezDashboard /> */}
-            {/* <Registration /> */}
+            <Registration />
             {/* <Login /> */}
-            <OndZending />
+            {/* <OndZending /> */}
         
         </div>
     )
