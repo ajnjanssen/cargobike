@@ -20,16 +20,6 @@ import {makeStyles} from '@material-ui/core/styles';
 
 function Registration() {
 
-    // const [ondernemers, setOndernemers] = useState([
-    //     {
-    //         fName: "",
-    //         lName: "",
-    //         email: "",
-    //         password: "",
-    //         user: null
-    //     }
-    // ]);
-
     const [fName,
         setFName] = useState('');
     const [lName,

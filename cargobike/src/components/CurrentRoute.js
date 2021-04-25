@@ -1,42 +1,73 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import { AiOutlineArrowRight } from 'react-icons/ai'
+import {render} from '@testing-library/react';
+import React, {useEffect, useState} from 'react'
+import {Card, Col, Container, Row} from 'react-bootstrap'
+import placeholder from '../img/Map.png';
+import {db} from './firebase/Firebase'
 
-function CurrentRoute() {
+function CurrenRoute() {
+
+    const [fromAdres,
+        setFromAdres] = useState();
+    const [toAdres,
+        setToAdres] = useState();
+
+    const [cargoModel,
+        setCargoModel] = useState();
+    const [amountPackets,
+        setAmountPackets] = useState();
+
+    const [routes,
+        setRoutes] = useState([]);
+    useEffect(() => {
+        db
+            .collection('routes')
+            .onSnapshot(snapshot => {
+                setRoutes(snapshot.docs.map(doc => ({
+                    id: doc.id,
+                    route: doc.data()
+                })));
+            })
+    }, []);
+
     return (
+
         <div>
-            <Container>
-             <div className="Card_First_Delivery box">
-            <Row>
+            {routes.map(({id, route}) => (
 
-             <Col xs={10}>
-                     <h1 className="Card_title">Actuele bezorgingen</h1> 
-               </Col>
-            
+                <Container className="routeWrapper">
+                    <div className="Card_route box">
+                        <Row>
 
-                {/* for loop maken voor actuele bezorgingen */}
-               <Col xs={8} className="Cargobike_res_details">
-                     <h1>P+R Reitdiep</h1> 
-                     <h2>Friesestraatweg 152</h2>
-                     <h3>34 pakketten - Cargobike Standard</h3>  
-               </Col>
-               <Col xs={4} className="Cargobike_res_details">
-                     {/* <h1>Do: 01-04</h1>  */}
-                     <h2>52 minuten</h2>
-               </Col>
+                            <Col xs={10}>
+                                <h1 className="Card_title">Actuele route</h1>
+                            </Col>
 
-               <Col xs={4}>
-                    <div className="wijzigen">
-                     <h3>Reservering wijzigen</h3> 
-                     <AiOutlineArrowRight />
-                     </div>
-               </Col>
+                            <Col xs={7} className="Cargobike_res_details">
+                                <h1>{route.van}</h1>
+                                <h2>{route.naar}</h2>
+                                <h3>{route.pakketten}
+                                    paketten</h3>
+                            </Col>
+                            <Col xs={5} className="Cargobike_res_details">
+                                <h2>
+                                    <b>{route.tijd}
+                                        minuten</b>
+                                </h2>
+                            </Col>
 
-            </Row>
-            </div>
-        </Container>
+                            <Card.Img variant="top" src={placeholder} className="Route_img"/>
+
+                            <Col xs={8} className="Res_wijzigen">
+                                <h3>Reservering wijzigen</h3>
+                            </Col>
+
+                        </Row>
+                    </div>
+                </Container>
+
+            ))
+}
         </div>
     )
 }
-
-export default CurrentRoute
+export default CurrenRoute

@@ -26,6 +26,20 @@ function DashboardGreeting() {
                 })));
             })
     }, []);
+
+    const [reserveringen,
+        setReserveringen] = useState([]);
+    useEffect(() => {
+        db
+            .collection('reserveringen')
+            .onSnapshot(snapshot => {
+                setReserveringen(snapshot.docs.map(doc => ({
+                    id: doc.id,
+                    reservering: doc.data()
+                })));
+            })
+    }, []);
+
     return (
 
         <div>
@@ -57,8 +71,15 @@ function DashboardGreeting() {
                                 size: "2em"
                             }}>
                                 {/* for loop alle recente pakketten gebruiker */}
-                                <BsDot/>
-                                <small class="text-muted">Cargobikes gereserveerd voor [datum], [tijd], [locatie], [x pakketten]</small>
+                                {/* <BsDot/> */}
+                                <ul>
+                                    <li>
+
+                                        {reserveringen.map(({id, reservering}) => (
+                                            <small class="text-muted">Cargobikes gereserveerd voor {reservering.datum}, {reservering.tijd}, {reservering.locatie}, {reservering.pakketten}</small>
+                                        ))}
+                                    </li>
+                                </ul>
                             </IconContext.Provider>
                         </Row>
                     </Col>
