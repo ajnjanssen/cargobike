@@ -1,6 +1,5 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-
+import {Col, Container, Row} from 'react-bootstrap'
 
 import './OndReservering.css';
 import './BezDashboard.css';
@@ -10,11 +9,11 @@ import CurrentAgenda from './components/employee/CurrentAgenda';
 
 function BezDashboard() {
     return (
-        <div>
-            
-            <DashboardGreeting />
+        <div className='bezDashboard'>
 
-            <CurrenRoute />
+            <DashboardGreeting/>
+
+            <CurrenRoute/>
 
             <Container className="Title_dash">
                 <Row>
@@ -28,20 +27,18 @@ function BezDashboard() {
                 <div className="Card_agenda box">
                     <Row>
                         <Col xs={10}>
-                            <h1 className="Card_title">Agenda</h1> 
+                            <h1 className="Card_title">Agenda</h1>
                         </Col>
-                        
+
                         {/* For loop schrijven voor actuele data van bezorger */}
-                        <CurrentAgenda />
+                        <CurrentAgenda/>
 
                         <Col xs={8}>
-                                <h3>Alle tijden bekijken</h3> 
+                            <h3>Alle tijden bekijken</h3>
                         </Col>
                     </Row>
                 </div>
             </Container>
-
-
 
         </div>
     )

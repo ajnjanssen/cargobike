@@ -52,7 +52,7 @@ function Login() {
                 </div>
             </Container>
             <Container>
-                <div className="card col-12 col-lg-4 login-card mt-2 hv-center regBlock">
+                <div className="card col-12 col-lg-12 login-card mt-2 hv-center regBlock">
                     <div className="makeAccount">
                         <h1>Inloggen</h1>
                     </div>

@@ -18,15 +18,15 @@ function Header() {
          <div className="Header_bg" style={{ backgroundImage: `url(${background})` }}>
             <Container>
              <Row>
-                 <Col>
+                 {/* <Col>
                  <div class="d-flex justify-content-left">
                   <IconContext.Provider value={{ color: "white", className: "Menu_icon", size: "2.5em" }}>
                       <CgMenuLeft />
                      </IconContext.Provider>
                      </div>
-                 </Col>
+                 </Col> */}
                  <Col xs={6}>
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-end">
                     <img src={logo} alt="" className="Header_logo"/>
                     </div>
                  </Col>
