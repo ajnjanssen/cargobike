@@ -1,7 +1,7 @@
 import {Col, Container, Row} from 'react-bootstrap'
-import './Registration.css';
+import '../Registration.css';
 import React, {useState, useEffect} from "react";
-import { auth } from './firebase/Firebase';
+import { auth } from '../components/firebase/Firebase';
 
 function Login() {
 

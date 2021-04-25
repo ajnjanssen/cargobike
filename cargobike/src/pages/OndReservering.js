@@ -1,15 +1,15 @@
 import React from 'react'
-import './OndReservering.css';
+import '../OndReservering.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import FirstInQueueDelivery from './components/user/FirstInQueueDelivery';
-import NextInQueueDelivery from './components/user/NextInQueueDelivery';
+import FirstInQueueDelivery from '../components/user/FirstInQueueDelivery';
+import NextInQueueDelivery from '../components/user/NextInQueueDelivery';
 
 function OndReservering() {
     return (
-        <div className="ondReservering">
+        <div className="OndReservering">
 
             {/* Dit component kan vervangen worden door 
             src/components/user/DashboardGreeting.js */}
