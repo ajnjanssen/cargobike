@@ -20,7 +20,7 @@ function Body() {
             {/* <BezDashboard /> */}
             {/* <OndZending /> */}
             {/* <Registration/>  */}
-            <Login />
+            {/* <Login /> */}
 
         </div>
     )
