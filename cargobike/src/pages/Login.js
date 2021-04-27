@@ -102,7 +102,7 @@ function Login() {
       auth
         .signInWithEmailAndPassword(email, password)
         .catch((error) => alert(error.message));
-        history.push('/pages/OndDashboard');
+        history.push('/OndDashboard');
     };
 
     return (

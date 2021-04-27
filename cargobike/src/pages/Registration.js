@@ -4,7 +4,8 @@ import React, {useState, useEffect} from "react";
 import {auth} from '../components/firebase/Firebase';
 import CssBaseline from '@material-ui/core/CssBaseline';
 // import {db} from './firebase/Firebase';
-
+import {withRouter} from 'react-router-dom';
+import {useHistory} from 'react-router'
 import {
     Avatar,
     Box,
@@ -30,8 +31,8 @@ function Registration() {
         setPassword] = useState('');
     const [user,
         setUser] = useState(null);
+        const history = useHistory();
 
-        
     useEffect(() => {
         auth.onAuthStateChanged((authUser) => {
             if (authUser) {
@@ -57,8 +58,9 @@ function Registration() {
                 return authUser
                     .user
                     .updateProfile({displayName: fName})
-            })
+                                })
             .catch((error) => alert(error.message));
+            history.push('/Login');
     }
 
     const signIn = (event) => {
@@ -66,7 +68,8 @@ function Registration() {
         auth
             .signInWithEmailAndPassword(email, password)
             .catch((error) => alert(error.message));
-    }
+            history.pushState()
+    };
 
     const useStyles = makeStyles((theme) => ({
         paper: {
@@ -132,8 +135,7 @@ function Registration() {
                                             label="First Name"
                                             autoFocus
                                             value={fName}
-                                            onChange={(e) => setFName(e.target.value)}
-                                            />
+                                            onChange={(e) => setFName(e.target.value)}/>
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <TextField
@@ -144,7 +146,7 @@ function Registration() {
                                             label="Last Name"
                                             name="lastName"
                                             value={lName}
-                                onChange={(e) => setLName(e.target.value)}
+                                            onChange={(e) => setLName(e.target.value)}
                                             autoComplete="lname"/>
                                     </Grid>
                                     <Grid item xs={12}>
@@ -184,8 +186,7 @@ function Registration() {
                                     variant="contained"
                                     color="primary"
                                     className={classes.submit}
-                                    onClick={signUp}
-                                    >
+                                    onClick={signUp}>
                                     Sign Up
                                 </Button>
                                 <Grid container justify="flex-end">
