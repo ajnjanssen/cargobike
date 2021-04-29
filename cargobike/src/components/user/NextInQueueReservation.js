@@ -1,7 +1,5 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { IconContext } from 'react-icons/lib'
-import { MdDelete } from 'react-icons/md'
 
 function NextInQueueReservation() {
     return (
