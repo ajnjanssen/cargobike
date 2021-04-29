@@ -3,6 +3,7 @@ import {Col, Container, Row} from 'react-bootstrap'
 import {BsDot} from 'react-icons/bs'
 import {IconContext} from 'react-icons/lib'
 import {db} from '../firebase/Firebase'
+import { auth } from "../firebase/Firebase";
 
 function DashboardGreeting() {
     const [achternaam,
@@ -23,7 +24,8 @@ function DashboardGreeting() {
                 setOndernemers(snapshot.docs.map(doc => ({
                     id: doc.id,
                     ondernemer: doc.data()
-                })));
+                    })
+                ));
             })
     }, []);
 

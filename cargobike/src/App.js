@@ -32,8 +32,8 @@ function App() {
                 <Route path='/Login' exact component={Login}/>
             </Switch>
       </Router>
-      {/* <OndDashboard />
-      <Registration /> */}
+      {/* <OndDashboard /> */}
+      {/* // <Registration /> */}
       {/* <OndReservering /> */}
       </div>
   
