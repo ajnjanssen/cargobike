@@ -5,7 +5,7 @@ import { auth } from "../components/firebase/Firebase";
 import CssBaseline from "@material-ui/core/CssBaseline";
 // import {db} from './firebase/Firebase';
 import { withRouter } from "react-router-dom";
-import { useHistory } from "react-router";
+import { useHistory, useRouteMatch } from "react-router";
 import { db } from "../components/firebase/Firebase";
 import {
   Avatar,
@@ -36,40 +36,28 @@ function Registration() {
   const [password, setPassword] = useState("");
   const [user, setUser] = useState(null);
   const history = useHistory();
-
-
-  useEffect(() => {
-    auth.onAuthStateChanged((authUser) => {
-      if (authUser) {
-        
-        setUser(authUser);
-        setFName(fName);
-       
-          
-        if (authUser.displayName) {
-          //niks doen
-        } else {
-          return authUser.updateProfile({ displayName: fName });
-        }
-      } else {
-        setUser(null);
-      }
-    });
-  }, [user, fName]);
-
+//   const [uid, setUid] = useState("");
+//   const fireUSer = auth.currentUser.uid;
+  
 
   const signUp = (event) => {
     event.preventDefault();
     auth
       .createUserWithEmailAndPassword(email, password)
+      
       .then((authUser) => {
         return authUser.user.updateProfile({ displayName: fName });
-      })
+    })
+    
       .catch((error) => alert(error.message));
-      const userRef = db.collection('ondernemers').add({
-        fName: fName
-    });  
-    console.log(fName)
+         
+    db.collection('ondernemers').doc(auth.uid).set({
+        fName: fName,
+        lName: lName,
+        email: email,
+        password: password
+    });
+    // console.log(uid);
     history.push("/Login");
   };
 
