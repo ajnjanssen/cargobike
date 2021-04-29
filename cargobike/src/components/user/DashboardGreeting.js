@@ -14,6 +14,8 @@ function DashboardGreeting() {
     const kvk = '';
     const voornaam = '';
     const wachtwoord = '';
+    const [fName, setFName] = useState('')
+
 
     const [ondernemers,
         setOndernemers] = useState([]);
@@ -23,12 +25,12 @@ function DashboardGreeting() {
             .onSnapshot(snapshot => {
                 setOndernemers(snapshot.docs.map(doc => ({
                     id: doc.id,
-                    ondernemer: doc.data()
+                    ondernemer: doc.data().fName
                     })
                 ));
             })
     }, []);
-
+    
     const [reserveringen,
         setReserveringen] = useState([]);
     useEffect(() => {
@@ -51,7 +53,7 @@ function DashboardGreeting() {
                         <div className="Dash_greet"></div>
 
                         {ondernemers.map(({id, ondernemer}) => (
-                            <h1 className="Header_title">Goedemorgen {ondernemer.voornaam}
+                            <h1 className="Header_title">Goedemorgen {ondernemer}
                             </h1>
 
                         ))
