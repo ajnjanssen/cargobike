@@ -67,7 +67,7 @@ function Copyright() {
 function Login() {
 
     const [user, setUser] = useState(null);
-    const [username, setUsername] = useState("");
+    const [username] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 

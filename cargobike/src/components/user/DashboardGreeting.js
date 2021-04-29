@@ -1,29 +1,18 @@
 import React, {useEffect, useState} from 'react'
 import {Col, Container, Row} from 'react-bootstrap'
-import {BsDot} from 'react-icons/bs'
 import {IconContext} from 'react-icons/lib'
 import {db} from '../firebase/Firebase'
-import { auth } from "../firebase/Firebase";
 
 function DashboardGreeting() {
-    const [achternaam,
-        setAchternaam] = useState();
-    const [adres,
-        setAdres] = useState();
-    const email = '';
-    const kvk = '';
-    const voornaam = '';
-    const wachtwoord = '';
-    const [fName, setFName] = useState('')
-
-
     const [ondernemers,
         setOndernemers] = useState([]);
     useEffect(() => {
         db
             .collection('ondernemers')
+            // .where(auth.uid, '==', auth.uid)
             .onSnapshot(snapshot => {
                 setOndernemers(snapshot.docs.map(doc => ({
+                    
                     id: doc.id,
                     ondernemer: doc.data().fName
                     })

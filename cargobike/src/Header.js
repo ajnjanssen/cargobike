@@ -7,7 +7,6 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import background from './img/header_bg.svg';
 import logo from './img/logo_cargobike.svg';
-import { CgMenuLeft } from "react-icons/cg";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
 

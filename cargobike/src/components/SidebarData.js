@@ -1,12 +1,8 @@
 import React from 'react'
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
-import SendIcon from '@material-ui/icons/Send';
-import AllInboxIcon from '@material-ui/icons/AllInbox';
-import LocationCityIcon from '@material-ui/icons/LocationCity';
 import UpdateIcon from '@material-ui/icons/Update';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import ContactSupportIcon from '@material-ui/icons/ContactSupport';
+
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 export const SidebarData = [
     {

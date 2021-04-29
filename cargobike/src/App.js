@@ -4,13 +4,10 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-// import './Body.css';
-import Test from './pages/Test';
 import Registration from './pages/Registration';
 import OndReservering from './pages/OndReservering'
 import OndDashboard from './pages/OndDashboard'
 import BezDashboard from './BezDashboard'
-// import Registration from './components/Registration';
 import Login from './pages/Login';
 import OndZending from './OndZending';
 

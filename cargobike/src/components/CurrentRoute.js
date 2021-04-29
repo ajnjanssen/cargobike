@@ -1,4 +1,4 @@
-import {render} from '@testing-library/react';
+
 import React, {useEffect, useState} from 'react'
 import {Card, Col, Container, Row} from 'react-bootstrap'
 import placeholder from '../img/Map.png';
@@ -6,16 +6,7 @@ import {db} from './firebase/Firebase'
 
 function CurrenRoute() {
 
-    const [fromAdres,
-        setFromAdres] = useState();
-    const [toAdres,
-        setToAdres] = useState();
-
-    const [cargoModel,
-        setCargoModel] = useState();
-    const [amountPackets,
-        setAmountPackets] = useState();
-
+ 
     const [routes,
         setRoutes] = useState([]);
     useEffect(() => {

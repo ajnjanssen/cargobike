@@ -1,11 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap";
 import "../Registration.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { auth } from "../components/firebase/Firebase";
 import CssBaseline from "@material-ui/core/CssBaseline";
-// import {db} from './firebase/Firebase';
-import { withRouter } from "react-router-dom";
-import { useHistory, useRouteMatch } from "react-router";
+import { useHistory } from "react-router";
 import { db } from "../components/firebase/Firebase";
 import {
   Avatar,
@@ -21,23 +19,15 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 
 function Registration() {
-  const [ondernemers, setOndernemers] = useState([
-    {
-        fName: "",
-      userLastName: "achternaam",
-      kvknummer: "12345678",
-      bedrijfsnaam: "testbedrijf",
-    },
-  ]);
+
 
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
   const history = useHistory();
-//   const [uid, setUid] = useState("");
-//   const fireUSer = auth.currentUser.uid;
+
   
 
   const signUp = (event) => {
@@ -89,8 +79,7 @@ function Registration() {
         <div>
           <Row>
             <Col className="RowLogo">
-              <h1 className="logoRegistration">LOGO CARGOBIKE</h1>
-              {/* <h1>{user.fName}</h1> */}
+             
             </Col>
           </Row>
         </div>

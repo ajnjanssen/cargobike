@@ -5,16 +5,6 @@ import {db} from '../firebase/Firebase'
 
 function CurrenRoute() {
 
-    const [fromAdres,
-        setFromAdres] = useState();
-    const [toAdres,
-        setToAdres] = useState();
-
-    const [cargoModel,
-        setCargoModel] = useState();
-    const [amountPackets,
-        setAmountPackets] = useState();
-
     const [ondernemerActualRouteData,
         setOndernemerActualRouteData] = useState([]);
     useEffect(() => {
