@@ -1,0 +1,68 @@
+
+/* css for the component 'InformationScreen' It should be refactored later on in the project, because of the chaos mode here. */
+
+/* any questions about this stylesheet can be asked to Isa Winkenius */
+
+.information-container {
+    padding: 5% 5%;
+}
+
+.information-image {
+    max-width:260px;
+    width: 50%;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    top: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-information-screen {
+    background-color: #796FF6;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    max-width: 400px;
+    display: block;
+    margin: auto;
+    text-align: center; 
+    padding-top: 15px;
+}
+
+.btn-information-screen:hover {
+    background-color: #635adf;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.information-title {
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    color: #88C053;
+
+}
+
+.information-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 60px;
+}
+
+.information-screen-button-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 10px 0px;
+}

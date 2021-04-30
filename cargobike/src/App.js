@@ -10,6 +10,8 @@ import OndDashboard from './pages/OndDashboard'
 import BezDashboard from './BezDashboard'
 import Login from './pages/Login';
 import OndZending from './OndZending';
+// import Onboarding from './pages/Onboarding'
+import Onboarding from './pages/Onboarding';
 
 function App() {
 
@@ -27,6 +29,8 @@ function App() {
                 <Route path='/OndZending' exact component={OndZending}/>
                 <Route path='/Registration' exact component={Registration}/>
                 <Route path='/Login' exact component={Login}/>
+                {/* temporary link to onboarding.js for building the page and testing the build */}
+                <Route path='/Onboarding' exact component={Onboarding}/>
             </Switch>
       </Router>
       {/* <OndDashboard /> */}
