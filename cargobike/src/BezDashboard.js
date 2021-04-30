@@ -18,7 +18,7 @@ function BezDashboard() {
             <Container className="Title_dash">
                 <Row>
                     <Col xs={12} md={8}>
-                        <h1 className="Bezorging_title">Ontdek jou werkdag</h1>
+                        <h1 className="Bezorging_title">Ontdek jouw werkdag</h1>
                     </Col>
                 </Row>
             </Container>

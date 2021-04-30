@@ -37,7 +37,7 @@ function CurrenRoute() {
                                 <h1>{route.van}</h1>
                                 <h2>{route.naar}</h2>
                                 <h3>{route.pakketten}
-                                    paketten</h3>
+                                    pakketten</h3>
                             </Col>
                             <Col xs={5} className="Cargobike_res_details">
                                 <h2>

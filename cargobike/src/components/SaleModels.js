@@ -12,16 +12,16 @@ function SaleModels() {
 <Card style={{ width: '22rem' }} className="Cargobike_box box">
     <Card.Body>
     <h1 className="Cargobike_title">Cargobike</h1> 
-    <h2>Standard</h2> 
+    <h2>Standaard</h2> 
 
     <Row className="Cargobike_spec_box">
         <Col className="Cargo_specs">
         <h2 className="Cargo_spec_text">Radius</h2>
-        <h3 className="Cargo_spec_det">40 Kilometer</h3>
+        <h3 className="Cargo_spec_det">40 kilometer</h3>
         </Col>
         <Col className="Cargo_specs">
         <h2 className="Cargo_spec_text">Capaciteit</h2>
-        <h3 className="Cargo_spec_det">120 Liter</h3>
+        <h3 className="Cargo_spec_det">120 liter</h3>
         </Col>
     </Row>
 
@@ -32,16 +32,16 @@ function SaleModels() {
 <Card style={{ width: '22rem' }} className="Cargobike_box box">
     <Card.Body>
     <h1 className="Cargobike_title">Cargobike</h1> 
-    <h2>Standard</h2> 
+    <h2>Standaard</h2> 
 
     <Row className="Cargobike_spec_box">
         <Col className="Cargo_specs">
         <h2 className="Cargo_spec_text">Radius</h2>
-        <h3 className="Cargo_spec_det">40 Kilometer</h3>
+        <h3 className="Cargo_spec_det">40 kilometer</h3>
         </Col>
         <Col className="Cargo_specs">
         <h2 className="Cargo_spec_text">Capaciteit</h2>
-        <h3 className="Cargo_spec_det">120 Liter</h3>
+        <h3 className="Cargo_spec_det">120 liter</h3>
         </Col>
     </Row>
 

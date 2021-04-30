@@ -20,7 +20,7 @@ function FirstInQueueDelivery() {
                </Col>
 
                <Col xs={10} className="Cargobike_type_det">
-                     <h1>Cargobike Standard</h1> 
+                     <h1>Cargobike Standaard</h1> 
                      <h2>Gereserveerd op: 03-03-2021</h2> 
                </Col>
 
