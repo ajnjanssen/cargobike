@@ -31,7 +31,7 @@ function InformationScreen (title, text, buttons) {
 
         <div className="information-container">
 
-            <img className="information-image" src={InformationScreenImage}></img>
+            <img className="information-image" alt="" src={InformationScreenImage}></img>
             
             <h1 className="information-title">{title}</h1>
             <p className="information-text">{text}</p>

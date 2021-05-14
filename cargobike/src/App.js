@@ -2,7 +2,7 @@ import './App.css';
 import Header from "./Header";
 import React from 'react';
 import Navbar from './components/Navbar';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 
 import Registration from './pages/Registration';
 import OndReservering from './pages/OndReservering'
@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import OndZending from './OndZending';
 // import Onboarding from './pages/Onboarding'
 import Onboarding from './pages/Onboarding';
+import OndSend from './pages/OndSend';
 
 function App() {
 
@@ -21,7 +22,12 @@ function App() {
         <Header/>
           <Navbar/>
             <Switch>
-                {/* <Route path='/Test' exact component={Test}/> */}
+
+                
+                {/* <OndSend /> */}
+                {/* Default location is the login screen */}
+                <Redirect exact from="/" to="/Login" />
+                <Route path='/OndSend' exact component={OndSend}/>
                 <Route path='/OndDashboard' exact component={OndDashboard}/>
                 <Route path='/OndReservering' exact component={OndReservering}/>
                 <Route path='/BezDashboard' exact component={BezDashboard}/>

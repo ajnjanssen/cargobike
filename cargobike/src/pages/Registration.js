@@ -26,6 +26,13 @@ function Registration() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   // const [user, setUser] = useState(null);
+  const [datum, setDatum] = useState("");
+  const [locatie, setLocatie] = useState("");
+  const [pakketten, setPakketten] = useState("");
+  const [tijd, setTijd] = useState("");
+
+  const[userId, setUserId] = useState("");
+
   const history = useHistory();
 
   
@@ -45,8 +52,15 @@ function Registration() {
         fName: fName,
         lName: lName,
         email: email,
-        password: password
-    });
+        password: password,
+      });
+
+    // db.collection('reserveringen').doc(auth.uid).set({
+    //     datum: datum,
+    //     locatie: locatie,
+    //     pakketten: pakketten,
+    //     tijd: tijd
+    // })
     // console.log(uid);
     history.push("/Login");
   };

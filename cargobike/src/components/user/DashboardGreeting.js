@@ -4,16 +4,21 @@ import {IconContext} from 'react-icons/lib'
 import {db} from '../firebase/Firebase'
 
 function DashboardGreeting() {
+    var corneId = 'lRiJdDyoWRUHMw82dp1G';
     const [ondernemers,
         setOndernemers] = useState([]);
+
+    
     useEffect(() => {
         db
             .collection('ondernemers')
             // .where(auth.uid, '==', auth.uid)
             .onSnapshot(snapshot => {
-                setOndernemers(snapshot.docs.map(doc => ({
+                setOndernemers(snapshot.docs.map
                     
-                    id: doc.id,
+                    (doc => ({
+                    
+                    userId: console.log(doc.id),
                     ondernemer: doc.data().fName
                     })
                 ));
@@ -31,7 +36,7 @@ function DashboardGreeting() {
                     reservering: doc.data()
                 })));
             })
-    }, []);
+        }, []);
 
     return (
 
