@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import styled from "styled-components";
 import { InputLabel, MenuItem, Select, TextField } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
+import { auth, db } from "../components/firebase/Firebase";
+import { useHistory } from "react-router";
+
+
+
+
 
 const useStyles = makeStyles({
     root: {
@@ -114,6 +120,27 @@ const ButtonContainer = styled.div`
 
 
 function OndSend() {
+    const [datum, setDatum] = useState("");
+  const [locatie, setLocatie] = useState("");
+  const [type, setType] = useState("");
+  const [tijd, setTijd] = useState("");
+
+  const addNewReservation = (event) => {
+    event.preventDefault();
+             
+  
+
+    db.collection('reserveringen').doc(auth.uid).set({
+        datum: datum,
+        locatie: locatie,
+        type: type,
+        tijd: tijd
+    })
+    // console.log(uid);
+    history.push("/OndDashboard");
+  };
+
+  const history = useHistory();
     const classes = useStyles();
   return (
     <div>
@@ -151,6 +178,8 @@ function OndSend() {
                     type="date"
                     defaultValue="2017-05-24"
                     className={classes.textField}
+                    value={datum}
+                    onChange={(e) => setDatum(e.target.value)}
                     InputLabelProps={{
                     shrink: true,
                     }}
@@ -167,10 +196,10 @@ function OndSend() {
                 <Col>
                 {/* <InputLabel id="label">Age</InputLabel> */}
                     <Select labelId="label" id="select" value="20">
-                    <MenuItem value="1"><b>Ochtend / </b> 6:30 - 8:00</MenuItem>
-                    <MenuItem value="2"><b>Middag / </b> 11:30 - 1:30</MenuItem>
-                    <MenuItem value="3"><b>Eind middag / </b> 3:30 - 5:00</MenuItem>
-                    <MenuItem value="4"><b>Avond / </b> 6:00 - 7:30</MenuItem>
+                    <MenuItem value={tijd} onChange={(e) => setTijd(e.target.value)}><b>Ochtend / </b> 6:30 - 8:00</MenuItem>
+                    <MenuItem value={tijd} onChange={(e) => setTijd(e.target.value)}><b>Middag / </b> 11:30 - 1:30</MenuItem>
+                    <MenuItem value={tijd} onChange={(e) => setTijd(e.target.value)}><b>Eind middag / </b> 3:30 - 5:00</MenuItem>
+                    <MenuItem value={tijd} onChange={(e) => setTijd(e.target.value)}><b>Avond / 6:00 - 7:30</b> </MenuItem>
                     <MenuItem disabled value="20">Selecteer een tijd</MenuItem>
                 </Select>
                 </Col>
@@ -184,8 +213,8 @@ function OndSend() {
                 <Col>
                 {/* <InputLabel id="label">Age</InputLabel> */}
                     <Select labelId="label" id="select" value="20">
-                    <MenuItem value="1"><b>Cargobike standard</b></MenuItem>
-                    <MenuItem value="2"><b>Cargobike Deluxe</b></MenuItem>
+                    <MenuItem value={type} onChange={(e) => setType(e.target.value)}><b>Cargobike standard</b></MenuItem>
+                    <MenuItem value={type} onChange={(e) => setType(e.target.value)}><b>Cargobike Deluxe</b></MenuItem>
                     <MenuItem disabled value="20">Selecteer een tijd</MenuItem>
                 </Select>
                 </Col>
@@ -193,7 +222,7 @@ function OndSend() {
             </TimePicker>
             <ButtonContainer>
 
-                <Button>
+                <Button onClick={addNewReservation}>
                             Deze zending reserveren
                 </Button>
             </ButtonContainer>
