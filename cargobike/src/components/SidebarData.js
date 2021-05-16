@@ -5,12 +5,12 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 export const SidebarData = [
-    {
-        title: 'Test',
-        path: '/Test',
-        icon: <DashboardIcon/>,
-        cName: 'nav-text'
-    }, 
+    // {
+    //     title: 'Test',
+    //     path: '/Test',
+    //     icon: <DashboardIcon/>,
+    //     cName: 'nav-text'
+    // }, 
     {
         title: 'Dashboard',
         path: '/OndDashboard',

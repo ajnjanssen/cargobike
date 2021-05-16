@@ -85,6 +85,10 @@ function Registration() {
     },
   }));
 
+  const handleClick = () => {
+    history.push("/Login");
+}
+
   const classes = useStyles();
 
   return (
@@ -108,7 +112,7 @@ function Registration() {
                 {/* <LockOutlinedIcon /> */}
               </Avatar>
               <Typography component="h1" variant="h5">
-                Sign up
+                Registratie
               </Typography>
               <form className={classes.form} noValidate>
                 <Grid container spacing={2}>
@@ -120,7 +124,7 @@ function Registration() {
                       required
                       fullWidth
                       id="firstName"
-                      label="First Name"
+                      label="Voornaam"
                       autoFocus
                       value={fName}
                       onChange={(e) => setFName(e.target.value)}
@@ -132,7 +136,7 @@ function Registration() {
                       required
                       fullWidth
                       id="lastName"
-                      label="Last Name"
+                      label="Achternaam"
                       name="lastName"
                       value={lName}
                       onChange={(e) => setLName(e.target.value)}
@@ -145,7 +149,7 @@ function Registration() {
                       required
                       fullWidth
                       id="email"
-                      label="Email Address"
+                      label="Email Adres"
                       name="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -158,7 +162,7 @@ function Registration() {
                       required
                       fullWidth
                       name="password"
-                      label="Password"
+                      label="Wachtwoord"
                       type="password"
                       id="password"
                       value={password}
@@ -171,7 +175,7 @@ function Registration() {
                       control={
                         <Checkbox value="allowExtraEmails" color="primary" />
                       }
-                      label="I want to receive inspiration, marketing promotions and updates via email."
+                      label="Ik wil inspiratie, marketingacties en updates ontvangen via e-mail."
                     />
                   </Grid>
                 </Grid>
@@ -183,12 +187,12 @@ function Registration() {
                   className={classes.submit}
                   onClick={signUp}
                 >
-                  Sign Up
+                  Registreren
                 </Button>
                 <Grid container justify="flex-end">
                   <Grid item>
-                    <Link href="#" variant="body2">
-                      Already have an account? Sign in
+                    <Link href="#" onClick={handleClick} variant="body2">
+                      Heeft u al een account? Log in
                     </Link>
                   </Grid>
                 </Grid>

@@ -71,12 +71,13 @@ function DashboardGreeting() {
                                 {/* for loop alle recente pakketten gebruiker */}
                                 {/* <BsDot/> */}
                                 <ul>
-                                    <li>
+                                    
 
                                         {reserveringen.map(({id, reservering}) => (
+                                            <li>
                                             <small class="text-muted">Cargobikes gereserveerd voor {reservering.datum}, {reservering.tijd}, {reservering.locatie}, {reservering.pakketten}</small>
+                                            </li>
                                         ))}
-                                    </li>
                                 </ul>
                             </IconContext.Provider>
                         </Row>

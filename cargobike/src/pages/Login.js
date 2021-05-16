@@ -19,6 +19,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { withRouter } from 'react-router-dom'; // <--- import `withRouter`. We will use this in the bottom of our file.
 import {useHistory } from 'react-router'
+import { Snackbar } from '@material-ui/core';
 
 function Copyright() {
     return (
@@ -71,9 +72,11 @@ function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+
     const classes = useStyles();
   
     const history = useHistory();
+    
 
     useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged((authUser) => {
@@ -98,67 +101,28 @@ function Login() {
   
     const signIn = (event) => {
       event.preventDefault();
-      auth
+        auth
         .signInWithEmailAndPassword(email, password)
-        .catch((error) => alert(error.message));
+        .catch((error) => 
+          history.push('/Login'),
+          event.preventDefault(),
+          alert('E-mail adres of wachtwoord komt niet overeen'),
+          );
         history.push('/OndDashboard');
     };
 
+    const [state, setState] = React.useState({
+      open: false,
+      vertical: 'top',
+      horizontal: 'center',
+    });
+  
+    const handleClick = () => {
+      history.push("/Registration");
+  }
     return (
         <div>
-            {/* <Container>
-                <div>
-                    <Row>
-                        <Col className="RowLogo">
-                            <h1 className="logoRegistration">LOGO CARGOBIKE</h1>
-                        </Col>
-                    </Row>
-                </div>
-            </Container>
-
-
-
-            <Container>
-                <div className="card col-12 col-lg-12 login-card mt-2 hv-center regBlock">
-                    <div className="makeAccount">
-                        <h1>Inloggen</h1>
-                    </div>
-                    <form>
-                        <div className="form-group text-left">
-                            <label htmlFor="exampleInputEmail1">Email address</label>
-                            <input
-                                type="email"
-                                className="form-control"
-                                id="email"
-                                aria-describedby="emailHelp"
-                                placeholder="Enter email"
-                                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                                />
-                                
-                        </div>
-                        <div className="form-group text-left">
-                            <label htmlFor="exampleInputPassword1">Wachtwoord</label>
-                            <input
-                                type="password"
-                                className="form-control"
-                                id="password"
-                                placeholder="Wachtwoord"
-                                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                                />
-                            <small id="emailHelp" className="form-text text-muted">Wachtwoord vergeten?</small>
-                        </div>
-                        <button 
-                        // onClick={signIn} 
-                        type="submit" onClick={signIn} className="btn btn-primary">
-                            Log in
-                        </button>
-                    </form>
-                </div>
-            </Container>*/}
-
- <Grid container component="main" className={classes.root}>
+  <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -218,7 +182,7 @@ function Login() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="#" onClick={handleClick} variant="body2">
                   {"Nog geen account? Account registreren"}
                 </Link>
               </Grid>

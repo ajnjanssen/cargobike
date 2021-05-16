@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import styled from "styled-components";
-import { InputLabel, MenuItem, Select, TextField } from "@material-ui/core";
+import { InputLabel, FormControl, MenuItem, Select, TextField } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import { auth, db } from "../components/firebase/Firebase";
 import { useHistory } from "react-router";
@@ -21,6 +21,10 @@ const useStyles = makeStyles({
       height: 48,
       padding: '0 30px',
     },
+
+    formControl: {
+        minWidth: 100
+    }
   });
 
 const Send__delivery = styled.div`
@@ -93,31 +97,33 @@ const MakeSendOrder = styled.div`
 `;
 
 const TimePicker = styled.div`
-display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
     margin-top: 20px;
     margin-left: 25px;
-    width: 100%;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: flex-end;
-    text-align: center;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: center;
-`;
+    width: 85%;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    
+`
+
+const TextCol = styled.div`
+    width:100%;
+    height:100%;
+    display:table;
+    margin-top:10px;
+`
+
+const TextCol2 = styled.div`
+    width:100%;
+    height:100%;
+    display:table;
+    margin-top:27px;
+`
 
 const ButtonContainer = styled.div`
     padding-left:25px;
     margin-top:20px;
 `
-
 
 function OndSend() {
     const [datum, setDatum] = useState("");
@@ -132,13 +138,18 @@ function OndSend() {
 
     db.collection('reserveringen').doc(auth.uid).set({
         datum: datum,
-        locatie: locatie,
         type: type,
         tijd: tijd
     })
     // console.log(uid);
     history.push("/OndDashboard");
   };
+
+  const [select, setSelect] = useState(1)
+
+  const [select2, setSelect2] = useState(1)
+
+
 
   const history = useHistory();
     const classes = useStyles();
@@ -190,33 +201,61 @@ function OndSend() {
             <TimePicker>       
             <Row>
                 <Col>
+                <TextCol>
                 <h4>Moment</h4>
+                </TextCol>
                 </Col>
 
                 <Col>
-                {/* <InputLabel id="label">Age</InputLabel> */}
-                    <Select labelId="label" id="select" value="20">
-                    <MenuItem value={tijd} onChange={(e) => setTijd(e.target.value)}><b>Ochtend / </b> 6:30 - 8:00</MenuItem>
-                    <MenuItem value={tijd} onChange={(e) => setTijd(e.target.value)}><b>Middag / </b> 11:30 - 1:30</MenuItem>
-                    <MenuItem value={tijd} onChange={(e) => setTijd(e.target.value)}><b>Eind middag / </b> 3:30 - 5:00</MenuItem>
-                    <MenuItem value={tijd} onChange={(e) => setTijd(e.target.value)}><b>Avond / 6:00 - 7:30</b> </MenuItem>
-                    <MenuItem disabled value="20">Selecteer een tijd</MenuItem>
+                <FormControl className={classes.formControl}>
+                {/* <InputLabel id="label">Tijdstip</InputLabel> */}
+                    <Select 
+                    placeholder="test"
+                    labelId="label"
+                    id="select" 
+                    value={select} 
+                    displayEmpty
+                    onChange={
+                        (e) => setSelect(e.target.value)
+                    }  
+                    onClick={
+                        (e) => setTijd(e.target.value)
+                    }  
+                    >
+                    <MenuItem disabled value="">Selecteer een tijd</MenuItem>
+                    <MenuItem value='6:30 - 8:00' onChange={(e) => setType(e.target.value)}><b>Ochtend - </b> 6:30 - 8:00</MenuItem>
+                    <MenuItem value="11:30 - 1:30"><b>Middag - </b> 11:30 - 1:30</MenuItem>
+                    <MenuItem value="3:30 - 5:00"><b>Eind middag - </b> 3:30 - 5:00</MenuItem>
+                    <MenuItem value="6:00 - 7:30"><b>Avond</b> - 6:00 - 7:30 </MenuItem>
                 </Select>
+                </FormControl>
                 </Col>
             </Row>
-
             <Row>
                 <Col>
+                <TextCol2>
                 <h4>Type cargobike</h4>
+                </TextCol2>
                 </Col>
 
                 <Col>
-                {/* <InputLabel id="label">Age</InputLabel> */}
-                    <Select labelId="label" id="select" value="20">
-                    <MenuItem value={type} onChange={(e) => setType(e.target.value)}><b>Cargobike standard</b></MenuItem>
-                    <MenuItem value={type} onChange={(e) => setType(e.target.value)}><b>Cargobike Deluxe</b></MenuItem>
-                    <MenuItem disabled value="20">Selecteer een tijd</MenuItem>
+                <FormControl className={classes.formControl}>
+                <InputLabel id="label"> </InputLabel>
+                    <Select 
+                    labelId="label" 
+                    id="select" 
+                    value={select2}
+                    displayEmpty 
+                    onChange={(e) => setSelect2(e.target.value)}
+                    onClick={
+                        (e) => setType(e.target.value)
+                    }  >
+                    <MenuItem disabled value="">Selecteer type</MenuItem>
+                    <MenuItem value="Cargobike standard" onChange={(e) => setType(e.target.value)}><b>Cargobike standard</b></MenuItem>
+                    <MenuItem value="Cargobike Deluxe" onChange={(e) => setType(e.target.value)}><b>Cargobike Deluxe</b></MenuItem>
+                    
                 </Select>
+                </FormControl>
                 </Col>
             </Row>
             </TimePicker>
