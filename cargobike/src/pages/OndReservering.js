@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../OndReservering.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
@@ -7,7 +7,12 @@ import Col from 'react-bootstrap/Col'
 import FirstInQueueDelivery from '../components/user/FirstInQueueDelivery';
 import NextInQueueDelivery from '../components/user/NextInQueueDelivery';
 
+
 function OndReservering() {
+
+
+
+
     return (
         <div className="OndReservering">
 
@@ -15,7 +20,7 @@ function OndReservering() {
             src/components/user/DashboardGreeting.js */}
 
             <Container className="DasboardGreeting">
-                <Row>
+                <Row style={{paddingLeft: '15px'}}>
                     <Col xs={12} md={8}>
                         <div className="Dash_greet">
                         <h1 className="Header_title">Mijn bezorgingen</h1>
@@ -31,7 +36,7 @@ function OndReservering() {
             <FirstInQueueDelivery />
 
             <Container className="Title_dash">
-            <Row>
+            <Row style={{paddingLeft : '15px'}}>
                   <Col xs={12} md={8}>
                         <h1 className="Bezorging_title">Al uw gemaakte bezorgingen</h1>
                   </Col>

@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
+
+
 function NextInQueueReservation() {
+
     return (
         <div>
             <Container>

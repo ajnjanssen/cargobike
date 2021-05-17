@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { IconContext } from 'react-icons/lib'
 import { MdDelete } from 'react-icons/md'
+import { db } from '../../components/firebase/Firebase';
 
 function FirstInQueueDelivery() {
+
+
     return (
         <div>
              <Container>
              <div className="Card_First_Delivery box">
             <Row>
+
 
              <Col xs={10}>
                      <h1 className="Card_title">Volgende bezorging</h1> 

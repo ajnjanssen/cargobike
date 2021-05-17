@@ -126,10 +126,12 @@ const ButtonContainer = styled.div`
 `
 
 function OndSend() {
-    const [datum, setDatum] = useState("");
+  const [datum, setDatum] = useState("");
   const [locatie, setLocatie] = useState("");
   const [type, setType] = useState("");
   const [tijd, setTijd] = useState("");
+  const [adres, setAdres] = useState("");
+  const [postcode, setPostcode] = useState("");
 
   const addNewReservation = (event) => {
     event.preventDefault();
@@ -139,7 +141,9 @@ function OndSend() {
     db.collection('reserveringen').doc(auth.uid).set({
         datum: datum,
         type: type,
-        tijd: tijd
+        tijd: tijd,
+        adres: adres,
+        postcode, postcode
     })
     // console.log(uid);
     history.push("/OndDashboard");
@@ -181,8 +185,30 @@ function OndSend() {
             <row>
                 <h1>Zending reserveren</h1>
             </row>
+
+            <Row style={{paddingLeft: 40, marginBottom: '30px', width: '100%'}}>
+            <TextField 
+            id="standard-basic" 
+            label="Adres"
+            value={adres}
+            onChange={(e) => setAdres(e.target.value)} 
+            />
+            </Row>
+
+            <Row style={{paddingLeft: 40, marginBottom: '30px', width: '100%'}}>
+            <TextField 
+            id="standard-basic" 
+            label="Postcode" 
+            value={postcode}
+            onChange={(e) => setPostcode(e.target.value)} 
+            />
+            </Row>
+
+
             <Row style={{paddingLeft: 40}} className="date">
             <form className={classes.container} noValidate>
+
+              
                 <TextField
                     id="date"
                     // label="Birthday"
