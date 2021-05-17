@@ -70,7 +70,7 @@ function DashboardGreeting() {
                             }}>
                                 {/* for loop alle recente pakketten gebruiker */}
                                 {/* <BsDot/> */}
-                                <ul>
+                                {/* <ul>
                                     
 
                                         {reserveringen.map(({id, reservering}) => (
@@ -78,7 +78,7 @@ function DashboardGreeting() {
                                             <small class="text-muted">Cargobikes gereserveerd voor {reservering.datum}, {reservering.tijd}, {reservering.locatie}, {reservering.pakketten}</small>
                                             </li>
                                         ))}
-                                </ul>
+                                </ul> */}
                             </IconContext.Provider>
                         </Row>
                     </Col>

@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Tabs } from "react-bootstrap";
 import "../Registration.css";
 import React, { useState } from "react";
 import { auth } from "../components/firebase/Firebase";
@@ -13,14 +13,14 @@ import {
   FormControlLabel,
   Grid,
   Link,
+  Paper,
   TextField,
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Tab from '@material-ui/core/Tab';
 
 function Registration() {
-
-
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
   const [email, setEmail] = useState("");
@@ -31,37 +31,28 @@ function Registration() {
   const [pakketten, setPakketten] = useState("");
   const [tijd, setTijd] = useState("");
 
-  const[userId, setUserId] = useState("");
+  const [userId, setUserId] = useState("");
 
   const history = useHistory();
-
-  
 
   const signUp = (event) => {
     event.preventDefault();
     auth
       .createUserWithEmailAndPassword(email, password)
-      
+
       .then((authUser) => {
         return authUser.user.updateProfile({ displayName: fName });
-    })
-    
-      .catch((error) => alert(error.message));
-         
-    db.collection('ondernemers').doc(auth.uid).set({
-        fName: fName,
-        lName: lName,
-        email: email,
-        password: password,
-      });
+      })
 
-    // db.collection('reserveringen').doc(auth.uid).set({
-    //     datum: datum,
-    //     locatie: locatie,
-    //     pakketten: pakketten,
-    //     tijd: tijd
-    // })
-    // console.log(uid);
+      .catch((error) => alert(error.message));
+
+    db.collection("ondernemers").doc(auth.uid).set({
+      fName: fName,
+      lName: lName,
+      email: email,
+      password: password,
+    });
+
     history.push("/Login");
   };
 
@@ -87,23 +78,29 @@ function Registration() {
 
   const handleClick = () => {
     history.push("/Login");
-}
+  };
 
   const classes = useStyles();
+  const [value, setValue] = React.useState(0);
 
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   return (
     <div className="registration">
+
+
       <Container>
         <div>
           <Row>
-            <Col className="RowLogo">
-             
-            </Col>
+            <Col className="RowLogo"></Col>
           </Row>
         </div>
+        
       </Container>
 
       <Container>
+        
         <div className="card col-12 col-lg-12 login-card mt-2 hv-center regBlock">
           <div className="makeAccount">
             <CssBaseline />
@@ -113,6 +110,7 @@ function Registration() {
               </Avatar>
               <Typography component="h1" variant="h5">
                 Registratie
+                
               </Typography>
               <form className={classes.form} noValidate>
                 <Grid container spacing={2}>
