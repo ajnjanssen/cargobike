@@ -65,18 +65,18 @@ export const SidebarData = [
     //     icon: <ContactSupportIcon/>,
     //     cName: 'nav-text'
     // }, 
-    {
-        title: 'Registreren',
-        path: '/Registration',
-        icon: <AccountCircleIcon/>,
-        cName: 'nav-text'
-    },
-    {
-        title: 'Inloggen',
-        path: '/Login',
-        icon: <AccountCircleIcon/>,
-        cName: 'nav-text'
-    },
+    // {
+    //     title: 'Registreren',
+    //     path: '/Registration',
+    //     icon: <AccountCircleIcon/>,
+    //     cName: 'nav-text'
+    // },
+    // {
+    //     title: 'Inloggen',
+    //     path: '/Login',
+    //     icon: <AccountCircleIcon/>,
+    //     cName: 'nav-text'
+    // },
     {
         title: 'Uitloggen',
         path: '../',

@@ -1,4 +1,5 @@
 
+import { Button } from '@material-ui/core';
 import React, {useEffect, useState} from 'react'
 import {Card, Col, Container, Row} from 'react-bootstrap'
 import placeholder from '../img/Map.png';
@@ -49,7 +50,9 @@ function CurrenRoute() {
                             <Card.Img variant="top" src={placeholder} className="Route_img"/>
 
                             <Col xs={8} className="Res_wijzigen">
-                                <h3>Reservering wijzigen</h3>
+                            <Button color="primary">
+                            Reservering wijzigen
+                            </Button>
                             </Col>
 
                         </Row>

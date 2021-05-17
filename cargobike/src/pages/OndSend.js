@@ -48,6 +48,7 @@ const ThisCol = styled.div`
     background-color: #83b555;
     width: 80px;
     border-radius: 15px;
+    cursor:pointer;
   }
 `;
 
@@ -152,7 +153,10 @@ function OndSend() {
   const [select, setSelect] = useState(1)
 
   const [select2, setSelect2] = useState(1)
-
+  
+  const handleExitNewDelivery = () => {
+    history.push("/OndDashboard")
+}
 
 
   const history = useHistory();
@@ -163,7 +167,7 @@ function OndSend() {
         <Row>
           <HeaderContainer>
             <Col md={4}>
-              <ThisCol>
+              <ThisCol onClick={handleExitNewDelivery}>
                 <ArrowBackIcon style={{ fill: "#fff" }} />
                 <h2 style={{ color: "white" }}>Terug</h2>
               </ThisCol>
@@ -228,7 +232,7 @@ function OndSend() {
             <Row>
                 <Col>
                 <TextCol>
-                <h4>Moment</h4>
+                <h3>Moment</h3>
                 </TextCol>
                 </Col>
 
@@ -260,7 +264,7 @@ function OndSend() {
             <Row>
                 <Col>
                 <TextCol2>
-                <h4>Type cargobike</h4>
+                <h3>Type cargobike</h3>
                 </TextCol2>
                 </Col>
 

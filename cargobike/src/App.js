@@ -15,6 +15,7 @@ import Onboarding from './pages/Onboarding';
 
 import OndSend from './pages/OndSend';
 import UserInformation from './pages/UserInformation';
+import UserInformationData from './pages/UserInformationData';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
                 {/* temporary link to onboarding.js for building the page and testing the build */}
                 <Route path='/Onboarding' exact component={Onboarding}/>
                 <Route path='/UserInformation' exact component={UserInformation}/>
+                <Route path='/UserInformationData' exact component={UserInformationData}/>
             </Switch>
       </Router>
       {/* <OndDashboard /> */}

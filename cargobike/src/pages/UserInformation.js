@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { IconContext } from 'react-icons/lib'
-import DashboardGreeting from '../components/user/DashboardGreeting'
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import styled from "styled-components";
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { Button, Divider, List, ListItem, ListItemText, makeStyles } from '@material-ui/core';
@@ -43,6 +40,10 @@ const useStyles = makeStyles((theme) => ({
   const handleClick = () => {
     history.push("/OndDashboard");
 }
+
+    const handlePaymentDetails = () =>{
+        history.push("/UserInformationData");
+    }
     return (
         <div>
             <Container className="DasboardGreeting">
@@ -83,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
 
                
             <List component="nav" className={classes.root} aria-label="mailbox folders">
-                <ListItem button>
+                <ListItem button onClick={handlePaymentDetails}>
                     <ListItemText primary="BETAALGEGEVENS" />
                     <ChevronRightIcon />
                 </ListItem>
@@ -104,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
                 <ListRedirects>
 
                 <Button width="300px" color="primary">
-                Accounter verwijderen
+                Account verwijderen
                 </Button>
                 </ListRedirects>
                 </List>

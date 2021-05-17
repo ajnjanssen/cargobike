@@ -3,9 +3,17 @@ import { Col, Container, Row } from 'react-bootstrap'
 import { IconContext } from 'react-icons/lib'
 import { MdDelete } from 'react-icons/md'
 import { db } from '../../components/firebase/Firebase';
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+import DeleteIcon from '@material-ui/icons/Delete';
 
+const useStyles = makeStyles((theme) => ({
+      button: {
+        margin: theme.spacing(1),
+      },
+    }));
 function FirstInQueueDelivery() {
-
+      const classes = useStyles();
 
     return (
         <div>
@@ -14,13 +22,18 @@ function FirstInQueueDelivery() {
             <Row>
 
 
-             <Col xs={10}>
+             <Col xs={8}>
                      <h1 className="Card_title">Volgende bezorging</h1> 
                </Col>
-               <Col xs={2}>
-                <IconContext.Provider value={{ color: "#838383", className: "Delete_icon", size: "2em" }}>
-                      <MdDelete />
-                     </IconContext.Provider>
+               <Col xs={4}>
+               <Button
+        variant="contained"
+        color="secondary"
+        className={classes.button}
+        startIcon={<DeleteIcon />}
+      >
+        Delete
+      </Button>
                </Col>
 
                <Col xs={10} className="Cargobike_type_det">
