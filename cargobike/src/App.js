@@ -12,7 +12,9 @@ import Login from './pages/Login';
 import OndZending from './OndZending';
 // import Onboarding from './pages/Onboarding'
 import Onboarding from './pages/Onboarding';
+
 import OndSend from './pages/OndSend';
+import UserInformation from './pages/UserInformation';
 
 function App() {
 
@@ -37,6 +39,7 @@ function App() {
                 <Route path='/Login' exact component={Login}/>
                 {/* temporary link to onboarding.js for building the page and testing the build */}
                 <Route path='/Onboarding' exact component={Onboarding}/>
+                <Route path='/UserInformation' exact component={UserInformation}/>
             </Switch>
       </Router>
       {/* <OndDashboard /> */}

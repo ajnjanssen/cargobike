@@ -118,7 +118,7 @@ function Login() {
     });
   
     const handleClick = () => {
-      history.push("/Registration");
+      history.push("/Onboarding");
   }
     return (
         <div>

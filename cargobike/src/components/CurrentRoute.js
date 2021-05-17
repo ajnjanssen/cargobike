@@ -25,8 +25,8 @@ function CurrenRoute() {
         <div>
             {routes.map(({id, route}) => (
 
-                <Container className="routeWrapper">
-                    <div className="Card_route box">
+                <Container style={{paddingLeft:'20px'}} className="routeWrapper">
+                    <div  className="Card_route box">
                         <Row>
 
                             <Col xs={10}>

@@ -52,12 +52,13 @@ export const SidebarData = [
     //     path: '../',
     //     icon: <DirectionsBikeIcon/>,
     //     cName: 'nav-text'
-    // }, {
-    //     title: 'Mijn account',
-    //     path: '../',
-    //     icon: <AccountCircleIcon/>,
-    //     cName: 'nav-text'
     // }, 
+    {
+        title: 'Mijn account',
+        path: '../UserInformation',
+        icon: <AccountCircleIcon/>,
+        cName: 'nav-text'
+    }, 
     // {
     //     title: 'Contact',
     //     path: '../',

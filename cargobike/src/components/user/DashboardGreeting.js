@@ -42,7 +42,7 @@ function DashboardGreeting() {
 
         <div>
             <Container className="DasboardGreeting">
-                <Row>
+                <Row style={{paddingLeft:'20px'}}>
                     <Col xs={12} md={8}>
                         <div className="Dash_greet"></div>
 

@@ -7,7 +7,7 @@ function SaleModels() {
         <div>
             <Container>
 
-<Row>
+<Row style={{paddingLeft:'20px'}}>
 
 <Card style={{ width: '22rem' }} className="Cargobike_box box">
     <Card.Body>
