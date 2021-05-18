@@ -9,10 +9,20 @@ import '../App.css';
 //this image is used to onboard the user, it's now a free to use image of Pixabay.com as a placeholder.
 import InformationScreenImage from '../img/onboarding-image.png';
 
-// creating the component buttons
+// creating the component buttons (if a button is secundair, like a backbutton or 'other options' button, it will be known and their apperance will be changed.)
 function InformationScreenButton(properties) { 
-     return (  <a href={properties.link} className="btn-information-screen">{properties.text}
-     </a>);
+
+    if(properties.secundair){
+        return ( 
+            <a href={properties.link} className="btn-information-screen-secundair">{properties.text}
+          </a>
+       );
+    }
+
+     return ( 
+          <a href={properties.link} className="btn-information-screen">{properties.text}
+        </a>
+     );
     }
 
 /**
@@ -23,6 +33,7 @@ function InformationScreenButton(properties) {
  *                              -> 'text' = text inside of the button
  *                              -> 'label' = label above of the button
  *                              -> 'link' = link to other page
+ *                              -> 'secundair' = if the button is a back button, other options button 
  */
 
 function InformationScreen (title, text, buttons) {

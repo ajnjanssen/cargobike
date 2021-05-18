@@ -18,6 +18,7 @@ var InformationScreenText = <text>
  *                                  -> 'text' = the text inside of the button
  *                                  -> 'label' = the label above the button with description
  *                                  -> 'link' = the link to navigate by click on the button 
+ *                                  -> 'secundair' = if the button is a back button, other options button 
  */
 
 function Onboarding() {
@@ -31,6 +32,11 @@ function Onboarding() {
                 {
                     'text': 'Ik wil pakketten bezorgen', 
                     'label': 'Ik ben een bezorger'
+                },
+                {
+                    'text': 'Andere account opties', 
+                    'link': '/Onboarding',
+                    'secundair': true,
                 },
                 
             ]);

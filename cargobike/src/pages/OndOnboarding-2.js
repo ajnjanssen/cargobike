@@ -7,7 +7,7 @@ import InformationScreen from '../components/InformationScreen';
 // These variables are beforehand defined and can be changed in the progress of onboarding.
 var InformationScreenTitle = '2. Huur een cargobike voor elke vracht';
 var InformationScreenText = <text>
-                                Als je de bezorgtijden hebt uitgekozen kan je een cargobike huren om zelf aan de slag te gaan, of je laat een bezorger je pakketten rondbrengen! <br/><br/>Hoe dan ook, je betaald een maandelijks bedrag en kan daarna onbeperkt pakketten rondbrengen.
+                                Als je de bezorgtijden hebt uitgekozen kan je een cargobike huren om zelf aan de slag te gaan, of je laat een bezorger je pakketten rondbrengen! <br/><br/>Onbeperkt pakketten bezorgen in Groningen!
                             </text>;
 
 /**
@@ -18,6 +18,7 @@ var InformationScreenText = <text>
  *                                  -> 'text' = the text inside of the button
  *                                  -> 'label' = the label above the button with description
  *                                  -> 'link' = the link to navigate by click on the button 
+ *                                  -> 'secundair' = if the button is a back button, other options button 
  */
 
 function Onboarding() {
@@ -27,7 +28,11 @@ function Onboarding() {
                     'text': 'Laten we beginnen!',  
                     'link': '/Registration'
                 },
-                
+                {
+                    'text': 'Terug', 
+                    'link': '/OndOnboarding-1',
+                    'secundair': true,
+                },
             ]);
         
 }
