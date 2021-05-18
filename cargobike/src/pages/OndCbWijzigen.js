@@ -1,15 +1,14 @@
 import React from 'react';
+import {useState} from 'react';
+import '../OndCbWijzigen.css';
 //date-form module
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 //Date-form components
 import { Container, Row, Col } from 'react-bootstrap';
 import { MuiPickersUtilsProvider, KeyboardTimePicker, KeyboardDatePicker } from '@material-ui/pickers';
-import Datumform from '../components/Datumform';
 //Textfield used in Input
 import { Button } from '@material-ui/core';
-import {useState} from 'react';
-import '../OndCbWijzigen.css';
 
 export default function OndCbWijzigen(){
     //Set userdata
@@ -40,8 +39,8 @@ export default function OndCbWijzigen(){
             <Container>                
                 <div className="card">
                     <Row className="card-partition">
-                        <Col xs={12} md={8}>
-                            <h1>Datum van jouw reservering</h1>
+                        <Col xs={12} md={12}>
+                            <h1 className="card-partition">Datum van jouw reservering</h1>
                             <div className="datefield">
                                 <MuiPickersUtilsProvider utils={DateFnsUtils}>
                                     <KeyboardDatePicker
@@ -61,8 +60,8 @@ export default function OndCbWijzigen(){
                     </Row>
                     <Row className="card-partition">
                         <Col xs={6} md={6}>
-                            <h1 className="card-partition">Type Cargobike</h1>
-                            <h1 className="card-partition">Locatie</h1>
+                            <h2 className="card-partition">Type Cargobike</h2>
+                            <h2 className="card-partition">Locatie</h2>
                         </Col>
                         <Col xs={6} md={6}>
                             <h1 className="card-partition">Das</h1>

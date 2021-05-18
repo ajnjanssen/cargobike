@@ -9,44 +9,47 @@
 h1.Dashgreeting{
     color: white;
     font-weight: 600;
-    font-size: 32x;
+    font-size: 32px;
 }
 
 h2.Dashgreeting{
     font-weight: 200;
-    font-size: 20px;
+    font-size: 24px;
     color: white;
 }
 
 /* CARD */
-.card, .datefield{
-    margin: auto;
-    position:relative;
+.card{
     z-index:1;
+    position:relative;
+    margin: auto;
+    width: 90%;
+    padding: 5px;
+    margin-top: 8vh;
     border-radius: 20px;
     background-color: white;
 }
 
-.card{
-    width: 90%;
-    padding: 15px;
-    margin-top: 8vh;
+.datefield{
+    border-radius: 15px;
+    padding: 5;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-.datefield{
-    padding: 5px;
-    text-align: center;
-}
 .card-partition{
-    padding: 20px;
+    padding: 10px;
 }
 
 h1.card-partition{
-    color: #838383;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
 }
 
-.datefield{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+h2.card-partition{
+    font-weight: 600;
+    font-size: 16px;
+    color: #838383;
 }
