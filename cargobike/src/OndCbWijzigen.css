@@ -1,0 +1,42 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.OndCbWijzigen{
+    padding-top: 15vh;
+}
+
+h1.Dashgreeting{
+    color: white;
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 3px;
+}
+
+h2.Dashgreeting{
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+}
+
+/* CARD */
+
+.card{
+    margin-top: 10vh;
+    padding: 20px;
+    position:relative;
+    z-index:1;
+    border-radius: 20px;
+    background-color: white;
+    width: 100%;
+}
+
+.card-partition{
+    padding: 20px;
+}
+
+h1{
+    color: #838383;
+    font-weight: 600;
+    font-size: 20px;
+}
