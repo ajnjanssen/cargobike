@@ -5,9 +5,9 @@ import React from 'react'
 import InformationScreen from '../components/InformationScreen';
 
 // These variables are beforehand defined and can be changed in the progress of onboarding.
-var InformationScreenTitle = 'Cargobike';
+var InformationScreenTitle = '2. Huur een cargobike voor elke vracht';
 var InformationScreenText = <text>
-                                De logistieke oplossing voor de duurzame ondernemer van onze Groningse binnenstad.
+                                Als je de bezorgtijden hebt uitgekozen kan je een cargobike huren om zelf aan de slag te gaan, of je laat een bezorger je pakketten rondbrengen! <br/><br/>Hoe dan ook, je betaald een maandelijks bedrag en kan daarna onbeperkt pakketten rondbrengen.
                             </text>;
 
 /**
@@ -24,13 +24,8 @@ function Onboarding() {
 
         return InformationScreen(InformationScreenTitle, InformationScreenText, [
                 {
-                    'text': 'Ik wil pakketten verzenden', 
-                    'label': 'Ik ben een ondernemer', 
-                    'link': '/OndOnboarding-1'
-                },
-                {
-                    'text': 'Ik wil pakketten bezorgen', 
-                    'label': 'Ik ben een bezorger'
+                    'text': 'Laten we beginnen!',  
+                    'link': '/Registration'
                 },
                 
             ]);
