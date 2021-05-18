@@ -6,9 +6,6 @@
 import '../InformationScreen.css';
 import '../App.css';
 
-//this image is used to onboard the user, it's now a free to use image of Pixabay.com as a placeholder.
-import InformationScreenImage from '../img/onboarding-image.png';
-
 // creating the component buttons (if a button is secundair, like a backbutton or 'other options' button, it will be known and their apperance will be changed.)
 function InformationScreenButton(properties) { 
 
@@ -36,13 +33,13 @@ function InformationScreenButton(properties) {
  *                              -> 'secundair' = if the button is a back button, other options button 
  */
 
-function InformationScreen (title, text, buttons) {
+function InformationScreen (title, text, image, buttons) {
     
     return (
 
         <div className="information-container">
 
-            <img className="information-image" alt="" src={InformationScreenImage}></img>
+            <img className="information-image" alt="onboarding-image" src={image}></img>
             
             <h1 className="information-title">{title}</h1>
             <p className="information-text">{text}</p>

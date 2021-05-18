@@ -4,6 +4,9 @@ import React from 'react'
 // import component, {InformationScreen} to create the onboarding page
 import InformationScreen from '../components/InformationScreen';
 
+//this image is used to onboard the user, it's now a free to use image of Pixabay.com as a placeholder.
+import InformationScreenImage from '../img/onboarding-image.png';
+
 // These variables are beforehand defined and can be changed in the progress of onboarding.
 var InformationScreenTitle = 'Cargobike';
 var InformationScreenText = <text>
@@ -23,7 +26,7 @@ var InformationScreenText = <text>
 
 function Onboarding() {
 
-        return InformationScreen(InformationScreenTitle, InformationScreenText, [
+        return InformationScreen(InformationScreenTitle, InformationScreenText, InformationScreenImage, [
                 {
                     'text': 'Ik wil pakketten verzenden', 
                     'label': 'Ik ben een ondernemer', 
