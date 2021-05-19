@@ -8,9 +8,9 @@ import InformationScreen from '../components/InformationScreen';
 import InformationScreenImage from '../img/onboarding-image.png';
 
 // These variables are beforehand defined and can be changed in the progress of onboarding.
-var InformationScreenTitle = 'Cargobike';
+var InformationScreenTitle = '1. Stel je reservering samen';
 var InformationScreenText = <text>
-                                De logistieke oplossing voor de duurzame ondernemer van onze Groningse binnenstad.
+                                Het is nog nooit zo makkelijk geweest om een cargobike te huren!<br/><br/>Plaats een reservering voor je pakketten en kies een bezorgraam wanneer je de pakketten bezorgt wilt worden.
                             </text>;
 
 /**
@@ -28,20 +28,14 @@ function Onboarding() {
 
         return InformationScreen(InformationScreenTitle, InformationScreenText, InformationScreenImage, [
                 {
-                    'text': 'Ik wil pakketten verzenden', 
-                    'label': 'Ik ben een ondernemer', 
-                    'link': '/OndOnboarding-1'
+                    'text': 'Volgende',  
+                    'link': '/OndOnboarding-2'
                 },
                 {
-                    'text': 'Ik wil pakketten bezorgen', 
-                    'label': 'Ik ben een bezorger'
-                },
-                {
-                    'text': 'Andere account opties', 
+                    'text': 'Terug', 
                     'link': '/Onboarding',
                     'secundair': true,
                 },
-                
             ]);
         
 }

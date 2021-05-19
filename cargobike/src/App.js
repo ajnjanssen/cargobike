@@ -12,6 +12,8 @@ import Login from './pages/Login';
 import OndZending from './OndZending';
 // import Onboarding from './pages/Onboarding'
 import Onboarding from './pages/Onboarding';
+import OndOnboarding1 from './pages/OndOnboarding-1';
+import OndOnboarding2 from './pages/OndOnboarding-2';
 
 import OndSend from './pages/OndSend';
 import UserInformation from './pages/UserInformation';
@@ -26,7 +28,6 @@ function App() {
           <Navbar/>
             <Switch>
 
-                
                 {/* <OndSend /> */}
                 {/* Default location is the login screen */}
                 <Redirect exact from="/" to="/Login" />
@@ -38,8 +39,11 @@ function App() {
                 <Route path='/OndZending' exact component={OndZending}/>
                 <Route path='/Registration' exact component={Registration}/>
                 <Route path='/Login' exact component={Login}/>
-                {/* temporary link to onboarding.js for building the page and testing the build */}
+                {/* links to onboarding.js to start onboarding + other links for onboarding the Ond */}
+                <Route path='/OndOnboarding-1' exact component={OndOnboarding1}/>
+                <Route path='/OndOnboarding-2' exact component={OndOnboarding2}/>
                 <Route path='/Onboarding' exact component={Onboarding}/>
+                {/* End onboarding routes */}
                 <Route path='/UserInformation' exact component={UserInformation}/>
                 <Route path='/UserInformationData' exact component={UserInformationData}/>
             </Switch>

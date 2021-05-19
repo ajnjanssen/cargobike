@@ -19,14 +19,11 @@
     margin-right: auto;
 }
 
-.btn-information-screen {
-    background-color: #796FF6;
+.btn-information-screen, 
+.btn-information-screen-secundair {
     border: none;
-    color: white;
     border-radius: 6px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
     position: relative;
     width: 100%;
     height: 60px;
@@ -34,7 +31,21 @@
     display: block;
     margin: auto;
     text-align: center; 
+}
+
+.btn-information-screen {
+    background-color: #796FF6;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
     padding-top: 15px;
+}
+
+.btn-information-screen-secundair {
+    color: #212529;
+    font-weight: 600;
+    font-size: 14px;
+    padding-top: 30px;
 }
 
 .btn-information-screen:hover {
@@ -42,6 +53,12 @@
     cursor: pointer;
     text-decoration: none;
     color: white;
+}
+
+.btn-information-screen-secundair:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #88C053;
 }
 
 .information-title {
@@ -57,7 +74,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .information-screen-button-label {

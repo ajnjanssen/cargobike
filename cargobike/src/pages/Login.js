@@ -105,8 +105,8 @@ function Login() {
         .signInWithEmailAndPassword(email, password)
         .catch((error) => 
           history.push('/Login'),
-          event.preventDefault(),
-          alert('E-mail adres of wachtwoord komt niet overeen'),
+          // event.preventDefault(),
+          // alert('E-mail adres of wachtwoord komt niet overeen'),
           );
         history.push('/OndDashboard');
     };
