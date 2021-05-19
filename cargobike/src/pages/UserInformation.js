@@ -70,11 +70,14 @@ const useStyles = makeStyles((theme) => ({
                     </UserAvatar>
                     <UserDisplay>
                     {ondernemers.map(({id, ondernemer}) => (
-                            <h3 style={{color:'#9bcf6a'}}>{ondernemer}</h3>
+                        <NormalizeTextAlt>
+                            {ondernemer}
+                            </NormalizeTextAlt>
 
                         ))
-}
-                        <h4>Onderneming</h4>
+}                       <NormalizeTextAlt2>
+                        OKAPHONE Elektronika
+                        </NormalizeTextAlt2>
                     </UserDisplay>
                 </UserContainer>
             </Container>
@@ -157,7 +160,19 @@ const NormalizeText = styled.h3`
       font-weight:500;
       font-size: 16px;
       color:#fff!important;
-      `
+`
+
+const NormalizeTextAlt = styled.h3`
+      font-weight:500;
+      font-size: 24px;
+      color:#9bcf6a !important;
+`
+
+const NormalizeTextAlt2 = styled.h3`
+      font-weight:500;
+      font-size: 16px;
+      color:#000000 !important;
+`
 
 const UserAvatar = styled.div`
 width:250px;
