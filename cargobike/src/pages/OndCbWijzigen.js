@@ -1,27 +1,17 @@
 import React from 'react';
 import {useState} from 'react';
 import '../OndCbWijzigen.css';
-//date-form module
-import 'date-fns';
-import DateFnsUtils from '@date-io/date-fns';
-//Date-form components
 import { Container, Row, Col } from 'react-bootstrap';
-import { MuiPickersUtilsProvider, KeyboardTimePicker, KeyboardDatePicker } from '@material-ui/pickers';
-//Textfield used in Input
 import { Button } from '@material-ui/core';
+
+//Component import
+import CBTypeDropdown from '../components/dropdown_cargobiketype';
+import LocationDropdown from '../components/dropdown_location';
+import DateTimePicker from '../components/DateTimePicker';
 
 export default function OndCbWijzigen(){
     //Set userdata
     const [voornaam, setVoornaam] = useState('Voornaam')
-
-    //Set current date and time
-    const today = new Date();
-    const [selectedDate, setSelectedDate] = React.useState(new Date(today));
-
-    //state for dates?
-    function handleDateChange(date){
-        setSelectedDate(date);
-    }
 
     return(
         <div className="OndCbWijzigen">
@@ -38,43 +28,45 @@ export default function OndCbWijzigen(){
             {/* Content */}
             <Container>                
                 <div className="card">
-                    <Row className="card-partition">
+                    {/* DateTime-picker */}
+                    <Row>
                         <Col xs={12} md={12}>
-                            <h1 className="card-partition">Datum van jouw reservering</h1>
+                            <h1 className="card-partition">Moment van jouw reservering</h1>
                             <div className="datefield">
-                                <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                                    <KeyboardDatePicker
-                                        margin="normal"
-                                        id="date-picker-dialog"
-                                        label=""
-                                        format="MM/dd/yyyy"
-                                        value={selectedDate}
-                                        onChange={handleDateChange}
-                                        KeyboardButtonProps={{
-                                            'aria-label': 'change date',
-                                        }}
-                                    />
-                                </MuiPickersUtilsProvider>
+                                <DateTimePicker/>
                             </div>                   
                         </Col>
                     </Row>
-                    <Row className="card-partition">
-                        <Col xs={6} md={6}>
+                    
+                    {/* Type-picker */}
+                    <Row>
+                        <Col xs={4} md={6}>
                             <h2 className="card-partition">Type Cargobike</h2>
-                            <h2 className="card-partition">Locatie</h2>
                         </Col>
-                        <Col xs={6} md={6}>
-                            <h1 className="card-partition">Das</h1>
+                        <Col xs={8} md={6}>
+                            <CBTypeDropdown/>
+                        </Col>
+                    </Row>
+
+                    {/* Locations-picker */}
+                    <Row>
+                        <Col xs={4} md={6}>
+                            <h2 className="card-partition">Location</h2>
+                        </Col>
+                        <Col xs={8} md={6} className="dropdown">
+                            <LocationDropdown/>
                         </Col>
                     </Row>
                 </div>
 
-                <Row>
-                    <Button>Reservering opslaan</Button>
-                        
-  
-                    <Button>Reservering annuleren</Button>
-                </Row>
+                <div className="bottom-button">
+                    <Row>
+                        <Col xs={12} md={12}>
+                            <Button size="large" color="primary" variant="contained">Reservering opslaan</Button>
+                            <Button size="large" color="primary">Reservering annuleren</Button>
+                        </Col>
+                    </Row>
+                </div>
             </Container>
         </div>
     )
