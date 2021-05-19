@@ -19,6 +19,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { withRouter } from 'react-router-dom'; // <--- import `withRouter`. We will use this in the bottom of our file.
 import {useHistory } from 'react-router'
 import { Snackbar } from '@material-ui/core';
+import styled from "styled-components";
 
 function Copyright() {
     return (
