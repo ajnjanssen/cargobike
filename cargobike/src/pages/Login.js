@@ -2,7 +2,6 @@ import '../Registration.css';
 import React, {useState, useEffect} from "react";
 import { auth } from '../components/firebase/Firebase';
 
-
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
