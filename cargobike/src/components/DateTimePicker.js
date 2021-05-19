@@ -5,7 +5,6 @@ import {useState} from 'react';
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, KeyboardTimePicker, KeyboardDatePicker } from '@material-ui/pickers';
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 
 export default function DateTimePicker(){
     //Set current date and time to current
