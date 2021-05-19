@@ -183,7 +183,7 @@ function Login() {
               </Grid>
               <Grid item>
                 <Link href="#" onClick={handleClick} variant="body2">
-                  {"Nog geen account? Account registreren"}
+                  {"Nog geen account? Registreer nu!"}
                 </Link>
               </Grid>
             </Grid>

@@ -94,12 +94,12 @@ const useStyles = makeStyles((theme) => ({
                     <ChevronRightIcon />
                 </ListItem>
                 <ListItem button>
-                    <ListItemText primary="ABBONEMENT" />
+                    <ListItemText primary="ABONNEMENT" />
                     <ChevronRightIcon />
                 </ListItem>
                 <Divider light />
                 <ListItem button>
-                    <ListItemText primary="PRIVACY VERKLARING" />
+                    <ListItemText primary="PRIVACYBELEID" />
                     <ChevronRightIcon />
                 </ListItem>
                 <ListRedirects>
@@ -114,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
 
                 <ListRedirects>
             <Button onClick={handleClick} variant="contained" min-width="300px" color="secondary">
-                Terug naar Dashboard
+                Terug naar dashboard
             </Button>
 
                 </ListRedirects>

@@ -10,7 +10,7 @@ import InformationScreenImage from '../img/onboarding-image.png';
 // These variables are beforehand defined and can be changed in the progress of onboarding.
 var InformationScreenTitle = '1. Stel je reservering samen';
 var InformationScreenText = <text>
-                                Het is nog nooit zo makkelijk geweest om een cargobike te huren!<br/><br/>Plaats een reservering voor je pakketten en kies een bezorgraam wanneer je de pakketten bezorgt wilt worden.
+                                Het is nog nooit zo makkelijk geweest om een cargobike te huren!<br/><br/>Plaats een reservering voor uw pakketten en kies een tijdsvak wanneer de pakketten bezorgt moeten worden.
                             </text>;
 
 /**

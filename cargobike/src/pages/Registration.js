@@ -190,7 +190,7 @@ function Registration() {
                 <Grid container justify="flex-end">
                   <Grid item>
                     <Link href="#" onClick={handleClick} variant="body2">
-                      Heeft u al een account? Log in
+                      Heeft u al een account? Log in.
                     </Link>
                   </Grid>
                 </Grid>

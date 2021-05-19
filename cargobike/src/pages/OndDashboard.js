@@ -327,7 +327,7 @@ function OndDashboard() {
                     <MenuItem value='6:30 - 8:00' onChange={(e) => setType(e.target.value)}><b>Ochtend - </b> 6:30 - 8:00</MenuItem>
                     <MenuItem value="11:30 - 1:30"><b>Middag - </b> 11:30 - 1:30</MenuItem>
                     <MenuItem value="3:30 - 5:00"><b>Eind middag - </b> 3:30 - 5:00</MenuItem>
-                    <MenuItem value="6:00 - 7:30"><b>Avond</b> - 6:00 - 7:30 </MenuItem>
+                    <MenuItem value="6:00 - 7:30"><b>Avond - </b> 6:00 - 7:30 </MenuItem>
                 </Select>
                 </FormControl>
                 </Col>
@@ -352,7 +352,7 @@ function OndDashboard() {
                         (e) => setType(e.target.value)
                     }  >
                     <MenuItem disabled value="">Selecteer type</MenuItem>
-                    <MenuItem value="Cargobike standard" onChange={(e) => setType(e.target.value)}><b>Cargobike standard</b></MenuItem>
+                    <MenuItem value="Cargobike standard" onChange={(e) => setType(e.target.value)}><b>Cargobike Standaard</b></MenuItem>
                     <MenuItem value="Cargobike Deluxe" onChange={(e) => setType(e.target.value)}><b>Cargobike Deluxe</b></MenuItem>
                     
                 </Select>
