@@ -151,12 +151,13 @@ margin-top:20px;
         width: 80px;
         border-radius: 15px;
   }
-`;
+`
 
 const NormalizeText = styled.h3`
-      font-weight:200;
+      font-weight:500;
+      font-size: 16px;
       color:#fff!important;
-`
+      `
 
 const UserAvatar = styled.div`
 width:250px;
