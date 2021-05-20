@@ -34,7 +34,7 @@ const AddbuttonReservering = styled.div`
     position: fixed;
     bottom: 0;
     z-index: 2;
-    margin-left: 57%;
+    margin-left: 47%;
     margin-bottom: 10%;
 
     > .MuiFab-primary {
@@ -249,8 +249,8 @@ function OndDashboard() {
             
         <AddbuttonReservering>
             <Fab variant="extended" color="primary" onClick={handleClickOpen}>
-                 <NavigationIcon className={classes.extendedIcon} />
-                Reserveren
+                 <AddIcon />
+                Zending toevoegen
             </Fab>
         </AddbuttonReservering>
 
