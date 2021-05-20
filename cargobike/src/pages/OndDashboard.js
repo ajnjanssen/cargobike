@@ -9,6 +9,7 @@ import { Button } from '@material-ui/core';
 import { Row, Col } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import NavigationIcon from "@material-ui/icons/Navigation"
 
 
 
@@ -33,7 +34,7 @@ const AddbuttonReservering = styled.div`
     position: fixed;
     bottom: 0;
     z-index: 2;
-    margin-left: 80%;
+    margin-left: 57%;
     margin-bottom: 10%;
 
     > .MuiFab-primary {
@@ -247,8 +248,9 @@ function OndDashboard() {
         <div className='OndDashboard'>
             
         <AddbuttonReservering>
-            <Fab color="primary" aria-label="add" onClick={handleClickOpen}>
-                <AddIcon />
+            <Fab variant="extended" color="primary" onClick={handleClickOpen}>
+                 <NavigationIcon className={classes.extendedIcon} />
+                Reserveren
             </Fab>
         </AddbuttonReservering>
 
