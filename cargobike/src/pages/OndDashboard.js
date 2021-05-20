@@ -1,17 +1,15 @@
 // css apart maken voor dit component
 import '../OndReservering.css';
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 // import React, {useEffect, useState} from 'react'
 import CurrentRoute from '../components/CurrentRoute';
 import SaleModels from '../components/SaleModels';
 import DashboardGreeting from '../components/user/DashboardGreeting';
-import { Button } from '@material-ui/core';
-import { Row, Col } from 'react-bootstrap';
-import { useHistory } from 'react-router';
+import {Button} from '@material-ui/core';
+import {Row, Col} from 'react-bootstrap';
+import {useHistory} from 'react-router';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import NavigationIcon from "@material-ui/icons/Navigation"
-
-
 
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -19,10 +17,9 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-import { InputLabel, FormControl, MenuItem, Select, TextField } from "@material-ui/core";
-import { makeStyles } from '@material-ui/core/styles';
-import { auth, db } from "../components/firebase/Firebase";
-import HorizontalSlider from 'react-horizontal-slider'
+import {InputLabel, FormControl, MenuItem, Select, TextField} from "@material-ui/core";
+import {makeStyles} from '@material-ui/core/styles';
+import {auth, db} from "../components/firebase/Firebase";
 
 // import { db } from '../components/firebase/Firebase';
 
@@ -31,7 +28,7 @@ import AddIcon from '@material-ui/icons/Add';
 
 import styled from "styled-components";
 
-const AddbuttonReservering = styled.div`
+const AddbuttonReservering = styled.div `
     position: fixed;
     bottom: 0;
     z-index: 2;
@@ -45,32 +42,32 @@ const AddbuttonReservering = styled.div`
 
 const useStyles = makeStyles({
     root: {
-      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-      border: 0,
-      borderRadius: 3,
-      boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-      color: 'white',
-      height: 48,
-      padding: '0 30px',
+        background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+        border: 0,
+        borderRadius: 3,
+        boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+        color: 'white',
+        height: 48,
+        padding: '0 30px'
     },
 
     formControl: {
         minWidth: 100
     }
-  });
+});
 
-const Send__delivery = styled.div`
+const Send__delivery = styled.div `
   width:400px;
   overflow-x: hidden;
 `;
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.div `
     /* display:flex; */
     align-items:center;
     width:80%;
 `
 
-const ThisCol = styled.div`
+const ThisCol = styled.div `
   display: flex;
   justify-content: safe-center;
   padding-right: 100px;
@@ -83,14 +80,14 @@ const ThisCol = styled.div`
   }
 `;
 
-const ThisRow = styled.div`
+const ThisRow = styled.div `
   margin-left: 35px;
   > h1 {
     color: white !important;
   }
 `;
 
-const ThatRow = styled.div`
+const ThatRow = styled.div `
   margin-left: 36px;
   > h3 {
     color: white !important;
@@ -98,7 +95,7 @@ const ThatRow = styled.div`
   }
 `;
 
-const MakeSendOrder = styled.div`
+const MakeSendOrder = styled.div `
     display:flex;
     flex-direction: column;
     
@@ -150,7 +147,7 @@ const MakeSendOrder = styled.div`
     }
 `;
 
-const TimePicker = styled.div`
+const TimePicker = styled.div `
     margin-top: 20px;
     margin-left: 25px;
     width: 85%;
@@ -160,25 +157,24 @@ const TimePicker = styled.div`
     
 `
 
-const TextCol = styled.div`
+const TextCol = styled.div `
     width:100%;
     height:100%;
     display:table;
     margin-top:10px;
 `
 
-const TextCol2 = styled.div`
+const TextCol2 = styled.div `
     width:100%;
     height:100%;
     display:table;
     margin-top:27px;
 `
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled.div `
     padding-left:25px;
     margin-top:20px;
 `
-
 
 function OndDashboard() {
     const history = useHistory();
@@ -187,200 +183,218 @@ function OndDashboard() {
         history.push("/OndSend")
     }
 
-    const [open, setOpen] = React.useState(false);
+    const [open,
+        setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
         setOpen(true);
-     };
+    };
 
     const handleClose = () => {
-         setOpen(false);
-     };
+        setOpen(false);
+    };
 
-    const [datum, setDatum] = useState("");
-    const [locatie, setLocatie] = useState("");
-    const [type, setType] = useState("");
-    const [tijd, setTijd] = useState("");
-    const [adres, setAdres] = useState("");
-    const [postcode, setPostcode] = useState("");
-   
+    const [datum,
+        setDatum] = useState("");
+    const [locatie,
+        setLocatie] = useState("");
+    const [type,
+        setType] = useState("");
+    const [tijd,
+        setTijd] = useState("");
+    const [adres,
+        setAdres] = useState("");
+    const [postcode,
+        setPostcode] = useState("");
+
     const addNewReservation = (event) => {
-       event.preventDefault();
-                
-     
-   
-       db.collection('reserveringen').doc(auth.uid).set({
-           datum: datum,
-           type: type,
-           tijd: tijd,
-           adres: adres,
-           postcode, postcode
-       })
-       // console.log(uid);
-       handleClose()
-       history.push("/OndDashboard");
-     };
-   
-    const [select, setSelect] = useState(1)
-   
-    const [select2, setSelect2] = useState(1)
-     
+        event.preventDefault();
+
+        db
+            .collection('reserveringen')
+            .doc(auth.uid)
+            .set({
+                datum: datum,
+                type: type,
+                tijd: tijd,
+                adres: adres,
+                postcode,
+                postcode
+            })
+        // console.log(uid);
+        handleClose()
+        history.push("/OndDashboard");
+    };
+
+    const [select,
+        setSelect] = useState(1)
+
+    const [select2,
+        setSelect2] = useState(1)
+
     const handleExitNewDelivery = () => {
-       history.push("/OndDashboard")
-   }
-    
+        history.push("/OndDashboard")
+    }
+
     const classes = useStyles();
 
     return (
-        
+
         <div className='OndDashboard'>
-            
-        <AddbuttonReservering>
-            <Fab variant="extended" color="primary" onClick={handleClickOpen}>
-                 <AddIcon />
-                Zending toevoegen
-            </Fab>
-        </AddbuttonReservering>
 
-        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <Send__delivery>
-        <Row>
+            <AddbuttonReservering>
+                <Fab variant="extended" color="primary" onClick={handleClickOpen}>
+                    <AddIcon/>
+                    Zending toevoegen
+                </Fab>
+            </AddbuttonReservering>
 
-          <MakeSendOrder>
-            <row>
-                <h1>Zending reserveren</h1>
-            </row>
+            <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+                <Send__delivery>
+                    <Row>
 
-            <Row style={{paddingLeft: 40, marginBottom: '30px', width: '100%'}}>
-            <TextField 
-            id="standard-basic" 
-            label="Adres"
-            value={adres}
-            onChange={(e) => setAdres(e.target.value)} 
-            />
-            </Row>
+                        <MakeSendOrder>
+                            <row>
+                                <h1>Zending reserveren</h1>
+                            </row>
 
-            <Row style={{paddingLeft: 40, marginBottom: '30px', width: '100%'}}>
-            <TextField 
-            id="standard-basic" 
-            label="Postcode" 
-            value={postcode}
-            onChange={(e) => setPostcode(e.target.value)} 
-            />
-            </Row>
+                            <Row
+                                style={{
+                                paddingLeft: 40,
+                                marginBottom: '30px',
+                                width: '100%'
+                            }}>
+                                <TextField
+                                    id="standard-basic"
+                                    label="Adres"
+                                    value={adres}
+                                    onChange={(e) => setAdres(e.target.value)}/>
+                            </Row>
 
+                            <Row
+                                style={{
+                                paddingLeft: 40,
+                                marginBottom: '30px',
+                                width: '100%'
+                            }}>
+                                <TextField
+                                    id="standard-basic"
+                                    label="Postcode"
+                                    value={postcode}
+                                    onChange={(e) => setPostcode(e.target.value)}/>
+                            </Row>
 
-            <Row style={{paddingLeft: 40}} className="date">
-            <form className={classes.container} noValidate>
+                            <Row
+                                style={{
+                                paddingLeft: 40
+                            }}
+                                className="date">
+                                <form className={classes.container} noValidate>
 
-              
-                <TextField
-                    id="date"
-                    // label="Birthday"
-                    type="date"
-                    defaultValue="2017-05-24"
-                    className={classes.textField}
-                    value={datum}
-                    onChange={(e) => setDatum(e.target.value)}
-                    InputLabelProps={{
-                    shrink: true,
-                    }}
-                />
-                </form>
-            </Row>
+                                    <TextField id="date" // label="Birthday"
+                                        type="date" defaultValue="2017-05-24" className={classes.textField} value={datum} onChange={(e) => setDatum(e.target.value)} InputLabelProps={{
+                                        shrink: true
+                                    }}/>
+                                </form>
+                            </Row>
 
-            <TimePicker>       
-            <Row>
-                <Col>
-                <TextCol>
-                <h3>Moment</h3>
-                </TextCol>
-                </Col>
+                            <TimePicker>
+                                <Row>
+                                    <Col>
+                                        <TextCol>
+                                            <h3>Moment</h3>
+                                        </TextCol>
+                                    </Col>
 
-                <Col>
-                <FormControl className={classes.formControl}>
-                {/* <InputLabel id="label">Tijdstip</InputLabel> */}
-                    <Select 
-                    placeholder="test"
-                    labelId="label"
-                    id="select" 
-                    value={select} 
-                    displayEmpty
-                    onChange={
-                        (e) => setSelect(e.target.value)
-                    }  
-                    onClick={
-                        (e) => setTijd(e.target.value)
-                    }  
-                    >
-                    <MenuItem disabled value="">Selecteer een tijd</MenuItem>
-                    <MenuItem value='6:30 - 8:00' onChange={(e) => setType(e.target.value)}><b>Ochtend - </b> 6:30 - 8:00</MenuItem>
-                    <MenuItem value="11:30 - 1:30"><b>Middag - </b> 11:30 - 1:30</MenuItem>
-                    <MenuItem value="3:30 - 5:00"><b>Eind middag - </b> 3:30 - 5:00</MenuItem>
-                    <MenuItem value="6:00 - 7:30"><b>Avond - </b> 6:00 - 7:30 </MenuItem>
-                </Select>
-                </FormControl>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                <TextCol2>
-                <h3>Type cargobike</h3>
-                </TextCol2>
-                </Col>
+                                    <Col>
+                                        <FormControl className={classes.formControl}>
+                                            {/* <InputLabel id="label">Tijdstip</InputLabel> */}
+                                            <Select
+                                                placeholder="test"
+                                                labelId="label"
+                                                id="select"
+                                                value={select}
+                                                displayEmpty
+                                                onChange={(e) => setSelect(e.target.value)}
+                                                onClick={(e) => setTijd(e.target.value)}>
+                                                <MenuItem disabled value="">Selecteer een tijd</MenuItem>
+                                                <MenuItem value='6:30 - 8:00' onChange={(e) => setType(e.target.value)}>
+                                                    <b>Ochtend -
+                                                    </b>
+                                                    6:30 - 8:00</MenuItem>
+                                                <MenuItem value="11:30 - 1:30">
+                                                    <b>Middag -
+                                                    </b>
+                                                    11:30 - 1:30</MenuItem>
+                                                <MenuItem value="3:30 - 5:00">
+                                                    <b>Eind middag -
+                                                    </b>
+                                                    3:30 - 5:00</MenuItem>
+                                                <MenuItem value="6:00 - 7:30">
+                                                    <b>Avond -
+                                                    </b>
+                                                    6:00 - 7:30
+                                                </MenuItem>
+                                            </Select>
+                                        </FormControl>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <TextCol2>
+                                            <h3>Type cargobike</h3>
+                                        </TextCol2>
+                                    </Col>
 
-                <Col>
-                <FormControl className={classes.formControl}>
-                <InputLabel id="label"> </InputLabel>
-                    <Select 
-                    labelId="label" 
-                    id="select" 
-                    value={select2}
-                    displayEmpty 
-                    onChange={(e) => setSelect2(e.target.value)}
-                    onClick={
-                        (e) => setType(e.target.value)
-                    }  >
-                    <MenuItem disabled value="">Selecteer type</MenuItem>
-                    <MenuItem value="Cargobike standard" onChange={(e) => setType(e.target.value)}><b>Cargobike Standaard</b></MenuItem>
-                    <MenuItem value="Cargobike Deluxe" onChange={(e) => setType(e.target.value)}><b>Cargobike Deluxe</b></MenuItem>
-                    
-                </Select>
-                </FormControl>
-                </Col>
-            </Row>
-            </TimePicker>
-            <ButtonContainer>
+                                    <Col>
+                                        <FormControl className={classes.formControl}>
+                                            <InputLabel id="label"></InputLabel>
+                                            <Select
+                                                labelId="label"
+                                                id="select"
+                                                value={select2}
+                                                displayEmpty
+                                                onChange={(e) => setSelect2(e.target.value)}
+                                                onClick={(e) => setType(e.target.value)}>
+                                                <MenuItem disabled value="">Selecteer type</MenuItem>
+                                                <MenuItem value="Cargobike standard" onChange={(e) => setType(e.target.value)}>
+                                                    <b>Cargobike Standaard</b>
+                                                </MenuItem>
+                                                <MenuItem value="Cargobike Deluxe" onChange={(e) => setType(e.target.value)}>
+                                                    <b>Cargobike Deluxe</b>
+                                                </MenuItem>
 
-                <Button onClick={addNewReservation}>
-                            Deze zending reserveren
-                </Button>
-            </ButtonContainer>
-          </MakeSendOrder>
-        </Row>
-      </Send__delivery>
-      </Dialog>
+                                            </Select>
+                                        </FormControl>
+                                    </Col>
+                                </Row>
+                            </TimePicker>
+                            <ButtonContainer>
+
+                                <Button onClick={addNewReservation}>
+                                    Deze zending reserveren
+                                </Button>
+                            </ButtonContainer>
+                        </MakeSendOrder>
+                    </Row>
+                </Send__delivery>
+            </Dialog>
 
             {/* Dashboard begroeting voor de gebruiker met reserveringen */}
-            <DashboardGreeting />
-        
-
-            {/* Card met Actuele route */}
-             <CurrentRoute />
-        
-            {/* Cards met Cargobike modellen*/}
+            <DashboardGreeting/> {/* Card met Actuele route */}
+            <CurrentRoute/> {/* Cards met Cargobike modellen*/}
             <WrapperSales>
 
-            <SaleModels />
+                <SaleModels/>
             </WrapperSales>
- 
-        </div>  
+
+        </div>
     )
 }
 
 export default OndDashboard
 
-const WrapperSales = styled.div`
+const WrapperSales = styled.div `
 display:flex;
 width:200%;
 `
