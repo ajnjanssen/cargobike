@@ -7,7 +7,6 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-
 const useStyles = makeStyles((theme) => ({
       button: {
         margin: theme.spacing(1),
@@ -27,14 +26,14 @@ function FirstInQueueDelivery() {
                      <h1 className="Card_title">Volgende bezorging</h1> 
                </Col>
                <Col xs={4}>
-
-            <Button
+               <Button
         variant="contained"
         color="secondary"
         className={classes.button}
-        startIcon={<DeleteIcon/>}>
+        startIcon={<DeleteIcon />}
+      >
+        Delete
       </Button>
-
                </Col>
 
                <Col xs={10} className="Cargobike_type_det">
