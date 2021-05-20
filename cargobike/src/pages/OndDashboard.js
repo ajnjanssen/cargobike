@@ -22,6 +22,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { InputLabel, FormControl, MenuItem, Select, TextField } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import { auth, db } from "../components/firebase/Firebase";
+import HorizontalSlider from 'react-horizontal-slider'
 
 // import { db } from '../components/firebase/Firebase';
 
@@ -182,19 +183,6 @@ const ButtonContainer = styled.div`
 function OndDashboard() {
     const history = useHistory();
 
-    // const [routes,
-    //     setRoutes] = useState([]);
-    //         useEffect(() => {
-    //          db
-    //         .collection('routes')
-    //         .onSnapshot(snapshot => {
-    //             setRoutes(snapshot.docs.map(doc => ({
-    //                 id: doc.id,
-    //                 route: doc.data()
-    //             })));
-    //         })
-    // }, []);
-
     const handleNewDelivery = () => {
         history.push("/OndSend")
     }
@@ -209,14 +197,14 @@ function OndDashboard() {
          setOpen(false);
      };
 
-     const [datum, setDatum] = useState("");
-     const [locatie, setLocatie] = useState("");
-     const [type, setType] = useState("");
-     const [tijd, setTijd] = useState("");
-     const [adres, setAdres] = useState("");
-     const [postcode, setPostcode] = useState("");
+    const [datum, setDatum] = useState("");
+    const [locatie, setLocatie] = useState("");
+    const [type, setType] = useState("");
+    const [tijd, setTijd] = useState("");
+    const [adres, setAdres] = useState("");
+    const [postcode, setPostcode] = useState("");
    
-     const addNewReservation = (event) => {
+    const addNewReservation = (event) => {
        event.preventDefault();
                 
      
@@ -233,16 +221,15 @@ function OndDashboard() {
        history.push("/OndDashboard");
      };
    
-     const [select, setSelect] = useState(1)
+    const [select, setSelect] = useState(1)
    
-     const [select2, setSelect2] = useState(1)
+    const [select2, setSelect2] = useState(1)
      
-     const handleExitNewDelivery = () => {
+    const handleExitNewDelivery = () => {
        history.push("/OndDashboard")
    }
-   
-   
-       const classes = useStyles();
+    
+    const classes = useStyles();
 
     return (
         
@@ -382,10 +369,18 @@ function OndDashboard() {
              <CurrentRoute />
         
             {/* Cards met Cargobike modellen*/}
-            <SaleModels />
+            <WrapperSales>
 
+            <SaleModels />
+            </WrapperSales>
+ 
         </div>  
     )
 }
 
 export default OndDashboard
+
+const WrapperSales = styled.div`
+display:flex;
+width:200%;
+`
