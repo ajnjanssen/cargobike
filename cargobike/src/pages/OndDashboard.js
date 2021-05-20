@@ -22,7 +22,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { InputLabel, FormControl, MenuItem, Select, TextField } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import { auth, db } from "../components/firebase/Firebase";
-//import HorizontalSlider from 'react-horizontal-slider'
+import HorizontalSlider from 'react-horizontal-slider'
 
 // import { db } from '../components/firebase/Firebase';
 
