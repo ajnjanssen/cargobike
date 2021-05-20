@@ -7,6 +7,11 @@
     margin-left: 2rem;
     font-size: 2rem;
     background:none;
+    color: white;
+}
+
+.menu-bars:hover{
+    color: grey;
 }
 
 .nav-menu{

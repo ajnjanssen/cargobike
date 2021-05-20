@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 import CloseIcon from "@material-ui/icons/Close";
 
+
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
@@ -26,7 +27,7 @@ function Navbar() {
           <ul className="nav-menu-items" onClick={showSidebar}>
             <li className="navbar-toggle">
               <Link to="#" className="menu-bars">
-                <CloseIcon color="primary" />
+                <CloseIcon color="#FFFFFF" />
               </Link>
             </li>
             {SidebarData.map((item, index) => {
