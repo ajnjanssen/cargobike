@@ -36,7 +36,7 @@ function UserInformationData() {
                     </Col>
                     <Col xs={12} md={8}>
                         <NormalizeText>
-                            Beheer eenvoudig uw Betaalgegevens
+                            Beheer eenvoudig uw betaalgegevens
                         </NormalizeText>
                         
                     </Col>
@@ -63,7 +63,7 @@ function UserInformationData() {
                             </ListItemAvatar>
                             <ListItemText 
                             primary="Automatische afschrijving op 23-05-2021" 
-                            secondary="Premium Cargobike abbonement" 
+                            secondary="Cargobike Deluxe abonnement" 
                             />
                         </ListItem>
                         </List>
@@ -97,7 +97,7 @@ function UserInformationData() {
 
                 <ListRedirects>
             <Button onClick={handleClick} variant="contained" min-width="300px" color="secondary">
-                Terug naar mijn Account
+                Terug naar accountpagina
             </Button>
 
                 </ListRedirects>
@@ -110,7 +110,8 @@ export default UserInformationData
 
 
 const NormalizeText = styled.h3`
-      font-weight:200;
+      font-weight:500;
+      font-size: 16px;
       color:#fff!important;
 `
 

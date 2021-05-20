@@ -19,6 +19,8 @@ import OndSend from './pages/OndSend';
 import UserInformation from './pages/UserInformation';
 import UserInformationData from './pages/UserInformationData';
 
+import MonDashboard from './pages/MonDashboard';
+
 function App() {
 
     return ( 
@@ -33,6 +35,7 @@ function App() {
                 <Redirect exact from="/" to="/Login" />
                 <Route path='/OndSend' exact component={OndSend}/>
                 <Route path='/OndDashboard' exact component={OndDashboard}/>
+                <Route path='/MonDashboard' exact component={MonDashboard}/>
                 <Route path='/OndReservering' exact component={OndReservering}/>
                 <Route path='/BezDashboard' exact component={BezDashboard}/>
                 <Route path='/components/Login' exact component={Login}/>

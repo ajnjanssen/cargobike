@@ -2,7 +2,6 @@ import '../Registration.css';
 import React, {useState, useEffect} from "react";
 import { auth } from '../components/firebase/Firebase';
 
-
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -20,6 +19,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { withRouter } from 'react-router-dom'; // <--- import `withRouter`. We will use this in the bottom of our file.
 import {useHistory } from 'react-router'
 import { Snackbar } from '@material-ui/core';
+import styled from "styled-components";
 
 function Copyright() {
     return (
@@ -183,7 +183,7 @@ function Login() {
               </Grid>
               <Grid item>
                 <Link href="#" onClick={handleClick} variant="body2">
-                  {"Nog geen account? Account registreren"}
+                  {"Nog geen account? Registreer nu!"}
                 </Link>
               </Grid>
             </Grid>

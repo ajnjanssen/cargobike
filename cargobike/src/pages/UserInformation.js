@@ -70,11 +70,14 @@ const useStyles = makeStyles((theme) => ({
                     </UserAvatar>
                     <UserDisplay>
                     {ondernemers.map(({id, ondernemer}) => (
-                            <h3 style={{color:'#9bcf6a'}}>{ondernemer}</h3>
+                        <NormalizeTextAlt>
+                            {ondernemer}
+                            </NormalizeTextAlt>
 
                         ))
-}
-                        <h4>Onderneming</h4>
+}                       <NormalizeTextAlt2>
+                        OKAPHONE Elektronika
+                        </NormalizeTextAlt2>
                     </UserDisplay>
                 </UserContainer>
             </Container>
@@ -94,12 +97,12 @@ const useStyles = makeStyles((theme) => ({
                     <ChevronRightIcon />
                 </ListItem>
                 <ListItem button>
-                    <ListItemText primary="ABBONEMENT" />
+                    <ListItemText primary="ABONNEMENT" />
                     <ChevronRightIcon />
                 </ListItem>
                 <Divider light />
                 <ListItem button>
-                    <ListItemText primary="PRIVACY VERKLARING" />
+                    <ListItemText primary="PRIVACYBELEID" />
                     <ChevronRightIcon />
                 </ListItem>
                 <ListRedirects>
@@ -114,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
 
                 <ListRedirects>
             <Button onClick={handleClick} variant="contained" min-width="300px" color="secondary">
-                Terug naar Dashboard
+                Terug naar dashboard
             </Button>
 
                 </ListRedirects>
@@ -151,11 +154,24 @@ margin-top:20px;
         width: 80px;
         border-radius: 15px;
   }
-`;
+`
 
 const NormalizeText = styled.h3`
-      font-weight:200;
+      font-weight:500;
+      font-size: 16px;
       color:#fff!important;
+`
+
+const NormalizeTextAlt = styled.h3`
+      font-weight:500;
+      font-size: 24px;
+      color:#9bcf6a !important;
+`
+
+const NormalizeTextAlt2 = styled.h3`
+      font-weight:500;
+      font-size: 16px;
+      color:#000000 !important;
 `
 
 const UserAvatar = styled.div`
