@@ -12,8 +12,12 @@ import Login from './pages/Login';
 import OndZending from './OndZending';
 // import Onboarding from './pages/Onboarding'
 import Onboarding from './pages/Onboarding';
+<<<<<<< HEAD
 import OndOnboarding1 from './pages/OndOnboarding-1';
 import OndOnboarding2 from './pages/OndOnboarding-2';
+=======
+import OndCbWijzigen from './pages/OndCbWijzigen';
+>>>>>>> cb_huren_wijzigen
 
 import OndSend from './pages/OndSend';
 import UserInformation from './pages/UserInformation';
@@ -29,7 +33,10 @@ function App() {
         <Header/>
           <Navbar/>
             <Switch>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cb_huren_wijzigen
                 {/* <OndSend /> */}
                 {/* Default location is the login screen */}
                 <Redirect exact from="/" to="/Login" />
@@ -49,6 +56,7 @@ function App() {
                 {/* End onboarding routes */}
                 <Route path='/UserInformation' exact component={UserInformation}/>
                 <Route path='/UserInformationData' exact component={UserInformationData}/>
+                <Route path='/OndCbWijzigen' exact component={OndCbWijzigen}/>
             </Switch>
       </Router>
       {/* <OndDashboard /> */}
