@@ -228,6 +228,7 @@ function OndDashboard() {
            postcode, postcode
        })
        // console.log(uid);
+       handleClose()
        history.push("/OndDashboard");
      };
    
