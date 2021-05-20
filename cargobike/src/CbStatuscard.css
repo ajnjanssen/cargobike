@@ -1,0 +1,43 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.cbStatCard{
+    margin-top: 2vh;
+}
+
+h1{ /*cb number */
+    font-weight: 600;
+    font-size: 28;
+    color: #838383;
+}
+
+h2{ /* distance */
+    font-weight: 400;
+    font-size: 28;
+    color: #838383;
+}
+
+h3{ /* Status */
+    color: #3F51B8;
+    font-weight: 600;
+}
+
+.sw_container{
+    border: 2px solid #3F51B8;
+    border-radius: 15px;
+    padding-left: 12px;
+    text-align: center;
+    width: 70px;
+    height: 46px;
+}
+
+/*
+.sw_icon{
+    color: white;
+    font-size: 64px;
+    margin-left: -60px;
+    background-color: #3F51B8;
+    border-radius: 5px;
+    padding: 5px;
+}*/

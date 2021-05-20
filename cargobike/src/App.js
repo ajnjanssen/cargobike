@@ -20,6 +20,7 @@ import UserInformation from './pages/UserInformation';
 import UserInformationData from './pages/UserInformationData';
 
 import MonDashboard from './pages/MonDashboard';
+import MonCbOverzicht from './pages/MonCbOverzicht'
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
                 {/* End onboarding routes */}
                 <Route path='/UserInformation' exact component={UserInformation}/>
                 <Route path='/UserInformationData' exact component={UserInformationData}/>
+                <Route path='/MonCbOverzicht' exact component={MonCbOverzicht}/>
             </Switch>
       </Router>
       {/* <OndDashboard /> */}

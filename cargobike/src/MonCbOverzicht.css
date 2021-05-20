@@ -1,0 +1,35 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.MonCbOverzicht{
+    padding-top: 15vh;
+}
+
+h1.Dashgreeting{
+    color: white;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+h2.Dashgreeting{
+    font-weight: 200;
+    font-size: 24px;
+    color: white;
+}
+
+.contentbox{
+    margin-top: 5vh;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+h1.content{
+    color: #88C053;
+    font-size: 24px;
+    font-weight: 200;
+}
