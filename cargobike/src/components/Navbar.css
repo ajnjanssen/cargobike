@@ -4,7 +4,7 @@
 }
 
 .menu-bars{
-    margin-left: 2rem;
+    margin-left: 1rem;
     font-size: 2rem;
     background:none;
     color: white;
@@ -246,4 +246,7 @@ li{
 
 .Cargobike_box {
     margin-top: 50px;
+    width:700px!important;
+    margin-bottom:100px;
+    margin-right:20px;
 }
