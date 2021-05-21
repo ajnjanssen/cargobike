@@ -7,7 +7,6 @@ import { db } from '../firebase/Firebase';
 
 function NextInQueueDelivery() {
 
-      
       const [reserveringen,
             setReserveringen] = useState([]);
         useEffect(() => {
@@ -20,7 +19,6 @@ function NextInQueueDelivery() {
                     })));
                 })
             }, []);
-
 
             // heeft een specifieke doc nodig om te kunnen verwijderen
             const handleDelete = () => {
@@ -60,40 +58,13 @@ function NextInQueueDelivery() {
                       <MdDelete onClick={handleDelete}/>
                      </IconContext.Provider>
 
-
                   </ListItem>
                   <Divider />
 
                   </List>
-
-
-                  {/* <Col xs={10}>
-                     <h1 className="Card_title"></h1> 
-               </Col>
-               <Col xs={2}>
-                <IconContext.Provider value={{ color: "#838383", className: "Delete_icon", size: "2em" }}>
-                      <MdDelete onClick={handleDelete}/>
-                     </IconContext.Provider>
-               </Col>
-
-               <Col xs={8} className="Cargobike_res_details">
-                     <h1>{reservering.locatie}</h1> 
-                     <h2>reservering.locatie.adres</h2>
-                     <h3>{reserveringen.length} pakketten</h3>  
-               </Col>
-               <Col xs={4} className="Cargobike_res_details">
-                     <h1>{reservering.datum}</h1> 
-                     <h2>{reservering.tijd}</h2>
-               </Col>
-
-               <Col xs={8}>
-                     <h3>Reservering wijzigen</h3> 
-               </Col> */}
-                 
                  </>
             ))}
              
-
             </Row>
             </div>
         </Container>

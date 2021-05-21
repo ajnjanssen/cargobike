@@ -1,9 +1,9 @@
 .Card_title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     color: #838383;
-    margin-top:15px;
+    padding-bottom: 5px;
 }
 
 h1 {
@@ -23,12 +23,11 @@ h2 {
 
 h3 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 200;
+    font-weight: 500;
     font-size: 12px;
-    color: #838383;
+    color: #707070;
     margin-bottom: 3px;
 }
-
 
 .Cargobike_res_details {
     margin-top: 0.5rem;
@@ -59,7 +58,6 @@ h3 {
     margin-top: 20px;
 }
 
-
 .Bezorging_title {
     font-size: 20px;
 }
@@ -78,4 +76,22 @@ h3 {
     0 41.8px 33.4px rgba(0, 0, 0, 0.010),
     0 100px 80px rgba(0, 0, 0, 0.020)
   ;
+}
+
+/*Fucked up fix hiero, maar moet ff want is crappo -> 'volgende bezorging card'*/
+.extra-padding-card {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+.Green_text {
+    color: #88C053;
+}
+
+.Grey_text {
+    color: #707070;
+}
+
+.Dikgedrukt {
+    font-weight: 500;
 }

@@ -191,6 +191,42 @@ function OndDashboard() {
     };
 
     const handleClose = () => {
+
+         setOpen(false);
+     };
+
+     const [datum, setDatum] = useState("");
+     const [locatie, setLocatie] = useState("");
+     const [type, setType] = useState("");
+     const [tijd, setTijd] = useState("");
+     const [adres, setAdres] = useState("");
+     const [postcode, setPostcode] = useState("");
+   
+     const addNewReservation = (event) => {
+       event.preventDefault();
+                
+       db.collection('reserveringen').doc(auth.uid).set({
+           datum: datum,
+           type: type,
+           tijd: tijd,
+           adres: adres,
+           postcode, postcode
+       })
+       // console.log(uid);
+       handleClose()
+       history.push("/OndReservering");
+     };
+   
+     const [select, setSelect] = useState(1)
+   
+     const [select2, setSelect2] = useState(1)
+     
+     const handleExitNewDelivery = () => {
+       history.push("/OndDashboard")
+   }
+   
+       const classes = useStyles();
+
         setOpen(false);
     };
 
@@ -238,9 +274,145 @@ function OndDashboard() {
 
     const classes = useStyles();
 
+
     return (
 
         <div className='OndDashboard'>
+
+            
+        <AddbuttonReservering>
+            <Fab variant="extended" color="primary" onClick={handleClickOpen}>
+                 <AddIcon />
+                Zending toevoegen
+            </Fab>
+        </AddbuttonReservering>
+
+        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+        <Send__delivery>
+        <Row>
+
+          <MakeSendOrder>
+            <row>
+                <h1>Zending reserveren</h1>
+            </row>
+
+            <Row style={{paddingLeft: 40, marginBottom: '30px', width: '100%'}}>
+            <TextField 
+            id="standard-basic" 
+            label="Adres"
+            value={adres}
+            onChange={(e) => setAdres(e.target.value)} 
+            />
+            </Row>
+
+            <Row style={{paddingLeft: 40, marginBottom: '30px', width: '100%'}}>
+            <TextField 
+            id="standard-basic" 
+            label="Postcode" 
+            value={postcode}
+            onChange={(e) => setPostcode(e.target.value)} 
+            />
+            </Row>
+
+            <Row style={{paddingLeft: 40}} className="date">
+            <form className={classes.container} noValidate>
+
+                <TextField
+                    id="date"
+                    // label="Birthday"
+                    type="date"
+                    defaultValue="2017-05-24"
+                    className={classes.textField}
+                    value={datum}
+                    onChange={(e) => setDatum(e.target.value)}
+                    InputLabelProps={{
+                    shrink: true,
+                    }}
+                />
+                </form>
+            </Row>
+
+            <TimePicker>       
+            <Row>
+                <Col>
+                <TextCol>
+                <h3>Moment</h3>
+                </TextCol>
+                </Col>
+
+                <Col>
+                <FormControl className={classes.formControl}>
+                {/* <InputLabel id="label">Tijdstip</InputLabel> */}
+                    <Select 
+                    placeholder="test"
+                    labelId="label"
+                    id="select" 
+                    value={select} 
+                    displayEmpty
+                    onChange={
+                        (e) => setSelect(e.target.value)
+                    }  
+                    onClick={
+                        (e) => setTijd(e.target.value)
+                    }  
+                    >
+                    <MenuItem disabled value="">Selecteer een tijd</MenuItem>
+                    <MenuItem value='6:30 - 8:00' onChange={(e) => setType(e.target.value)}><b>Ochtend - </b> 6:30 - 8:00</MenuItem>
+                    <MenuItem value="11:30 - 1:30"><b>Middag - </b> 11:30 - 1:30</MenuItem>
+                    <MenuItem value="3:30 - 5:00"><b>Eind middag - </b> 3:30 - 5:00</MenuItem>
+                    <MenuItem value="6:00 - 7:30"><b>Avond - </b> 6:00 - 7:30 </MenuItem>
+                </Select>
+                </FormControl>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                <TextCol2>
+                <h3>Type cargobike</h3>
+                </TextCol2>
+                </Col>
+
+                <Col>
+                <FormControl className={classes.formControl}>
+                <InputLabel id="label"> </InputLabel>
+                    <Select 
+                    labelId="label" 
+                    id="select" 
+                    value={select2}
+                    displayEmpty 
+                    onChange={(e) => setSelect2(e.target.value)}
+                    onClick={
+                        (e) => setType(e.target.value)
+                    }  >
+                    <MenuItem disabled value="">Selecteer type</MenuItem>
+                    <MenuItem value="Cargobike standard" onChange={(e) => setType(e.target.value)}><b>Cargobike Standaard</b></MenuItem>
+                    <MenuItem value="Cargobike Deluxe" onChange={(e) => setType(e.target.value)}><b>Cargobike Deluxe</b></MenuItem>
+                    
+                </Select>
+                </FormControl>
+                </Col>
+            </Row>
+            </TimePicker>
+            <ButtonContainer>
+
+                <Button onClick={addNewReservation}>
+                            Deze zending reserveren
+                </Button>
+            </ButtonContainer>
+          </MakeSendOrder>
+        </Row>
+      </Send__delivery>
+      </Dialog>
+
+            {/* Dashboard begroeting voor de gebruiker met reserveringen */}
+            <DashboardGreeting />
+        
+            {/* Card met Actuele route */}
+             <CurrentRoute />
+        
+            {/* Cards met Cargobike modellen*/}
+            <SaleModels />
+
 
             <AddbuttonReservering>
                 <Fab variant="extended" color="primary" onClick={handleClickOpen}>
@@ -387,6 +559,7 @@ function OndDashboard() {
 
                 <SaleModels/>
             </WrapperSales>
+
 
         </div>
     )
