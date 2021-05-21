@@ -7,11 +7,7 @@ import Col from 'react-bootstrap/Col'
 import FirstInQueueDelivery from '../components/user/FirstInQueueDelivery';
 import NextInQueueDelivery from '../components/user/NextInQueueDelivery';
 
-
 function OndReservering() {
-
-
-
 
     return (
         <div className="OndReservering">
@@ -32,7 +28,7 @@ function OndReservering() {
                 </Row>
             </Container>
 
-            {/* For Loop voor eeerste bezorging gekoppeld aan user */}
+            {/* For Loop voor eerste bezorging gekoppeld aan user */}
             <FirstInQueueDelivery />
 
             <Container className="Title_dash">

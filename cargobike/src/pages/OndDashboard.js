@@ -11,8 +11,6 @@ import { useHistory } from 'react-router';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import NavigationIcon from "@material-ui/icons/Navigation"
 
-
-
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -178,7 +176,6 @@ const ButtonContainer = styled.div`
     margin-top:20px;
 `
 
-
 function OndDashboard() {
     const history = useHistory();
 
@@ -219,8 +216,6 @@ function OndDashboard() {
      const addNewReservation = (event) => {
        event.preventDefault();
                 
-     
-   
        db.collection('reserveringen').doc(auth.uid).set({
            datum: datum,
            type: type,
@@ -230,7 +225,7 @@ function OndDashboard() {
        })
        // console.log(uid);
        handleClose()
-       history.push("/OndDashboard");
+       history.push("/OndReservering");
      };
    
      const [select, setSelect] = useState(1)
@@ -240,7 +235,6 @@ function OndDashboard() {
      const handleExitNewDelivery = () => {
        history.push("/OndDashboard")
    }
-   
    
        const classes = useStyles();
 
@@ -282,11 +276,9 @@ function OndDashboard() {
             />
             </Row>
 
-
             <Row style={{paddingLeft: 40}} className="date">
             <form className={classes.container} noValidate>
 
-              
                 <TextField
                     id="date"
                     // label="Birthday"
@@ -377,7 +369,6 @@ function OndDashboard() {
             {/* Dashboard begroeting voor de gebruiker met reserveringen */}
             <DashboardGreeting />
         
-
             {/* Card met Actuele route */}
              <CurrentRoute />
         
