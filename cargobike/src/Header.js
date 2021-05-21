@@ -17,7 +17,7 @@ function Header() {
          <div className="Header_bg" style={{ backgroundImage: `url(${background})` }}>
             <Container>
              <Row>
-                 <Col xs={6}>
+                 <Col xs={7}>
                     <div class="d-flex justify-content-end">
                     <img src={logo} alt="" className="Header_logo"/>
                     </div>

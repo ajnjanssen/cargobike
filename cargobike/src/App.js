@@ -15,6 +15,7 @@ import Onboarding from './pages/Onboarding';
 import OndOnboarding1 from './pages/OndOnboarding-1';
 import OndOnboarding2 from './pages/OndOnboarding-2';
 
+import OndCbWijzigen from './pages/OndCbWijzigen';
 import OndSend from './pages/OndSend';
 import UserInformation from './pages/UserInformation';
 import UserInformationData from './pages/UserInformationData';
@@ -43,12 +44,13 @@ function App() {
                 <Route path='/Registration' exact component={Registration}/>
                 <Route path='/Login' exact component={Login}/>
                 {/* links to onboarding.js to start onboarding + other links for onboarding the Ond */}
+                <Route path='/Onboarding' exact component={Onboarding}/>
                 <Route path='/OndOnboarding-1' exact component={OndOnboarding1}/>
                 <Route path='/OndOnboarding-2' exact component={OndOnboarding2}/>
-                <Route path='/Onboarding' exact component={Onboarding}/>
                 {/* End onboarding routes */}
                 <Route path='/UserInformation' exact component={UserInformation}/>
                 <Route path='/UserInformationData' exact component={UserInformationData}/>
+                <Route path='/OndCbWijzigen' exact component={OndCbWijzigen}/>
             </Switch>
       </Router>
       {/* <OndDashboard /> */}
