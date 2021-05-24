@@ -1,10 +1,11 @@
 .navbarCargo {
     position:absolute;
     margin-bottom: -120px;
+    margin-top: 10px;
 }
 
 .menu-bars{
-    margin-left: 1rem;
+    margin-left: 1.75rem;
     font-size: 2rem;
     background:none;
     color: white;
@@ -98,7 +99,7 @@ li{
 
 .Header_logo {
     width: 150px;
-    margin-top: 1.75rem;
+    margin-top: 2rem;
 }
 
 .Menu_icon {
