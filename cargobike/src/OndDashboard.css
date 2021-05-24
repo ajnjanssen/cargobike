@@ -122,3 +122,13 @@
 .routeWrapper{
     /* margin-left:15px; */
 }
+
+.d-flex.justify-content-center {
+    margin-left: 50px;
+}
+
+.TextRes_Wijzigen {
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 5px;
+}

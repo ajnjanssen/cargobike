@@ -11,6 +11,7 @@ import { useHistory } from 'react-router';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import NavigationIcon from "@material-ui/icons/Navigation"
 
+
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -32,8 +33,8 @@ const AddbuttonReservering = styled.div`
     position: fixed;
     bottom: 0;
     z-index: 2;
-    margin-left: 47%;
-    margin-bottom: 10%;
+    margin-left: 40%;
+    margin-bottom: 15%;
 
     > .MuiFab-primary {
         background-color: #796ff6;

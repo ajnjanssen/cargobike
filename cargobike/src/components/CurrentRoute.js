@@ -5,6 +5,8 @@ import {Card, Col, Container, Row} from 'react-bootstrap'
 import placeholder from '../img/Map.png';
 import {db} from './firebase/Firebase'
 
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+
 function CurrenRoute() {
 
  
@@ -36,12 +38,12 @@ function CurrenRoute() {
 
                             <Col xs={7} className="Cargobike_res_details">
                                 <h1>{route.van}</h1>
-                                <h2>{route.naar}</h2>
+                                <h2 className="LocSize">{route.naar}</h2>
                                 <h3>{route.pakketten}
                                 &nbsp;pakketten</h3>
                             </Col>
                             <Col xs={5} className="Cargobike_res_details">
-                                <h2>
+                                <h2 className="TimeSize">
                                     <b>{route.tijd}
                                     &nbsp;minuten</b>
                                 </h2>
@@ -50,11 +52,8 @@ function CurrenRoute() {
                             <Card.Img variant="top" src={placeholder} className="Route_img"/>
 
                             <Col xs={8} className="Res_wijzigen">
-                            <Button color="primary">
-                            Reservering wijzigen
-                            </Button>
+                                <h3 className="TextRes_Wijzigen">Reservering wijzigen  <ArrowForwardIcon style={{ fontSize: 20, color:'#88C053' }} /></h3>
                             </Col>
-
                         </Row>
                     </div>
                 </Container>

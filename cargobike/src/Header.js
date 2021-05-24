@@ -23,7 +23,7 @@ function Header() {
                     </div>
                  </Col>
                  <Col>
-                 <div class="d-flex justify-content-end">
+                 <div class="d-flex justify-content-center">
                   <IconContext.Provider value={{ color: "white", className: "Info_icon", size: "2em" }}>
                       <AiOutlineInfoCircle />
                      </IconContext.Provider>
