@@ -4,16 +4,49 @@ import placeholder from '../img/Placeholder.png';
 
 import bike from '../img/bike.jfif';
 import styled from 'styled-components'
+import { makeStyles } from '@material-ui/core';
+
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+import IconButton from '@material-ui/core/IconButton';
+import StarBorderIcon from '@material-ui/icons/StarBorder';
+// import tileData from './tileData';
+import tileData from './tileData'
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'space-around',
+      overflow: 'hidden',
+      backgroundColor: theme.palette.background.paper,
+    },
+    gridList: {
+      flexWrap: 'nowrap',
+      // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+      transform: 'translateZ(0)',
+    },
+    title: {
+      color: theme.palette.primary.light,
+    },
+    titleBar: {
+      background:
+        'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+    },
+  }));
 
 function SaleModels() {
+    const classes = useStyles();
+
     return (
         <div>
             <Container>
 <HeaderTitle>Huur een cargobike</HeaderTitle>
 <Row style={{paddingLeft:'20px'}}>
-    <ScrollingWrapper>
+   
 
-        <Card style={{ width: '22rem', display: 'inline-block' }} className="Cargobike_box box">
+        {/* <Card style={{ width: '22rem', display: 'inline-block' }} className="Cargobike_box box">
             <Card.Body>
             <h1 className="Cargobike_title">Cargobike</h1> 
             <h2>Standaard</h2> 
@@ -51,8 +84,30 @@ function SaleModels() {
 
             </Card.Body>
             <Card.Img variant="top" src={bike} />
-        </Card>
-    </ScrollingWrapper>
+        </Card> */}
+<ScrollingWrapper>
+
+<GridList className={classes.gridList} style={{ overflow: "hidden" }} cols={2.5}>
+        {tileData.map((tile) => (
+          <GridListTile key={tile.img}>
+            <img src={tile.img} alt={tile.title} />
+            <GridListTileBar
+              title={tile.title}
+              classes={{
+                root: classes.titleBar,
+                title: classes.title,
+              }}
+              actionIcon={
+                <IconButton aria-label={`star ${tile.title}`}>
+                  <StarBorderIcon className={classes.title} />
+                </IconButton>
+              }
+            />
+          </GridListTile>
+        ))}
+      </GridList>
+    
+</ScrollingWrapper>
 </Row>
 
 </Container>
@@ -65,14 +120,11 @@ function SaleModels() {
 export default SaleModels
 
 const ScrollingWrapper = styled.div`
-    display: flex;
-  flex-wrap: nowrap;
-  width:600px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+
+padding-bottom:80px;
+/* padding-top:50px; */
+overflow: hidden; /* Hide scrollbars */
+  
 `
 
 const HeaderTitle = styled.div`
@@ -83,4 +135,22 @@ margin-top:30px;
     margin-left:25px;
     color:grey;
     /* color: white; */
+    > * {
+        grid-column: 2 / -2;
+    }
+    > .full {
+        grid-column: 1 / -1;
+    }
+`
+
+const hs = styled.div`
+display: grid;
+  grid-gap: 10px;
+  grid-template-columns:
+    10px
+    repeat(6, calc(50% - 40px))
+    10px;
+  grid-template-rows: minmax(150px, 1fr);
+  padding: 0 20px;
+  margin-right: 20px;
 `

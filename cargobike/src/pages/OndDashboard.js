@@ -179,19 +179,6 @@ const ButtonContainer = styled.div`
 function OndDashboard() {
     const history = useHistory();
 
-    // const [routes,
-    //     setRoutes] = useState([]);
-    //         useEffect(() => {
-    //          db
-    //         .collection('routes')
-    //         .onSnapshot(snapshot => {
-    //             setRoutes(snapshot.docs.map(doc => ({
-    //                 id: doc.id,
-    //                 route: doc.data()
-    //             })));
-    //         })
-    // }, []);
-
     const handleNewDelivery = () => {
         history.push("/OndSend")
     }
