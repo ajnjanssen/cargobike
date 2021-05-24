@@ -88,23 +88,47 @@ function SaleModels() {
 <ScrollingWrapper>
 
 <GridList className={classes.gridList} style={{ overflow: "hidden" }} cols={2.5}>
-        {tileData.map((tile) => (
-          <GridListTile key={tile.img}>
-            <img src={tile.img} alt={tile.title} />
-            <GridListTileBar
-              title={tile.title}
-              classes={{
-                root: classes.titleBar,
-                title: classes.title,
-              }}
-              actionIcon={
-                <IconButton aria-label={`star ${tile.title}`}>
-                  <StarBorderIcon className={classes.title} />
-                </IconButton>
-              }
-            />
-          </GridListTile>
-        ))}
+<Card style={{ width: '22rem' }} className="Cargobike_box box">
+            <Card.Body>
+            <h1 className="Cargobike_title">Cargobike</h1> 
+            <h2>Standaard</h2> 
+
+            <Row className="Cargobike_spec_box">
+                <Col className="Cargo_specs">
+                <h2 className="Cargo_spec_text">Radius</h2>
+                <h3 className="Cargo_spec_det">40 kilometer</h3>
+                </Col>
+                <Col className="Cargo_specs">
+                <h2 className="Cargo_spec_text">Capaciteit</h2>
+                <h3 className="Cargo_spec_det">120 liter</h3>
+                </Col>
+            </Row>
+
+            </Card.Body>
+            <Card.Img variant="top" src={bike} />
+        </Card>
+
+        <Card style={{ width: '22rem' }} className="Cargobike_box box">
+            <Card.Body>
+            <h1 className="Cargobike_title">Cargobike</h1> 
+            <h2>Standaard</h2> 
+
+            <Row className="Cargobike_spec_box">
+                <Col className="Cargo_specs">
+                <h2 className="Cargo_spec_text">Radius</h2>
+                <h3 className="Cargo_spec_det">40 kilometer</h3>
+                </Col>
+                <Col className="Cargo_specs">
+                <h2 className="Cargo_spec_text">Capaciteit</h2>
+                <h3 className="Cargo_spec_det">120 liter</h3>
+                </Col>
+            </Row>
+
+            </Card.Body>
+            <Card.Img variant="top" src={bike} />
+        </Card> 
+
+        
       </GridList>
     
 </ScrollingWrapper>
