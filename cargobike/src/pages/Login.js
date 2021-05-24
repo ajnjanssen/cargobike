@@ -54,7 +54,7 @@ function Copyright() {
     },
     avatar: {
       margin: theme.spacing(1),
-      backgroundColor: theme.palette.secondary.main,
+      backgroundColor: '#796FF6',
     },
     form: {
       width: '100%', // Fix IE 11 issue.
@@ -62,6 +62,9 @@ function Copyright() {
     },
     submit: {
       margin: theme.spacing(3, 0, 2),
+      backgroundColor: '#796FF6',
+      height: '40px',
+      borderRadius: '8px'
     },
   }));
 
