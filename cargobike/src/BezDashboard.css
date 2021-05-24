@@ -1,7 +1,7 @@
 .Card_route {
     padding: 20px;
-    position:relative;
-    z-index:1;
+    position: relative;
+    z-index: 1;
     border-radius: 20px;
     height: 310px;
     background-color: white;
@@ -16,14 +16,31 @@
 
 .Res_wijzigen {
     margin-top: 18px;
+
+}
+
+.Button_reswijzigen {
+    color: black;
+    text-transform: initial!important;
 }
 
 .Card_agenda {
     padding: 20px;
-    position:relative;
-    z-index:1;
+    position: relative;
+    z-index: 1;
     border-radius: 20px;
     height: 400px;
     background-color: white;
     margin-top: 20px;
+}
+
+.LocSize{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.TimeSize{
+    font-size: 18px;
+    margin-top: 18px;
+    font-weight: 300;
 }

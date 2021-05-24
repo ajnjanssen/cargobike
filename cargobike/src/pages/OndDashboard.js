@@ -32,8 +32,8 @@ const AddbuttonReservering = styled.div`
     position: fixed;
     bottom: 0;
     z-index: 2;
-    margin-left: 47%;
-    margin-bottom: 10%;
+    margin-left: 40%;
+    margin-bottom: 15%;
 
     > .MuiFab-primary {
         background-color: #796ff6;

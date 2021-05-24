@@ -122,3 +122,7 @@
 .routeWrapper{
     /* margin-left:15px; */
 }
+
+.d-flex.justify-content-center {
+    margin-left: 50px;
+}

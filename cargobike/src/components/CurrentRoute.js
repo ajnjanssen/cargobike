@@ -36,12 +36,12 @@ function CurrenRoute() {
 
                             <Col xs={7} className="Cargobike_res_details">
                                 <h1>{route.van}</h1>
-                                <h2>{route.naar}</h2>
+                                <h2 className="LocSize">{route.naar}</h2>
                                 <h3>{route.pakketten}
                                 &nbsp;pakketten</h3>
                             </Col>
                             <Col xs={5} className="Cargobike_res_details">
-                                <h2>
+                                <h2 className="TimeSize">
                                     <b>{route.tijd}
                                     &nbsp;minuten</b>
                                 </h2>
@@ -50,7 +50,7 @@ function CurrenRoute() {
                             <Card.Img variant="top" src={placeholder} className="Route_img"/>
 
                             <Col xs={8} className="Res_wijzigen">
-                            <Button color="primary">
+                            <Button  className="Button_reswijzigen">
                             Reservering wijzigen
                             </Button>
                             </Col>
