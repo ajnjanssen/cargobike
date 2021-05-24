@@ -54,7 +54,7 @@ function NextInQueueDelivery() {
                   <ListItemText secondary={reservering.tijd} />
                   <ListItemText secondary={reservering.datum} />
                   
-                  <IconContext.Provider value={{ color: "#838383", className: "Delete_icon", size: "2em" }}>
+                  <IconContext.Provider value={{ color: "#838383", className: "Delete_icon", size: "1.5em" }}>
                       <MdDelete onClick={handleDelete}/>
                      </IconContext.Provider>
 

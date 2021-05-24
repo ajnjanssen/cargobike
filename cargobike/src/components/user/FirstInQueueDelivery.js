@@ -58,9 +58,9 @@ function FirstInQueueDelivery() {
                                                 <h2>{reserveringen[0].reservering.tijd}</h2>
                                           </Col>
 
-                                          <Col xs={8}>
-                                                <h3>Reservering wijzigen  <ArrowForwardIcon style={{ fontSize: 20, color:'#88C053' }} /></h3>
-                                          </Col>
+                                          <Col xs={8} className="Res_wijzigen">
+                                                <h3 className="TextRes_Wijzigen">Reservering wijzigen  <ArrowForwardIcon style={{ fontSize: 20, color:'#88C053' }} /></h3>
+                                            </Col>
                                     </Row>
                               </div>
                  </Row>
