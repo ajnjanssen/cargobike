@@ -43,16 +43,19 @@ function UserInformationData() {
                     </Row>
                     <Row style={{paddingLeft:'20px'}}>
                     <List className={classes.root}>
-                        <ListItem>
-                            <ListItemAvatar>
+                      
+                    <ListActiviteit>
+                        <ListItem >
+                            <ListItemAvatar >
                             <Avatar>
-                                <PaymentIcon />
+                                <PaymentIcon fontSize="small" />
                             </Avatar>
                             </ListItemAvatar>
                             <ListItemText 
                             primary="Bankrekeningnummer gewijzigd op 23-06-2021" 
                             secondary="Wijziging geaccepteerd" 
                             />
+
                             
                         </ListItem>
                         <ListItem>
@@ -66,8 +69,11 @@ function UserInformationData() {
                             secondary="Cargobike Deluxe abonnement" 
                             />
                         </ListItem>
+                        </ListActiviteit>   
                         </List>
-                                            
+                    
+                   
+
                         </Row>
                     
             </Container>
@@ -79,13 +85,13 @@ function UserInformationData() {
             <List component="nav" className={classes.root} aria-label="mailbox folders">
                 <ListItem button>
                     <ListItemText 
-                    primary="AUTOMATISCHE INCASSO" 
-                    secondary="AFSCRHIJVING OP REKENING **** 7987"/>
+                    primary="Automatische incasso" 
+                    secondary="Afschrijving op rekening **** 7987"/>
                     <ChevronRightIcon />
                 </ListItem>
                 <Divider />
-                <ListItem button divider>
-                    <ListItemText primary="OVERZICHT VAN FACTUREN"
+                <ListItem button >
+                    <ListItemText primary="Overzicht van facturen"
                     secondary="Handig voor je boekhouding"
                     />
                     <ChevronRightIcon />
@@ -96,11 +102,13 @@ function UserInformationData() {
                 </ListRedirects>
 
                 <ListRedirects>
+
             <Button onClick={handleClick} variant="contained" min-width="300px" color="secondary">
                 Terug naar accountpagina
             </Button>
-
+            
                 </ListRedirects>
+
             </Container>
         </div>
     )
@@ -122,5 +130,24 @@ const ListRedirects = styled.div`
 
     > .MuiButton-root{
         min-width:350px;
+        margin-top: 40px;
+        background-color: #796FF6;
+        height: 45px;
+        border-radius: 8px;
+    } > .MuiList-root {
+        background-color: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 1%), 0 6.7px 5.3px rgb(0 0 0 / 1%), 0 12.5px 10px rgb(0 0 0 / 6%), 0 22.3px 17.9px rgb(0 0 0 / 1%), 0 41.8px 33.4px rgb(0 0 0 / 1%), 0 100px 80px rgb(0 0 0 / 2%);
+        max-width: 360px;
+        font-size: 0.875rem!important;
+        
+    } > .MuiTypography-body1 {
+            font-size: 0.875rem!important;
+    }
+`
+const ListActiviteit = styled.div`
+    .MuiAvatar-root{
+        width: 30px;
+        height: 30px;
     }
 `
