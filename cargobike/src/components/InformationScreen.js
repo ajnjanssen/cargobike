@@ -8,10 +8,16 @@ import '../App.css';
 
 // creating the component buttons (if a button is secundair, like a backbutton or 'other options' button, it will be known and their apperance will be changed.)
 function InformationScreenButton(properties) { 
-
     if(properties.secundair){
         return ( 
             <a href={properties.link} className="btn-information-screen-secundair">{properties.text}
+          </a>
+       );
+    }
+
+    if(properties.semiSecundair) {
+        return ( 
+            <a href={properties.link} className="btn-information-screen-semi-secundair">{properties.text}
           </a>
        );
     }
@@ -20,7 +26,7 @@ function InformationScreenButton(properties) {
           <a href={properties.link} className="btn-information-screen">{properties.text}
         </a>
      );
-    }
+    } 
 
 /**
  * Building an Information screen with this component 'InformationScreen'
@@ -36,11 +42,13 @@ function InformationScreenButton(properties) {
 function InformationScreen (title, text, image, buttons) {
     
     return (
-
         <div className="information-container">
 
-            <img className="information-image" alt="onboarding-image" src={image}></img>
-            
+            <img    className="information-image" 
+                    alt="onboarding-image" 
+                    src={image}>
+             </img>
+
             <h1 className="information-title">{title}</h1>
             <p className="information-text">{text}</p>
 

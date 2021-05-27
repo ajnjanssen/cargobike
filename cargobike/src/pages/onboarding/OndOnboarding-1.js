@@ -2,15 +2,15 @@
 
 import React from 'react'
 // import component, {InformationScreen} to create the onboarding page
-import InformationScreen from '../components/InformationScreen';
+import InformationScreen from '../../components/InformationScreen';
 
 //this image is used to onboard the user, it's now a free to use image of Pixabay.com as a placeholder.
-import InformationScreenImage from '../img/onboarding-image.png';
+import InformationScreenImage from '../../img/onboarding-image.png';
 
 // These variables are beforehand defined and can be changed in the progress of onboarding.
-var InformationScreenTitle = '2. Huur een cargobike voor elke vracht';
+var InformationScreenTitle = '1. Stel je reservering samen';
 var InformationScreenText = <text>
-                                Wanneer u een bezorgtijd heeft uigekozen, kunt u de cargobike huren om zelf aan de slag te gaan. Of je laat een bezorger je pakketten rondbrengen. <br/><br/>Onbeperkt pakketten bezorgen in Groningen!
+                                Het is nog nooit zo makkelijk geweest om een cargobike te huren!<br/><br/>Plaats een reservering voor uw pakketten en kies een tijdsvak wanneer de pakketten bezorgt moeten worden.
                             </text>;
 
 /**
@@ -26,14 +26,18 @@ var InformationScreenText = <text>
 
 function Onboarding() {
 
+        // this event dispatcher gives the event listner the news we don't want an fully enabled header with logo, menu and information button.
+        const event = new Event('showLogdOutHeader');
+        window.dispatchEvent(event);
+
         return InformationScreen(InformationScreenTitle, InformationScreenText, InformationScreenImage, [
                 {
-                    'text': 'Laten we beginnen!',  
-                    'link': '/Registration'
+                    'text': 'Volgende',  
+                    'link': '/OndOnboarding-2'
                 },
                 {
                     'text': 'Terug', 
-                    'link': '/OndOnboarding-1',
+                    'link': '/Onboarding',
                     'secundair': true,
                 },
             ]);

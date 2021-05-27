@@ -1,11 +1,12 @@
 // any questions about this page can be asked to Isa Winkenius
 
 import React from 'react'
+
 // import component, {InformationScreen} to create the onboarding page
-import InformationScreen from '../components/InformationScreen';
+import InformationScreen from '../../components/InformationScreen';
 
 //this image is used to onboard the user, it's now a free to use image of Pixabay.com as a placeholder.
-import InformationScreenImage from '../img/onboarding-image.png';
+import InformationScreenImage from '../../img/onboarding-image.png';
 
 // These variables are beforehand defined and can be changed in the progress of onboarding.
 var InformationScreenTitle = 'Cargobike';
@@ -26,22 +27,21 @@ var InformationScreenText = <text>
 
 function Onboarding() {
 
+    // this event dispatcher gives the event listner the news we don't want an fully enabled header with logo, menu and information button.
+    const event = new Event('showLogdOutHeader');
+    window.dispatchEvent(event);
+
         return InformationScreen(InformationScreenTitle, InformationScreenText, InformationScreenImage, [
                 {
-                    'text': 'Ik wil pakketten verzenden', 
-                    'label': 'Ik ben een ondernemer', 
-                    'link': '/OndOnboarding-1'
+                    'text': 'Registreren', 
+                    'label': 'Ik ben nieuw hier', 
+                    'link': '/Onboarding-1'
                 },
                 {
-                    'text': 'Ik wil pakketten bezorgen', 
-                    'label': 'Ik ben een bezorger'
+                    'text': 'Log In', 
+                    'label': 'Ik heb al een account', 
+                    'link': '/Login',
                 },
-                {
-                    'text': 'Andere account opties', 
-                    'link': '/Onboarding',
-                    'secundair': true,
-                },
-                
             ]);
         
 }
