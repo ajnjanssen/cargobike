@@ -1860,6 +1860,30 @@
     "prop-types" "^15.7.2"
     "react-is" "^16.8.0 || ^17.0.0"
 
+"@material/feature-targeting@^11.0.0":
+  "integrity" "sha512-7/jdaHm7C16Eq02tDQ1iI+giWKgk+QRNWFrmGKzHfXbU604XwY/eSLSiVS8QI01vx9QZ0aO9K84m0yhQQNQQtg=="
+  "resolved" "https://registry.npmjs.org/@material/feature-targeting/-/feature-targeting-11.0.0.tgz"
+  "version" "11.0.0"
+  dependencies:
+    "tslib" "^2.1.0"
+
+"@material/theme@^11.0.0":
+  "integrity" "sha512-GnQI8sd2wHFD3AvmhpyRaH5o9D5Shobs1xDH4FdRU9+c+FNNqouZMDzyM6UpCX4700DzqvE7l0/1LjzB7ve7Lg=="
+  "resolved" "https://registry.npmjs.org/@material/theme/-/theme-11.0.0.tgz"
+  "version" "11.0.0"
+  dependencies:
+    "@material/feature-targeting" "^11.0.0"
+    "tslib" "^2.1.0"
+
+"@material/typography@^11.0.0":
+  "integrity" "sha512-i9IGO/ZsF+YnqC2+PpJapt/8hSXOKFXaqv6B9uUr+iQ8GD4bEFpxm5kChzH918wJpCHvxbTYbnR6buaF9nkjCQ=="
+  "resolved" "https://registry.npmjs.org/@material/typography/-/typography-11.0.0.tgz"
+  "version" "11.0.0"
+  dependencies:
+    "@material/feature-targeting" "^11.0.0"
+    "@material/theme" "^11.0.0"
+    "tslib" "^2.1.0"
+
 "@nodelib/fs.scandir@2.1.4":
   "integrity" "sha512-33g3pMJk3bg5nXbL/+CY6I2eJDzZAni49PfJnL5fghPTggPvBd/pFNSgJsdAgWptuFu7qq/ERvOYFlhvsLTCKA=="
   "resolved" "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz"
@@ -7947,6 +7971,11 @@
   "version" "1.4.0"
   dependencies:
     "js-tokens" "^3.0.0 || ^4.0.0"
+
+"lottie-web@^5.7.8":
+  "integrity" "sha512-VxKCZk33GwZac6mVHvT3grUFR/zrMsW85M7vxQPrgpJOP2IhcnjMbuD0h7muBkXgw84K9KmGulmcyzvhpzSMAg=="
+  "resolved" "https://registry.npmjs.org/lottie-web/-/lottie-web-5.7.8.tgz"
+  "version" "5.7.8"
 
 "lower-case@^2.0.2":
   "integrity" "sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg=="
