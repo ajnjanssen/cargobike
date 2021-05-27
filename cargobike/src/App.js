@@ -16,10 +16,11 @@ import Login from './pages/Login';
 import OndZending from './OndZending';
 
 // import Onboarding from './pages/Onboarding'
-import Onboarding from './pages/Onboarding';
-import Onboarding1 from './pages/Onboarding-1';
-import OndOnboarding1 from './pages/OndOnboarding-1';
-import OndOnboarding2 from './pages/OndOnboarding-2';
+import Onboarding from './pages/onboarding/Onboarding';
+import Onboarding1 from './pages/onboarding/Onboarding-1';
+import Onboarding2 from './pages/onboarding/Onboarding-2';
+import OndOnboarding1 from './pages/onboarding/OndOnboarding-1';
+import OndOnboarding2 from './pages/onboarding/OndOnboarding-2';
 
 import OndCbWijzigen from './pages/OndCbWijzigen';
 import OndSend from './pages/OndSend';
@@ -69,6 +70,7 @@ function App() {
             {/* links to onboarding.js to start onboarding + other links for onboarding the Ond */}
             <Route path='/Onboarding' exact component={Onboarding}/>
             <Route path='/Onboarding-1' exact component={Onboarding1}/>
+            <Route path='/Onboarding-2' exact component={Onboarding2}/>
             <Route path='/OndOnboarding-1' exact component={OndOnboarding1}/>
             <Route path='/OndOnboarding-2' exact component={OndOnboarding2}/>
             {/* End onboarding routes */}
