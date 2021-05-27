@@ -1,17 +1,16 @@
 // any questions about this page can be asked to Isa Winkenius
 
 import React from 'react'
-
 // import component, {InformationScreen} to create the onboarding page
 import InformationScreen from '../../components/InformationScreen';
 
 //this image is used to onboard the user, it's now a free to use image of Pixabay.com as a placeholder.
-import InformationScreenImage from '../../img/onboarding-image.png';
+import InformationScreenImage from '../../img/onboarding-image-monteur.png';
 
 // These variables are beforehand defined and can be changed in the progress of onboarding.
-var InformationScreenTitle = 'Welkom!';
+var InformationScreenTitle = 'Welkom nieuwe bezorger!';
 var InformationScreenText = <text>
-                                Wij kunnen u ook een mail hebben gestuurd met een meldcode, bezorgers en monteurs kunnen zich hier aanmelden.
+                                Gezellig dat je komt bezorgen bij CargoDelivery!<br/><br/>Met de aanmeldcode in de mail kan je gaan registreren.
                             </text>;
 
 /**
@@ -27,25 +26,19 @@ var InformationScreenText = <text>
 
 function Onboarding() {
 
-    // this event dispatcher gives the event listner the news we don't want an fully enabled header with logo, menu and information button.
-    const event = new Event('showLogdOutHeader');
-    window.dispatchEvent(event);
+        // this event dispatcher gives the event listner the news we don't want an fully enabled header with logo, menu and information button.
+        const event = new Event('showLogdOutHeader');
+        window.dispatchEvent(event);
 
         return InformationScreen(InformationScreenTitle, InformationScreenText, InformationScreenImage, [
                 {
-                    'text': 'Ik wil pakketen rondbrengen', 
-                    'label': 'Ik ben de nieuwe bezorger voor CargoDelivery', 
-                    'link': '/BezOnboarding-1'
+                    'text': 'Volgende',  
+                    'link': '/Registration'
                 },
                 {
-                    'text': 'Ik wil de CargoBikes repareren', 
-                    'label': 'Ik ben de nieuwe monteur voor CargoDelivery',
-                    'link':'/MonOnboarding-1'
-                },
-                {
-                    'text': 'Terug naar begin', 
+                    'text': 'Terug', 
+                    'link': '/Onboarding-2',
                     'secundair': true,
-                    'link': '/Onboarding',
                 },
             ]);
         

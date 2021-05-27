@@ -15,12 +15,14 @@ import BezDashboard from './BezDashboard'
 import Login from './pages/Login';
 import OndZending from './OndZending';
 
-// import Onboarding from './pages/Onboarding'
+// import Onboarding from './pages/onboarding/Onboarding'
 import Onboarding from './pages/onboarding/Onboarding';
 import Onboarding1 from './pages/onboarding/Onboarding-1';
 import Onboarding2 from './pages/onboarding/Onboarding-2';
 import OndOnboarding1 from './pages/onboarding/OndOnboarding-1';
 import OndOnboarding2 from './pages/onboarding/OndOnboarding-2';
+import BezOnboarding1 from './pages/onboarding/BezOnboarding-1';
+import MonOnboarding1 from './pages/onboarding/MonOnboarding-1';
 
 import OndCbWijzigen from './pages/OndCbWijzigen';
 import OndSend from './pages/OndSend';
@@ -73,6 +75,8 @@ function App() {
             <Route path='/Onboarding-2' exact component={Onboarding2}/>
             <Route path='/OndOnboarding-1' exact component={OndOnboarding1}/>
             <Route path='/OndOnboarding-2' exact component={OndOnboarding2}/>
+            <Route path='/BezOnboarding-1' exact component={BezOnboarding1}/>
+            <Route path='/MonOnboarding-1' exact component={MonOnboarding1}/>
             {/* End onboarding routes */}
             <Route path='/UserInformation' exact component={UserInformation}/>
             <Route path='/UserInformationData' exact component={UserInformationData}/>
