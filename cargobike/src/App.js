@@ -15,7 +15,7 @@ import BezDashboard from './BezDashboard'
 import Login from './pages/Login';
 import OndZending from './OndZending';
 
-// import Onboarding from './pages/onboarding/Onboarding'
+// import Onboarding from './src/pages/onboarding/Onboarding'
 import Onboarding from './pages/onboarding/Onboarding';
 import Onboarding1 from './pages/onboarding/Onboarding-1';
 import Onboarding2 from './pages/onboarding/Onboarding-2';
@@ -24,15 +24,17 @@ import OndOnboarding2 from './pages/onboarding/OndOnboarding-2';
 import BezOnboarding1 from './pages/onboarding/BezOnboarding-1';
 import MonOnboarding1 from './pages/onboarding/MonOnboarding-1';
 
-// import Monteur schermen from './pages'
+// import Monteur schermen from './src/pages'
 import MonCargobike from './pages/MonCargobike';
+import MonDashboard from './pages/MonDashboard';
+
+// import Component schermen from './src/components'
+import CargoLogCard from './components/CargoLogCard';
 
 import OndCbWijzigen from './pages/OndCbWijzigen';
 import OndSend from './pages/OndSend';
 import UserInformation from './pages/UserInformation';
 import UserInformationData from './pages/UserInformationData';
-
-import MonDashboard from './pages/MonDashboard';
 
 function App() {
 
@@ -62,27 +64,27 @@ function App() {
         <Switch>
             {/* <OndSend /> */}
             {/* Default location is the Onboarding screen */}
-            <Redirect exact from="/" to="/Onboarding" />
-            <Route path='/OndSend' exact component={OndSend}/>
-            <Route path='/OndDashboard' exact component={OndDashboard}/>
-            <Route path='/OndReservering' exact component={OndReservering}/>
-            <Route path='/BezDashboard' exact component={BezDashboard}/>
-            <Route path='/components/Login' exact component={Login}/>
-            <Route path='/OndZending' exact component={OndZending}/>
-            <Route path='/Registration' exact component={Registration}/>
-            <Route path='/Login' exact component={Login}/>
-            {/* links to onboarding.js to start onboarding + other links for onboarding the Ond */}
-            <Route path='/Onboarding' exact component={Onboarding}/>
-            <Route path='/Onboarding-1' exact component={Onboarding1}/>
-            <Route path='/Onboarding-2' exact component={Onboarding2}/>
-            <Route path='/OndOnboarding-1' exact component={OndOnboarding1}/>
-            <Route path='/OndOnboarding-2' exact component={OndOnboarding2}/>
-            <Route path='/BezOnboarding-1' exact component={BezOnboarding1}/>
-            <Route path='/MonOnboarding-1' exact component={MonOnboarding1}/>
+              <Redirect exact from="/" to="/Onboarding" />
+              <Route path='/OndSend' exact component={OndSend}/>
+              <Route path='/OndDashboard' exact component={OndDashboard}/>
+              <Route path='/OndReservering' exact component={OndReservering}/>
+              <Route path='/BezDashboard' exact component={BezDashboard}/>
+              <Route path='/components/Login' exact component={Login}/>
+              <Route path='/OndZending' exact component={OndZending}/>
+              <Route path='/Registration' exact component={Registration}/>
+              <Route path='/Login' exact component={Login}/>
+            {/* Start links to onboarding.js to start onboarding + other links for onboarding the Ond */}
+              <Route path='/Onboarding' exact component={Onboarding}/>
+              <Route path='/Onboarding-1' exact component={Onboarding1}/>
+              <Route path='/Onboarding-2' exact component={Onboarding2}/>
+              <Route path='/OndOnboarding-1' exact component={OndOnboarding1}/>
+              <Route path='/OndOnboarding-2' exact component={OndOnboarding2}/>
+              <Route path='/BezOnboarding-1' exact component={BezOnboarding1}/>
+              <Route path='/MonOnboarding-1' exact component={MonOnboarding1}/>
             {/* End onboarding routes */}
             {/* Start monteur scherm routes */}
-            <Route path='/MonDashboard' exact component={MonDashboard}/>
-            <Route path='/MonCargobike' exact component={MonCargobike}/>
+              <Route path='/MonDashboard' exact component={MonDashboard}/>
+              <Route path='/MonCargobike' exact component={MonCargobike}/>
             {/* End monteur scherm routes */}
             <Route path='/UserInformation' exact component={UserInformation}/>
             <Route path='/UserInformationData' exact component={UserInformationData}/>
