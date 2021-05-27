@@ -10,31 +10,32 @@ import logo from './img/logo_cargobike2.png';
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
 
-
 function Header() {
-    return (
-        <div className="Header">
-         <div className="Header_bg" style={{ backgroundImage: `url(${background})` }}>
-            <Container>
-             <Row>
-                 <Col xs={8}>
-                    <div class="d-flex justify-content-end">
-                    <img src={logo} alt="" className="Header_logo"/>
-                    </div>
-                 </Col>
-                 <Col>
-                 <div class="d-flex justify-content-center">
-                  <IconContext.Provider value={{ color: "white", className: "Info_icon", size: "2em" }}>
-                      <AiOutlineInfoCircle />
-                     </IconContext.Provider>
-                     </div>
-                 </Col>
-                </Row>
-          </Container>
-
-         </div>
-     </div>
-    )
-}
+        return (
+            <div className="Header">
+                <div className="Header_bg" style={{ backgroundImage: `url(${background})` }}>
+                    <Container>
+                        <Row>
+                            <Col xs={8}>
+                                <div class="d-flex justify-content-end">
+                                    <img src={logo} alt="" className="Header_logo"/>
+                                </div>
+                            </Col>  
+                            <Col>
+                                <div class="d-flex justify-content-center">
+                                    <IconContext.Provider value={{ 
+                                        color: "white", 
+                                        className: "Info_icon", 
+                                        size: "2em" }}>      
+                                        <AiOutlineInfoCircle />
+                                    </IconContext.Provider>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+            </div>
+        );
+    }   
 
 export default Header
