@@ -24,6 +24,9 @@ import OndOnboarding2 from './pages/onboarding/OndOnboarding-2';
 import BezOnboarding1 from './pages/onboarding/BezOnboarding-1';
 import MonOnboarding1 from './pages/onboarding/MonOnboarding-1';
 
+// import Monteur schermen from './pages'
+import MonCargobike from './pages/MonCargobike';
+
 import OndCbWijzigen from './pages/OndCbWijzigen';
 import OndSend from './pages/OndSend';
 import UserInformation from './pages/UserInformation';
@@ -58,11 +61,10 @@ function App() {
 
         <Switch>
             {/* <OndSend /> */}
-            {/* Default location is the login screen */}
-            <Redirect exact from="/" to="/Login" />
+            {/* Default location is the Onboarding screen */}
+            <Redirect exact from="/" to="/Onboarding" />
             <Route path='/OndSend' exact component={OndSend}/>
             <Route path='/OndDashboard' exact component={OndDashboard}/>
-            <Route path='/MonDashboard' exact component={MonDashboard}/>
             <Route path='/OndReservering' exact component={OndReservering}/>
             <Route path='/BezDashboard' exact component={BezDashboard}/>
             <Route path='/components/Login' exact component={Login}/>
@@ -78,6 +80,10 @@ function App() {
             <Route path='/BezOnboarding-1' exact component={BezOnboarding1}/>
             <Route path='/MonOnboarding-1' exact component={MonOnboarding1}/>
             {/* End onboarding routes */}
+            {/* Start monteur scherm routes */}
+            <Route path='/MonDashboard' exact component={MonDashboard}/>
+            <Route path='/MonCargobike' exact component={MonCargobike}/>
+            {/* End monteur scherm routes */}
             <Route path='/UserInformation' exact component={UserInformation}/>
             <Route path='/UserInformationData' exact component={UserInformationData}/>
             <Route path='/OndCbWijzigen' exact component={OndCbWijzigen}/>
