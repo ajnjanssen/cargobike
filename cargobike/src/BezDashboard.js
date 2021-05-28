@@ -4,8 +4,8 @@ import {Col, Container, Row} from 'react-bootstrap'
 import './OndReservering.css';
 import './BezDashboard.css';
 import DashboardGreeting from './components/user/DashboardGreeting';
-import CurrenRoute from './components/employee/CurrenRoute';
 import CurrentAgenda from './components/employee/CurrentAgenda';
+import CurrentRoute from './components/CurrentRoute';
 
 function BezDashboard() {
     return (
@@ -13,12 +13,13 @@ function BezDashboard() {
 
             <DashboardGreeting/>
 
-            <CurrenRoute/>
+            {/* Card met Actuele route */}
+             <CurrentRoute />
 
             <Container className="Title_dash">
                 <Row>
                     <Col xs={12} md={8}>
-                        <h1 className="Bezorging_title">Ontdek jouw werkdag</h1>
+                        <h1 className="BezorgerTitles">Ontdek jouw werkdag</h1>
                     </Col>
                 </Row>
             </Container>

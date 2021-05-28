@@ -29,7 +29,7 @@
     position: relative;
     z-index: 1;
     border-radius: 20px;
-    height: 400px;
+    width: 240px;
     background-color: white;
     margin-top: 20px;
 }
@@ -43,4 +43,10 @@
     font-size: 18px;
     margin-top: 18px;
     font-weight: 300;
+}
+
+.BezorgerTitles{
+    font-size: 26px;
+    font-weight: 600;
+    margin-left: 20px;
 }
