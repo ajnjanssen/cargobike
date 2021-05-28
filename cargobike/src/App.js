@@ -28,9 +28,6 @@ import MonOnboarding1 from './pages/onboarding/MonOnboarding-1';
 import MonCargobike from './pages/MonCargobike';
 import MonDashboard from './pages/MonDashboard';
 
-// import Component schermen from './src/components'
-import CargoLogCard from './components/CargoLogCard';
-
 import OndCbWijzigen from './pages/OndCbWijzigen';
 import OndSend from './pages/OndSend';
 import UserInformation from './pages/UserInformation';
