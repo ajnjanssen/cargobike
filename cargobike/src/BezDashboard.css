@@ -32,6 +32,7 @@
     width: 240px;
     background-color: white;
     margin-top: -20px;
+    min-height: 250px;
 }
 
 .Card_agenda_Ond {
@@ -42,6 +43,23 @@
     width: 240px;
     background-color: white;
     margin-top: 20px;
+}
+
+.Card_agenda_mijncargo {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    width: 240px;
+    background-color: white;
+    margin-top: 20px;
+    height: 240px;
+}
+
+.iEqpqd {
+    width: 93%!important;
+    margin-left: 10px;
+    margin-bottom: -20px;
 }
 
 .LocSize{
@@ -59,4 +77,8 @@
     font-size: 26px;
     font-weight: 600;
     margin-left: 20px;
+}
+
+.Card_Under_Title {
+    margin-top: 0px;
 }

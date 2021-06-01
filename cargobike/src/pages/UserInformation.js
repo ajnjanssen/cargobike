@@ -163,6 +163,7 @@ const ListRedirects = styled.div`
         text-transform: none;
         height: 45px;
         border-radius: 8px;
+        margin-bottom: 20px;
     } > .MuiList-root {
         background-color: #fff;
         border-radius: 18px;
