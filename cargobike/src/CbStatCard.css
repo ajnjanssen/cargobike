@@ -6,6 +6,8 @@
     margin-top: 2vh;
 }
 
+/* Deze classes namen meegeven ipv alle h1,h2 en h3 overschrijven (overschrijft namelijk alle textstyles op alle pagina's) */
+
 h1{ /*cb number */
     font-weight: 600;
     font-size: 28;
@@ -15,11 +17,11 @@ h1{ /*cb number */
 h2{ /* distance */
     font-weight: 400;
     font-size: 28;
-    color: #838383;
+    /* color: #838383; */
 }
 
 h3{ /* Status */
-    color: #3F51B8;
+    /* color: #3F51B8; */
     font-weight: 600;
 }
 
