@@ -31,6 +31,7 @@ import UserInformationData from './pages/UserInformationData';
 
 import MonDashboard from './pages/MonDashboard';
 import MonHalte from './pages/MonHalte';
+import MonCbOverzicht from './pages/MonCbOverzicht';
 
 function App() {
 
@@ -84,6 +85,7 @@ function App() {
             <Route path='/OndCbWijzigen' exact component={OndCbWijzigen}/>
 
             <Route path='/Test' exact component={MonHalte}/>
+            <Route path='/Test2' exact component={MonCbOverzicht}/>
         </Switch>
       </Router>
       {/* <OndDashboard /> */}

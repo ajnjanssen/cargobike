@@ -48,7 +48,7 @@ export class MapContainer extends Component {
 
             {/* P+R Hoofdstation */}
             <GoogleMapsCustomMarker
-            foo="ay"
+            foo="bla"
             name={'halte'}
             position={{lat: 53.211712978442634, lng: 6.561086218719561 }} 
             />

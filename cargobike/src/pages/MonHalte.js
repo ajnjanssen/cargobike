@@ -100,6 +100,7 @@ export default function MonHalteMap(){
                 <CbStatCard nr="1" afstand="128"/>
             </Contentbox>
         </Container>
+       
         <GoogleMap locationMarkerlat={ halteLat } locationMarkerlng= { halteLen }/>
         <ButtonContainer>
             <a href="https://maps.google.com/?q=53.2109719,6.5619039">
@@ -113,6 +114,7 @@ export default function MonHalteMap(){
             <Container>
                 <ContentBox_h1>Status van onderdelen voor deze halte</ContentBox_h1>
             </Container>
+
             <Scrollbar>
                 <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
                 <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
@@ -120,6 +122,7 @@ export default function MonHalteMap(){
                 <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
                 <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
             </Scrollbar>
+            
             <Container>
                 {/*<a href="tel: somephonenumber">*/}
                     <Button>
