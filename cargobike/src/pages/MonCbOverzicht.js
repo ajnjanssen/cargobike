@@ -1,11 +1,10 @@
 import react from 'react';
 import {Container, Row, Col } from 'react-bootstrap';
 import '../MonCbOverzicht.css';
-import CbStatuscard from '../components/CbStatuscard'
+import CbStatCard from '../components/CbStatCard';
 //Button styling
 import { Button } from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-
 
 export default function MonCbOverzicht(){
     return(
@@ -49,12 +48,12 @@ export default function MonCbOverzicht(){
                     </Row>
                     <Row>
                         <Col xs={12} md={12} >
-                            <CbStatuscard nr="14" afstand="220" />
-                            <CbStatuscard nr="42" afstand="899" />
-                            <CbStatuscard nr="47" afstand="100" />
-                            <CbStatuscard nr="23" afstand="230" />
-                            <CbStatuscard nr="75" afstand="2500" />
-                            <CbStatuscard nr="61" afstand="120" />
+                            <CbStatCard nr="14" afstand="220" />
+                            <CbStatCard nr="42" afstand="899" />
+                            <CbStatCard nr="47" afstand="100" />
+                            <CbStatCard nr="23" afstand="230" />
+                            <CbStatCard nr="75" afstand="2500" />
+                            <CbStatCard nr="61" afstand="120" />
                         </Col>
                     </Row>
                 </div>
