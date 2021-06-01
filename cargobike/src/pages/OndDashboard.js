@@ -5,9 +5,11 @@ import React, { useState } from 'react'
 import CurrentRoute from '../components/CurrentRoute';
 import SaleModels from '../components/SaleModels';
 import DashboardGreeting from '../components/user/DashboardGreeting';
+import CurrentAgenda from '../components/employee/CurrentAgenda';
 import { Button } from '@material-ui/core';
 import { Row, Col } from 'react-bootstrap';
 import { useHistory } from 'react-router';
+import { Container } from 'react-bootstrap';
 
 
 
@@ -24,6 +26,18 @@ import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 
 import styled from "styled-components";
+
+
+
+//Components
+import GoogleMap from '../components/GoogleMap';
+import CbStatCard from '../components/CbStatCard';
+import OnderdeelStatus from '../components/OnderdeelStatus';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import PhoneForwardedIcon from '@material-ui/icons/PhoneForwarded';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+
+
 
 const AddbuttonReservering = styled.div`
     position: fixed;
@@ -172,6 +186,53 @@ const ButtonContainer = styled.div`
     padding-left:25px;
     margin-top:20px;
 `
+
+const Scrollbar = styled.div`
+display: flex;
+overflow-x: scroll;
+`
+
+const Scrollbar_item = styled.div`
+    margin: 20px;
+`
+
+
+const Contentbox = styled.div`
+    margin-top: 5vh;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    color: black;
+`
+
+const ContentBox_h1 = styled.h1`
+    color: #88C053;
+    font-size: 20px;
+    font-weight: 600;
+`
+
+const ContentBox_p = styled.p`
+    color: #838383;
+    font-weight: 600;
+    font-size: 14;
+    margin: 0;
+    padding: 0;
+`
+
+const ContentBottom = styled.div`
+    margin-top: -3vh;
+    background-color: white;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: black;
+`
+
 
 function OndDashboard() {
     const history = useHistory();
@@ -356,8 +417,24 @@ function OndDashboard() {
             {/* Card met Actuele route */}
              <CurrentRoute />
         
-            {/* Cards met Cargobike modellen*/}
-            <SaleModels />
+             <Container className="Title_dash">
+                <Row>
+                    <Col xs={12} md={8}>
+                        <h1 className="BezorgerTitles">Huur een Cargobike</h1>
+                    </Col>
+                </Row>
+            </Container>
+
+             <ContentBottom>
+
+            <Scrollbar>
+                <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
+                <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
+                <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
+            </Scrollbar>
+            
+
+            </ContentBottom>
 
         </div>  
     )
