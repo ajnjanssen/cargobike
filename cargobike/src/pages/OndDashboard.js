@@ -116,11 +116,11 @@ const MakeSendOrder = styled.div`
     /* flex-wrap: wrap; */
     /* justify-content:center; */
     /* align-items:center; */
-    border-radius:25px;
+    border-radius:35px;
     margin-top:10px;
     margin-bottom: 30px;
     width:100%;
-    height:420px;
+    height:430px;
     margin-left:25px;
     background:white;
     overflow: hidden;
@@ -156,7 +156,10 @@ const MakeSendOrder = styled.div`
         letter-spacing: inherit;
         animation-duration: 10ms;
         -webkit-tap-highlight-color: transparent;
-    }
+
+    } 
+ 
+
 `;
 
 const TimePicker = styled.div`
@@ -435,7 +438,7 @@ function OndDashboard() {
             </TimePicker>
             <ButtonContainer>
 
-                <Button onClick={addNewReservation}>
+                <Button onClick={addNewReservation} variant="contained" min-width="300px" color="secondary">
                             Deze zending reserveren
                 </Button>
             </ButtonContainer>
