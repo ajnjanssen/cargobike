@@ -58,7 +58,7 @@ body {
   overflow-x:hidden;
 }
 
-body:-webkit-scrollbar{
-  width: 0px;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }

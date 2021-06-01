@@ -6,7 +6,7 @@ import './OndReservering.css';
 import './BezDashboard.css';
 import DashboardGreeting from './components/user/DashboardGreeting';
 import CurrentAgenda from './components/employee/CurrentAgenda';
-import CurrentRoute from './components/CurrentRoute';
+import ActRouteBez from './components/ActRouteBez';
 import SaleModels from './components/SaleModels';
 
 //Styling
@@ -21,6 +21,9 @@ import { Button } from '@material-ui/core';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import PhoneForwardedIcon from '@material-ui/icons/PhoneForwarded';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
+import EventNoteIcon from '@material-ui/icons/EventNote';
+import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
 
 import ph_img from "./img/Placeholder.png";
 
@@ -101,13 +104,12 @@ const ListRedirects = styled.div`
 const Info_box = styled.div`
     background-color: #F5FAF1;
     border-radius: 13px;
-    padding: 9px;
+    padding: 8px;
     width: 5.7em;
     overflow: hidden;
     margin-left: 25px;
-    margin-bottom: 14px;
-    margin-top: 6px;
-    height: 63px;
+    margin-bottom: 9px;
+    height: 59px;
 `
 const Info_label = styled.p`
     color: #838383;
@@ -143,9 +145,20 @@ function BezDashboard() {
         <div className='bezDashboard'>
 
             <DashboardGreeting/>
+            
+            <Col xs={12} md={8}>
+              <h1 className="RecentActivity"><ArrowForwardIosIcon style={{ fontSize: 14, color:'white' }} />Bezorgroute voor 23-10-25, 11:15 Sontplein</h1>
+              <h2 className="RecentActivity_Desc">Route 54 pakketten</h2>
+            </Col>
+
+            <Col xs={12} md={8}>
+              <h1 className="RecentActivity2"><ArrowForwardIosIcon style={{ fontSize: 14, color:'white' }} />Bezorgroute voor 18-09-25, 13:55 Zernike</h1>
+              <h2 className="RecentActivity_Desc2">Route 31 pakketten</h2>
+            </Col>
 
             {/* Card met Actuele route */}
-             <CurrentRoute />
+             <ActRouteBez />
+             
 
             <Container className="Title_dash">
                 <Row>
@@ -161,15 +174,15 @@ function BezDashboard() {
                     <div className="Card_agenda box">
                         <Row>
                             <Col xs={10}>
-                                <h1 className="Card_title">Agenda</h1>
+                                <h1 className="Card_title_Bez"><EventNoteIcon style={{ fontSize: 22, color:'#88C053' }} />Agenda</h1>
                             </Col>
 
                             {/* For loop schrijven voor actuele data van bezorger */}
                             <CurrentAgenda/>
-
-                            <Col xs={8}>
-                                <h3>Hele agenda bekijken</h3>
+                            <Col>
+                                <h3 className="TextRes_Wijzigen">Agenda bekijken  <ArrowForwardIcon style={{ fontSize: 20, color:'#88C053' }} /></h3>
                             </Col>
+
                         </Row>
                     </div>
                 </Scrollbar_item>
@@ -177,8 +190,8 @@ function BezDashboard() {
                 <Scrollbar_item>        
                     <div className="Card_agenda box">
                         <Row>
-                            <Col xs={10}>
-                                <h1 className="Card_title_Cargobike">Mijn Cargobike</h1>
+                            <Col xs={12}>
+                                <h1 className="Card_title_Bez"><DirectionsBikeIcon style={{ fontSize: 22, color:'#88C053', }} />Mijn Cargobike</h1>
                                 <h2 className="Card_Under_Title">Cargobike Standaard</h2>
                             </Col>
 
@@ -191,9 +204,23 @@ function BezDashboard() {
                                     <Info_label>Capaciteit</Info_label>
                                     <Info_data>120 Liter</Info_data>
                                 </Info_box>
-                            <Info_image src={ph_img}/>
+                            {/* <Info_image src={ph_img}/> */}
                         </Row>
 
+                        <Row>
+                            <Info_box>
+                             <Info_label>Batterij</Info_label>
+                                <Info_data>83%</Info_data>
+                            </Info_box>
+                            <Info_box>
+                                    <Info_label>Rijtijd</Info_label>
+                                    <Info_data>52 min</Info_data>
+                                </Info_box>
+                            {/* <Info_image src={ph_img}/> */}
+                        </Row>
+                        <Col>
+                                <h3 className="TextRes_Wijzigen">Cargobike bekijken  <ArrowForwardIcon style={{ fontSize: 20, color:'#88C053' }} /></h3>
+                            </Col>
                         </Row>
                     </div>
                 </Scrollbar_item>
