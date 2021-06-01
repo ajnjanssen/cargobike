@@ -32,72 +32,40 @@ export class MapContainer extends Component {
             }}
             zoom={12}
         >
-<<<<<<< Updated upstream
             {/* P+R Kardinge 
-=======
-            {/* P+R Kardinge */}
->>>>>>> Stashed changes
             <GoogleMapsCustomMarker
                 foo="bar"
                 name={'halte'}
                 position={{lat: 53.23818285334112, lng: 6.59414209732099 }} 
-<<<<<<< Updated upstream
             />*/}
 
             {/* P+R Hoogkerk 
-=======
-            />
-
-            {/* P+R Hoogkerk */}
->>>>>>> Stashed changes
             <GoogleMapsCustomMarker
             foo="meh"
             name={'halte'}
             position={{lat: 53.19762858868361, lng: 6.513166262838857}} 
-<<<<<<< Updated upstream
             />*/}
 
             {/* P+R Hoofdstation */}
             <GoogleMapsCustomMarker
             foo="bla"
-=======
-            />
-
-            {/* P+R Hoofdstation */}
-            <GoogleMapsCustomMarker
-            foo="ay"
->>>>>>> Stashed changes
             name={'halte'}
             position={{lat: 53.211712978442634, lng: 6.561086218719561 }} 
             />
 
-<<<<<<< Updated upstream
             {/* P+R Euroborg 
-=======
-            {/* P+R Euroborg */}
->>>>>>> Stashed changes
             <GoogleMapsCustomMarker
             foo="work"
             name={'halte'}
             position={{lat: 53.209844738596495, lng: 6.593501203378418 }} 
-<<<<<<< Updated upstream
             />*/}
 
             {/* P+R Zernike 
-=======
-            />
-
-            {/* P+R Zernike */}
->>>>>>> Stashed changes
             <GoogleMapsCustomMarker
             foo="it"
             name={'halte'}
             position={{lat: 53.2448297264615, lng: 6.528572957354985 }} 
-<<<<<<< Updated upstream
             />*/}
-=======
-            />
->>>>>>> Stashed changes
             </Map>
     );
     }
