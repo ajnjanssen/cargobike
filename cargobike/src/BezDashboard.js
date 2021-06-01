@@ -6,6 +6,7 @@ import './BezDashboard.css';
 import DashboardGreeting from './components/user/DashboardGreeting';
 import CurrentAgenda from './components/employee/CurrentAgenda';
 import CurrentRoute from './components/CurrentRoute';
+import SaleModels from './components/SaleModels';
 
 function BezDashboard() {
     return (
@@ -40,6 +41,10 @@ function BezDashboard() {
                     </Row>
                 </div>
             </Container>
+
+            {/* Cards met Cargobike modellen*/}
+            <SaleModels />
+    
 
         </div>
     )
