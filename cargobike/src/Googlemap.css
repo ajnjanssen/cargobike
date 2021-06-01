@@ -1,6 +1,12 @@
 .map{
+<<<<<<< Updated upstream
     z-index: -10;
     position: absolute;
     margin-top: -50vh;
     height: 10vh;
+=======
+    width: 100vw;
+    height: 50vh;
+    z-index: -10;
+>>>>>>> Stashed changes
 }
