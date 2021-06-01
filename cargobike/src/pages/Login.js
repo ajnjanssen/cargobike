@@ -1,5 +1,5 @@
 import "../Registration.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { auth } from "../components/firebase/Firebase";
 
 import Avatar from "@material-ui/core/Avatar";
@@ -18,20 +18,13 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import { withRouter } from "react-router-dom"; // <--- import `withRouter`. We will use this in the bottom of our file.
 import { useHistory } from "react-router";
-import { Snackbar } from "@material-ui/core";
-import styled from "styled-components";
 
 import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import PhoneIcon from "@material-ui/icons/Phone";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import PersonPinIcon from "@material-ui/icons/PersonPin";
-import HelpIcon from "@material-ui/icons/Help";
-import ShoppingBasket from "@material-ui/icons/ShoppingBasket";
-import ThumbDown from "@material-ui/icons/ThumbDown";
-import ThumbUp from "@material-ui/icons/ThumbUp";
+
+import lottie from "lottie-web";
 
 function Copyright() {
   return (
@@ -121,13 +114,9 @@ function Login() {
   const [username] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const classes = useStyles();
-
   const history = useHistory();
-
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -152,6 +141,43 @@ function Login() {
       unsubscribe();
     };
   }, [user, username]);
+
+  const container = useRef(null);
+  const container1 = useRef(null);
+  const container2 = useRef(null);
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: container.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      aspectRatio: 2,
+      animationData: require("../img/lottie/man.json"),
+    });
+  });
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: container1.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      aspectRatio: 1,
+      animationData: require("../img/lottie/deliver.json"),
+    });
+  });
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: container2.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      aspectRatio: 1,
+      animationData: require("../img/lottie/mechanic.json"),
+    });
+  });
 
   const signIn = (event) => {
     event.preventDefault();
@@ -191,12 +217,9 @@ function Login() {
               </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
-              <Avatar className={classes.avatar}>
-                <LockOutlinedIcon />
-              </Avatar>
-              <Typography component="h1" variant="h5">
-                Log In
-              </Typography>
+              <div className="lottieContainer">
+                <div className="container" ref={container}></div>
+              </div>
               <form className={classes.form} noValidate>
                 <TextField
                   variant="outlined"
@@ -255,11 +278,137 @@ function Login() {
                 </Box>
               </form>
             </TabPanel>
+
+
+
             <TabPanel value={value} index={1}>
-              Item Two
+              <div className="lottieContainer">
+                <div className="container1" ref={container1}></div>
+              </div>
+
+              <form className={classes.form} noValidate>
+                <TextField
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Adres"
+                  name="email"
+                  autoComplete="email"
+                  autoFocus
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <TextField
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  fullWidth
+                  name="password"
+                  label="Wachtwoord"
+                  type="password"
+                  id="password"
+                  autoComplete="current-password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <FormControlLabel
+                  control={<Checkbox value="remember" color="primary" />}
+                  label="Ingelogd blijven"
+                />
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  color="primary"
+                  className={classes.submit}
+                  onClick={signIn}
+                >
+                  Inloggen
+                </Button>
+                <Grid container>
+                  <Grid item xs>
+                    <Link href="#" variant="body2">
+                      Wachtwoord vergeten?
+                    </Link>
+                  </Grid>
+                  <Grid item>
+                    <Link href="#" onClick={handleClick} variant="body2">
+                      {"Nog geen account? Registreer nu!"}
+                    </Link>
+                  </Grid>
+                </Grid>
+                <Box mt={5}>
+                  <Copyright />
+                </Box>
+              </form>
             </TabPanel>
+
+
+
             <TabPanel value={value} index={2}>
-            <iframe src="https://lottiefiles.com/iframe/22620-store"></iframe>
+            <div className="lottieContainer">
+              <div className="container2" ref={container2}></div>
+              </div>
+
+              <form className={classes.form} noValidate>
+                <TextField
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Adres"
+                  name="email"
+                  autoComplete="email"
+                  autoFocus
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <TextField
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  fullWidth
+                  name="password"
+                  label="Wachtwoord"
+                  type="password"
+                  id="password"
+                  autoComplete="current-password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <FormControlLabel
+                  control={<Checkbox value="remember" color="primary" />}
+                  label="Ingelogd blijven"
+                />
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  color="primary"
+                  className={classes.submit}
+                  onClick={signIn}
+                >
+                  Inloggen
+                </Button>
+                <Grid container>
+                  <Grid item xs>
+                    <Link href="#" variant="body2">
+                      Wachtwoord vergeten?
+                    </Link>
+                  </Grid>
+                  <Grid item>
+                    <Link href="#" onClick={handleClick} variant="body2">
+                      {"Nog geen account? Registreer nu!"}
+                    </Link>
+                  </Grid>
+                </Grid>
+                <Box mt={5}>
+                  <Copyright />
+                </Box>
+              </form>
             </TabPanel>
           </div>
         </Grid>

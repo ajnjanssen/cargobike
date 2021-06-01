@@ -24,3 +24,25 @@
 .regBlock{
     padding-bottom:15px;
 }
+
+.lottieContainer{
+    width:10vw;
+    /* margin-left:240px;
+    margin-right:auto;
+    display:flex;
+    align-items:center; */
+}
+.container{
+    margin-right:auto;
+    /* margin-left:10vw; */
+    /* display:flex; */
+    align-items:center; 
+}
+
+.container1{
+    margin-right:auto;
+    margin-left:auto;
+    
+    display:flex;
+    align-items:center; 
+}
