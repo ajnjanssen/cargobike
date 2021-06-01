@@ -27,6 +27,8 @@ import MonOnboarding1 from './pages/onboarding/MonOnboarding-1';
 // import Monteur schermen from './src/pages'
 import MonCargobike from './pages/MonCargobike';
 import MonDashboard from './pages/MonDashboard';
+import MonHalte from './pages/MonHalte';
+import MonCbOverzicht from './pages/MonCbOverzicht';
 
 import OndCbWijzigen from './pages/OndCbWijzigen';
 import OndSend from './pages/OndSend';
@@ -86,6 +88,9 @@ function App() {
             <Route path='/UserInformation' exact component={UserInformation}/>
             <Route path='/UserInformationData' exact component={UserInformationData}/>
             <Route path='/OndCbWijzigen' exact component={OndCbWijzigen}/>
+
+            <Route path='/Test' exact component={MonHalte}/>
+            <Route path='/Test2' exact component={MonCbOverzicht}/>
         </Switch>
       </Router>
       {/* <OndDashboard /> */}

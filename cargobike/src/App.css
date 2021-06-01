@@ -53,4 +53,7 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  /* width: 400px; */
+  width:100%;
+  overflow-x:hidden;
 }
