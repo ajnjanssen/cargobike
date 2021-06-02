@@ -26,6 +26,8 @@ import MonOnboarding1 from './pages/onboarding/MonOnboarding-1';
 
 // import Monteur schermen from './src/pages'
 import MonCargobike from './pages/MonCargobike';
+// MonCargobikeBroken is a temporary fix until it's data is stored
+import MonCargobikeBroken from './pages/MonCargobikeBroken';
 import MonDashboard from './pages/MonDashboard';
 import MonHalte from './pages/MonHalte';
 import MonCbOverzicht from './pages/MonCbOverzicht';
@@ -84,6 +86,7 @@ function App() {
             {/* Start monteur scherm routes */}
               <Route path='/MonDashboard' exact component={MonDashboard}/>
               <Route path='/MonCargobike' exact component={MonCargobike}/>
+              <Route path='/MonCargobikeBroken' exact component={MonCargobikeBroken}/>
             {/* End monteur scherm routes */}
             <Route path='/UserInformation' exact component={UserInformation}/>
             <Route path='/UserInformationData' exact component={UserInformationData}/>

@@ -21,11 +21,11 @@ import PhoneForwardedIcon from '@material-ui/icons/PhoneForwarded';
 var cargobikeId = 12;
 var cargobikeSoort = 'Standaard Cargobike';
 var cargobikeStatus = 'C2';
-var CargobikeStatus = 6;
+var CargobikeStatus = 0;
 
 const ButtonContainer = styled.div`
-    margin:16px;
-    text-align: right;
+margin:16px;
+text-align: right;
 `
 const ContentBox_h1 = styled.h1`
     color: #88C053;
@@ -42,7 +42,6 @@ function CargobikePage() {
 
     return (
         <div className="MonCbOverzicht">
-                   <GoogleMap locationMarkerlat={ halteLat } locationMarkerlng= { halteLen }/>
         <Container>
             {/* Dashboard greeting */}
             <Row style={{paddingLeft:14}}>
@@ -52,13 +51,13 @@ function CargobikePage() {
             </Row>
             <Row style={{padding: 16}}>
                 <Col xs={12} md={8} >
-                    <h1 className="Dashgreeting">Nummer 3 - Online</h1>
-                    <h2 className="MonDashgreeting">Standaard Cargobike - C8</h2>
+                    <h1 className="Dashgreeting">Nummer 12 - Repair</h1>
+                    <h2 className="MonDashgreeting">Standaard Cargobike - C1</h2>
                 </Col>
             </Row>
             {/* List */} 
             { CargobikeStatus < 2 ? <CargoPicturesCard/> : ""}
-            <div className="contentbox_light" >
+            <div className="contentbox_light">
                 <Row>
                     <Col xs={12} md={6} >
                         <h1 className="content_light">Cargobike ontgrendelen</h1>        
@@ -66,20 +65,20 @@ function CargobikePage() {
                 </Row>
                 <Row>
                     <Col xs={12} md={12} >
-                        <CbStatCard nr="14" afstand="20" />
+                        <CbStatCard nr="12" afstand="20" />
                     </Col>
                 </Row>
             </div>
+            <ButtonContainer>
+            <a href="https://maps.google.com/?q=53.2109719,6.5619039">
+                <Button className="location_button">
+                    Ga naar locatie <ArrowForwardIcon/>
+                </Button>
+            </a>
+        </ButtonContainer>
             <div>
-                <ButtonContainer>
-                    <a href="https://maps.google.com/?q=53.2109719,6.5619039">
-                        <Button className="location_button">
-                            Ga naar locatie <ArrowForwardIcon/>
-                        </Button>
-                    </a>
-                </ButtonContainer>
-            </div>
             <CargoLogCard/>
+        </div>
         </Container>
         <Container>
                     <Button>

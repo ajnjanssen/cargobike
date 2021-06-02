@@ -7,13 +7,15 @@
 }
 
 h1.Dashgreeting{
-    color: white;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 30px;
+    color: white;
 }
 
-h2.Dashgreeting{
-    font-weight: 200;
+h2.Dashgreeting, h2.MonDashgreeting{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     font-size: 24px;
     color: white;
 }
@@ -29,10 +31,24 @@ h2.Dashgreeting{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
+.contentbox_light{
+    background-color: white;
+    border-radius: 15px;
+    width: 331px;
+    margin: auto;
+    padding: 16px;
+}
+
 h1.content{
     color: #88C053;
     font-size: 24px;
     font-weight: 200;
+}
+
+h1.content_light{
+    color: #96cc63;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .cb_open{
@@ -60,4 +76,16 @@ h1.content{
     padding: 15px;
     font-weight: 400;
     color: #838383;
+}
+
+button.location_button{
+    border-radius: 6px;
+    background-color: #3F51B8;
+    color:white;
+    padding: 10px 22px;
+    text-transform: lowercase;
+}
+
+button.location_button:hover{
+    background-color: #3445a3;
 }
