@@ -27,6 +27,7 @@
 
 .lottieContainer{
     width:10vw;
+    width:350px;
     /* margin-left:240px;
     margin-right:auto;
     display:flex;
@@ -36,13 +37,14 @@
     margin-right:auto;
     /* margin-left:10vw; */
     /* display:flex; */
+    width:350px;
     align-items:center; 
 }
 
 .container1{
     margin-right:auto;
     margin-left:auto;
-    
+    width:350px;
     display:flex;
     align-items:center; 
 }
