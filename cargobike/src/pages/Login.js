@@ -153,9 +153,9 @@ function Login() {
       loop: true,
       autoplay: true,
       aspectRatio: 2,
-      animationData: require("../img/lottie/man.json"),
+      animationData: require("../img/lottie/deliver.json"),
     });
-  });
+  }, []);
 
   useEffect(() => {
     lottie.loadAnimation({
@@ -164,7 +164,7 @@ function Login() {
       loop: true,
       autoplay: true,
       aspectRatio: 1,
-      animationData: require("../img/lottie/deliver.json"),
+      animationData: require("../img/lottie/man.json"),
     });
   });
 
@@ -188,6 +188,14 @@ function Login() {
     );
     history.push("/OndDashboard");
   };
+
+  const signInBezorger = () => {
+    history.push("/BezDashboard");
+  }
+  
+  const signInMonteur = () => {
+    history.push("/MonDashboard");
+  }
 
   const [state, setState] = React.useState({
     open: false,
@@ -323,7 +331,7 @@ function Login() {
                   variant="contained"
                   color="primary"
                   className={classes.submit}
-                  onClick={signIn}
+                  onClick={signInBezorger}
                 >
                   Inloggen
                 </Button>
@@ -389,7 +397,7 @@ function Login() {
                   variant="contained"
                   color="primary"
                   className={classes.submit}
-                  onClick={signIn}
+                  onClick={signInMonteur}
                 >
                   Inloggen
                 </Button>
