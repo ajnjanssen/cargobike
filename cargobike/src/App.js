@@ -35,6 +35,8 @@ import OndSend from './pages/OndSend';
 import UserInformation from './pages/UserInformation';
 import UserInformationData from './pages/UserInformationData';
 
+import MonKapotteCbMap from './pages/MonKapotteCbMap';
+
 function App() {
 
   // states are being set to show the header and navbar components
@@ -89,8 +91,7 @@ function App() {
             <Route path='/UserInformationData' exact component={UserInformationData}/>
             <Route path='/OndCbWijzigen' exact component={OndCbWijzigen}/>
 
-            <Route path='/Test' exact component={MonHalte}/>
-            <Route path='/Test2' exact component={MonCbOverzicht}/>
+            <Route path='/Test' exact component={MonKapotteCbMap}/>
         </Switch>
       </Router>
       {/* <OndDashboard /> */}

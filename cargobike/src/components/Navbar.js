@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 import CloseIcon from "@material-ui/icons/Close";
 
-
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);

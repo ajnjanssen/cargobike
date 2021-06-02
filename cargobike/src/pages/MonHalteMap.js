@@ -49,8 +49,7 @@ export default function MonHalteMap(){
                 <p>4 van de 6 plekken bezet</p>
             </Contentbox>
         </Container>
-        <GoogleMap locationMarkerlat={ halteLat } locationMarkerlng= { halteLen }/>
-
+        <GoogleMap styleclassname = {"MonHalteMap"} locationMarkerlat={ halteLat } locationMarkerlng= { halteLen }/>
         </>
     )
 }

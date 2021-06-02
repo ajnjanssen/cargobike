@@ -3,6 +3,7 @@ import {Map, GoogleApiWrapper} from 'google-maps-react';
 import GoogleMapsCustomMarker from './GoogleMapsCustomMarker';
 import '../Googlemap.css';
 
+
 //Export a childclass of parentclass 'component'
 export class MapContainer extends Component {
     state = {
@@ -14,13 +15,14 @@ export class MapContainer extends Component {
         markerLocation: {
         lat: this.props.locationMarkerlat,
         lng: this.props.locationMarkerlng,
-        }
+        },
+        styleClass: this.props.styleclassname,
     }
 
     render() {
 
     return( 
-        <Map className="map"
+        <Map className={this.state.styleClass}
             google={this.props.google}
             initialCenter={{
                 lat: this.state.mapCenter.lat,
@@ -31,6 +33,7 @@ export class MapContainer extends Component {
                 lng: this.state.mapCenter.lng,
             }}
             zoom={12}
+            mapTypeControl = {false}
         >
             {/* P+R Kardinge 
             <GoogleMapsCustomMarker
