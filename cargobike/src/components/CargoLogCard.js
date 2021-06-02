@@ -89,11 +89,11 @@ export default function CargoLogCard() {
                   </Grid>
                   <Grid item xs={11} >
                     <Typography variant="body2">
-                    Nieuwe band besteld voor locatie 2.b. Hierop
-                    wachten en alvast de accu aan het opladen.
+                    Zojuist het reparatie verzoek gekregen en naar
+het probleem gekeken, dit is een kromme band.
                     </Typography>
                     <Typography variant="body2" style={{color:'grey'}}>
-                  06.40 | 31-3-2021 | C2 - wachten op onderdelen
+                  06.16 | 31-3-2021 | C1 - inspectie
                   </Typography>
                   </Grid>
                 </Grid>
