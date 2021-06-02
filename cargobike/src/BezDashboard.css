@@ -31,7 +31,35 @@
     border-radius: 20px;
     width: 240px;
     background-color: white;
+    margin-top: -20px;
+    min-height: 250px;
+}
+
+.Card_agenda_Ond {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    width: 240px;
+    background-color: white;
     margin-top: 20px;
+}
+
+.Card_agenda_mijncargo {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    width: 240px;
+    background-color: white;
+    margin-top: 20px;
+    height: 240px;
+}
+
+.iEqpqd {
+    width: 93%!important;
+    margin-left: 10px;
+    margin-bottom: -20px;
 }
 
 .LocSize{
@@ -49,4 +77,49 @@
     font-size: 26px;
     font-weight: 600;
     margin-left: 20px;
+}
+
+.Card_Under_Title {
+    margin-top: 0px;
+}
+
+.Agenda_punt {
+    margin-bottom: 18px;
+}
+
+.RecentActivity {
+    margin-left: 20px;
+    color: white;
+    font-weight: 600;
+    margin-top: -50px;
+}
+
+.RecentActivity_Desc {
+    margin-left: 42px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.RecentActivity2 {
+    margin-left: 20px;
+    color: white;
+    font-weight: 600;
+    margin-top: -35px;
+}
+
+.RecentActivity_Desc2 {
+    margin-left: 42px;
+    color: white;
+    margin-bottom: 17px;
+}
+
+.Card_title_Bez {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: #838383;
+}
+
+.MuiSvgIcon-root {
+    margin-right: 7px;
 }

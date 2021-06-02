@@ -132,3 +132,7 @@
     margin-bottom: 0;
     margin-top: 5px;
 }
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedSecondary {
+    background-color: #796FF6;
+}

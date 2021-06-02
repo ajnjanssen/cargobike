@@ -5,11 +5,13 @@ import React, { useState } from 'react'
 import CurrentRoute from '../components/CurrentRoute';
 import SaleModels from '../components/SaleModels';
 import DashboardGreeting from '../components/user/DashboardGreeting';
+import CurrentAgenda from '../components/employee/CurrentAgenda';
 import { Button } from '@material-ui/core';
 import { Row, Col } from 'react-bootstrap';
 import { useHistory } from 'react-router';
+import { Container } from 'react-bootstrap';
 
-
+import ph_img from "../img/Placeholder.png";
 
 import Dialog from '@material-ui/core/Dialog';
 
@@ -24,6 +26,19 @@ import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 
 import styled from "styled-components";
+
+
+
+//Components
+import GoogleMap from '../components/GoogleMap';
+import CbStatCard from '../components/CbStatCard';
+import OnderdeelStatus from '../components/OnderdeelStatus';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import PhoneForwardedIcon from '@material-ui/icons/PhoneForwarded';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
+
+
 
 const AddbuttonReservering = styled.div`
     position: fixed;
@@ -101,11 +116,11 @@ const MakeSendOrder = styled.div`
     /* flex-wrap: wrap; */
     /* justify-content:center; */
     /* align-items:center; */
-    border-radius:25px;
+    border-radius:35px;
     margin-top:10px;
     margin-bottom: 30px;
     width:100%;
-    height:420px;
+    height:430px;
     margin-left:25px;
     background:white;
     overflow: hidden;
@@ -141,7 +156,10 @@ const MakeSendOrder = styled.div`
         letter-spacing: inherit;
         animation-duration: 10ms;
         -webkit-tap-highlight-color: transparent;
-    }
+
+    } 
+ 
+
 `;
 
 const TimePicker = styled.div`
@@ -172,6 +190,85 @@ const ButtonContainer = styled.div`
     padding-left:25px;
     margin-top:20px;
 `
+
+const Scrollbar = styled.div`
+display: flex;
+overflow-x: scroll;
+`
+
+const Scrollbar_item = styled.div`
+    margin: 20px;
+`
+
+
+const Contentbox = styled.div`
+    margin-top: 5vh;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    color: black;
+`
+
+const ContentBox_h1 = styled.h1`
+    color: #88C053;
+    font-size: 20px;
+    font-weight: 600;
+`
+
+const ContentBox_p = styled.p`
+    color: #838383;
+    font-weight: 600;
+    font-size: 14;
+    margin: 0;
+    padding: 0;
+`
+
+const ContentBottom = styled.div`
+    margin-top: -3vh;
+    background-color: white;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: black;
+`
+
+
+const Info_box = styled.div`
+    background-color: #F5FAF1;
+    border-radius: 13px;
+    padding: 9px;
+    width: 5.7em;
+    overflow: hidden;
+    margin-left: 25px;
+    margin-bottom: 14px;
+    margin-top: 6px;
+    height: 63px;
+`
+const Info_label = styled.p`
+    color: #838383;
+    font-weight: 600;
+    font-size: 18;
+    margin: 0px;
+    margin-left: 0px;
+`
+
+const Info_data = styled.p`
+    color: #88C053;
+    font-weight: 400;
+    font-size: 16;
+    margin: 0px;
+`
+
+const Info_image = styled.img`
+    width: 100%;
+`
+
+
 
 function OndDashboard() {
     const history = useHistory();
@@ -341,7 +438,7 @@ function OndDashboard() {
             </TimePicker>
             <ButtonContainer>
 
-                <Button onClick={addNewReservation}>
+                <Button onClick={addNewReservation} variant="contained" min-width="300px" color="secondary">
                             Deze zending reserveren
                 </Button>
             </ButtonContainer>
@@ -352,12 +449,108 @@ function OndDashboard() {
 
             {/* Dashboard begroeting voor de gebruiker met reserveringen */}
             <DashboardGreeting />
+
+            <Col xs={12} md={8}>
+              <h1 className="RecentActivity"><ArrowForwardIosIcon style={{ fontSize: 14, color:'white' }} />Bezorgroute voor 23-10-25, 11:15 Sontplein</h1>
+              <h2 className="RecentActivity_Desc">Route 54 pakketten</h2>
+            </Col>
+
+            <Col xs={12} md={8}>
+              <h1 className="RecentActivity2"><ArrowForwardIosIcon style={{ fontSize: 14, color:'white' }} />Bezorgroute voor 18-09-25, 13:55 Zernike</h1>
+              <h2 className="RecentActivity_Desc2">Route 31 pakketten</h2>
+            </Col>
         
             {/* Card met Actuele route */}
              <CurrentRoute />
         
-            {/* Cards met Cargobike modellen*/}
-            <SaleModels />
+             <Container className="Title_dash">
+                <Row>
+                    <Col xs={12} md={8}>
+                        <h1 className="BezorgerTitles">Huur een Cargobike</h1>
+                    </Col>
+                </Row>
+            </Container>
+
+             <ContentBottom>
+
+            <Scrollbar>
+                <Scrollbar_item>
+                <div className="Card_agenda box">
+                        <Row>
+                            <Col xs={10}>
+                                <h1 className="Card_title_Cargobike">Cargobike</h1>
+                                <h2 className="Card_Under_Title">Standaard</h2>
+                            </Col>
+
+                        <Row>
+                            <Info_box>
+                             <Info_label>Radius</Info_label>
+                                <Info_data>40 km</Info_data>
+                            </Info_box>
+                            <Info_box>
+                                    <Info_label>Capaciteit</Info_label>
+                                    <Info_data>120 Liter</Info_data>
+                                </Info_box>
+                            <Info_image src={ph_img}/>
+                        </Row>
+
+                        </Row>
+                    </div>
+                </Scrollbar_item>
+
+                <Scrollbar_item>
+                <div className="Card_agenda box">
+                        <Row>
+                            <Col xs={10}>
+                                <h1 className="Card_title_Cargobike">Cargobike</h1>
+                                <h2 className="Card_Under_Title">Deluxe</h2>
+                            </Col>
+
+                        <Row>
+                            <Info_box>
+                             <Info_label>Radius</Info_label>
+                                <Info_data>40 km</Info_data>
+                            </Info_box>
+                            <Info_box>
+                                    <Info_label>Capaciteit</Info_label>
+                                    <Info_data>120 Liter</Info_data>
+                                </Info_box>
+                            <Info_image src={ph_img}/>
+                        </Row>
+
+                        </Row>
+                    </div>
+                </Scrollbar_item>
+
+                <Scrollbar_item>
+                <div className="Card_agenda box">
+                        <Row>
+                            <Col xs={10}>
+                                <h1 className="Card_title_Cargobike">Cargobike</h1>
+                                <h2 className="Card_Under_Title">Extended</h2>
+                            </Col>
+
+                        <Row>
+                            <Info_box>
+                             <Info_label>Radius</Info_label>
+                                <Info_data>40 km</Info_data>
+                            </Info_box>
+                            <Info_box>
+                                    <Info_label>Capaciteit</Info_label>
+                                    <Info_data>120 Liter</Info_data>
+                                </Info_box>
+                            <Info_image src={ph_img}/>
+                        </Row>
+
+                        </Row>
+                    </div>
+                </Scrollbar_item>
+                
+
+            </Scrollbar>
+            
+
+            </ContentBottom>
 
         </div>  
     )
