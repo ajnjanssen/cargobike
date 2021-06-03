@@ -2,7 +2,7 @@
 import '../OndReservering.css';
 import React, { useState } from 'react'
 // import React, {useEffect, useState} from 'react'
-import CurrentRoute from '../components/CurrentRoute';
+import MonteurRoute from '../components/MonteurRoute';
 import SaleModels from '../components/SaleModels';
 import MonDashboardGreeting from '../components/user/MonDashboardGreeting';
 import { Button } from '@material-ui/core';
@@ -20,6 +20,10 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { InputLabel, FormControl, MenuItem, Select, TextField } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import { auth, db } from "../components/firebase/Firebase";
+
+import OnderdeelStatus from '../components/OnderdeelStatus';
+import CbStatCard from '../components/CbStatCard';
+
 
 // import { db } from '../components/firebase/Firebase';
 
@@ -240,145 +244,22 @@ function OndDashboard() {
     return (
         
         <div className='OndDashboard'>
-            
-        <AddbuttonReservering>
-            <Fab color="primary" aria-label="add" onClick={handleClickOpen}>
-                <AddIcon />
-            </Fab>
-        </AddbuttonReservering>
-
-        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <Send__delivery>
-        <Row>
-
-          <MakeSendOrder>
-            <row>
-                <h1>Zending reserveren</h1>
-            </row>
-
-            <Row style={{paddingLeft: 40, marginBottom: '30px', width: '100%'}}>
-            <TextField 
-            id="standard-basic" 
-            label="Adres"
-            value={adres}
-            onChange={(e) => setAdres(e.target.value)} 
-            />
-            </Row>
-
-            <Row style={{paddingLeft: 40, marginBottom: '30px', width: '100%'}}>
-            <TextField 
-            id="standard-basic" 
-            label="Postcode" 
-            value={postcode}
-            onChange={(e) => setPostcode(e.target.value)} 
-            />
-            </Row>
-
-            <Row style={{paddingLeft: 40}} className="date">
-            <form className={classes.container} noValidate>
-
-                <TextField
-                    id="date"
-                    // label="Birthday"
-                    type="date"
-                    defaultValue="2017-05-24"
-                    className={classes.textField}
-                    value={datum}
-                    onChange={(e) => setDatum(e.target.value)}
-                    InputLabelProps={{
-                    shrink: true,
-                    }}
-                />
-                </form>
-            </Row>
-
-            <TimePicker>       
-            <Row>
-                <Col>
-                <TextCol>
-                <h3>Moment</h3>
-                </TextCol>
-                </Col>
-
-                <Col>
-                <FormControl className={classes.formControl}>
-                {/* <InputLabel id="label">Tijdstip</InputLabel> */}
-                    <Select 
-                    placeholder="test"
-                    labelId="label"
-                    id="select" 
-                    value={select} 
-                    displayEmpty
-                    onChange={
-                        (e) => setSelect(e.target.value)
-                    }  
-                    onClick={
-                        (e) => setTijd(e.target.value)
-                    }  
-                    >
-                    <MenuItem disabled value="">Selecteer een tijd</MenuItem>
-                    <MenuItem value='6:30 - 8:00' onChange={(e) => setType(e.target.value)}><b>Ochtend - </b> 6:30 - 8:00</MenuItem>
-                    <MenuItem value="11:30 - 1:30"><b>Middag - </b> 11:30 - 1:30</MenuItem>
-                    <MenuItem value="3:30 - 5:00"><b>Eind middag - </b> 3:30 - 5:00</MenuItem>
-                    <MenuItem value="6:00 - 7:30"><b>Avond - </b> 6:00 - 7:30 </MenuItem>
-                </Select>
-                </FormControl>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                <TextCol2>
-                <h3>Type cargobike</h3>
-                </TextCol2>
-                </Col>
-
-                <Col>
-                <FormControl className={classes.formControl}>
-                <InputLabel id="label"> </InputLabel>
-                    <Select 
-                    labelId="label" 
-                    id="select" 
-                    value={select2}
-                    displayEmpty 
-                    onChange={(e) => setSelect2(e.target.value)}
-                    onClick={
-                        (e) => setType(e.target.value)
-                    }  >
-                    <MenuItem disabled value="">Selecteer type</MenuItem>
-                    <MenuItem value="Cargobike standard" onChange={(e) => setType(e.target.value)}><b>Cargobike Standaard</b></MenuItem>
-                    <MenuItem value="Cargobike Deluxe" onChange={(e) => setType(e.target.value)}><b>Cargobike Deluxe</b></MenuItem>
-                    
-                </Select>
-                </FormControl>
-                </Col>
-            </Row>
-            </TimePicker>
-            <ButtonContainer>
-
-                <Button onClick={addNewReservation}>
-                            Deze zending reserveren
-                </Button>
-            </ButtonContainer>
-          </MakeSendOrder>
-        </Row>
-      </Send__delivery>
-      </Dialog>
-
             {/* Dashboard begroeting voor de gebruiker met reserveringen */}
             <MonDashboardGreeting />
 
             <Col xs={12} md={8}>
-              <h1 className="RecentActivity"><ArrowForwardIosIcon style={{ fontSize: 14, color:'white' }} />Bezorgroute voor 23-10-25, 11:15 Sontplein</h1>
-              <h2 className="RecentActivity_Desc">Route 54 pakketten</h2>
+              <h1 className="RecentActivity"><ArrowForwardIosIcon style={{ fontSize: 14, color:'white' }} />Er zijn momenteel geen spoedgevallen</h1>
+              <h2 className="RecentActivity_Desc">Laatst bijgewerkt: 36 sec. geleden</h2>
             </Col>
 
 
         
-            {/* Card met Actuele route */}
-             <CurrentRoute />
+            {/* Card met monteur route */}
+             <MonteurRoute />
         
             {/* Cards met Cargobike modellen*/}
-            <SaleModels />
+
+            
 
         </div>  
     )
