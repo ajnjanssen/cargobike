@@ -6,9 +6,6 @@ import styled from 'styled-components';
 import SearchIcon from '@material-ui/icons/Search';
 import IconButton from '@material-ui/core/IconButton';
 
-//Place green icon over nav_icon
-import { CgMenuLeft } from "react-icons/cg";
-
 const CbSearchBtn = withStyles({
     root: {
       backgroundColor: '#F5FAF1',
@@ -49,20 +46,6 @@ const Contentbox = styled.div`
     float: right;
     z-radius: 12;
 `
-
-const Coloured_navbaricon = styled.div`
-    margin-left: 1.75rem;
-    font-size: 2rem;
-    color: #88C053;
-    background-color: black,
-    z-index: -30;
-    position:absolute;
-    margin-bottom: -120px;
-    margin-top: 10px;
-    height: 2rem;
-    width: 2em;
-`
-
 export default function MonKapotteCbMap(){
     return(
         <div className="MonKapotteCbMap">
@@ -71,7 +54,6 @@ export default function MonKapotteCbMap(){
                 <CbSearchBtn><SearchIcon/></CbSearchBtn>
             </Contentbox>
             <GoogleMap styleclassname = {"MonHaltesMap"}/>
-
         </div>
     )
 }

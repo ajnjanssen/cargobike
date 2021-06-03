@@ -1,7 +1,8 @@
 import React, {Component} from 'react'; 
-import {Map, GoogleApiWrapper} from 'google-maps-react';
+import {Map, GoogleApiWrapper, Marker} from 'google-maps-react';
 import GoogleMapsCustomMarker from './GoogleMapsCustomMarker';
 import '../Googlemap.css';
+
 
 
 //Export a childclass of parentclass 'component'
@@ -17,11 +18,14 @@ export class MapContainer extends Component {
         lng: this.props.locationMarkerlng,
         },
         styleClass: this.props.styleclassname,
+
     }
 
     render() {
 
     return( 
+        <>
+
         <Map className={this.state.styleClass}
             google={this.props.google}
             initialCenter={{
@@ -35,6 +39,14 @@ export class MapContainer extends Component {
             zoom={12}
             mapTypeControl = {false}
         >
+
+            {/* Test marker 
+            <GoogleMapsCustomMarker
+                foo="bar"
+                name={'halte'}
+                position={{lat: this.state.busted_cb[0][3], lng: this.state.busted_cb[0][4] }} 
+            />*/}
+            
             {/* P+R Kardinge 
             <GoogleMapsCustomMarker
                 foo="bar"
@@ -51,9 +63,9 @@ export class MapContainer extends Component {
 
             {/* P+R Hoofdstation */}
             <GoogleMapsCustomMarker
-            foo="bla"
-            name={'halte'}
-            position={{lat: 53.211712978442634, lng: 6.561086218719561 }} 
+                foo="bla"
+                name={'halte'}
+                position={{lat: 53.211712978442634, lng: 6.561086218719561 }} 
             />
 
             {/* P+R Euroborg 
@@ -70,6 +82,7 @@ export class MapContainer extends Component {
             position={{lat: 53.2448297264615, lng: 6.528572957354985 }} 
             />*/}
             </Map>
+        </>
     );
     }
 }

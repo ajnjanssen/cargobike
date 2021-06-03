@@ -44,7 +44,7 @@ export default function CbStatcard(props){
     const [cbLockState, setcbLockState] = useState({checkedA: true,});
     const handleChange = (event) => {
         //Does not work consistently
-        if(cbLockState.checkedA == false){
+        if(cbLockState.checkedA === false){
             setStatus('Vergrendeld')
         }else{
             setStatus('Ontgrendeld')
