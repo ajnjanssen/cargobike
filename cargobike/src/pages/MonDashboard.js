@@ -1,8 +1,11 @@
 // css apart maken voor dit component
 import '../OndReservering.css';
 import React, { useState } from 'react'
+import styled from "styled-components";
+
 // import React, {useEffect, useState} from 'react'
 import MonteurRoute from '../components/MonteurRoute';
+import { Container } from 'react-bootstrap';
 import SaleModels from '../components/SaleModels';
 import MonDashboardGreeting from '../components/user/MonDashboardGreeting';
 import { Button } from '@material-ui/core';
@@ -11,26 +14,13 @@ import { useHistory } from 'react-router';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
 
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-
-import { InputLabel, FormControl, MenuItem, Select, TextField } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import { auth, db } from "../components/firebase/Firebase";
 
 import OnderdeelStatus from '../components/OnderdeelStatus';
-import CbStatCard from '../components/CbStatCard';
-
 
 // import { db } from '../components/firebase/Firebase';
 
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
-
-import styled from "styled-components";
 
 const AddbuttonReservering = styled.div`
     position: fixed;
@@ -43,6 +33,33 @@ const AddbuttonReservering = styled.div`
         background-color: #796ff6;
     }
 `;
+
+const ContentBottom = styled.div`
+    margin-top: 5vh;
+    background-color: white;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: black;
+`
+
+
+const Scrollbar_item = styled.div`
+    margin: 20px;
+`
+
+const Scrollbar = styled.div`
+display: flex;
+overflow-x: scroll;
+`
+
+const ContentBox_h1 = styled.h1`
+    color: #88C053;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 40px;
+`
 
 const useStyles = makeStyles({
     root: {
@@ -258,9 +275,17 @@ function OndDashboard() {
              <MonteurRoute />
         
             {/* Cards met Cargobike modellen*/}
+            <Container>
+                <ContentBox_h1>Bekijk status van Cargobikes</ContentBox_h1>
+            </Container>
 
-            
-
+            <Scrollbar>
+                <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
+                <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
+                <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
+                <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
+                <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
+            </Scrollbar>
         </div>  
     )
 }
