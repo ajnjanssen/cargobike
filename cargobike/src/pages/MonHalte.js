@@ -70,8 +70,8 @@ const ButtonContainer = styled.div`
 `
 
 const Scrollbar = styled.div`
-display: flex;
-overflow-x: scroll;
+    display: flex;
+    overflow-x: scroll;
 `
 
 const Scrollbar_item = styled.div`

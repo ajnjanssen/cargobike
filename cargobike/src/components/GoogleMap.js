@@ -3,11 +3,8 @@ import {Map, GoogleApiWrapper, Marker} from 'google-maps-react';
 import GoogleMapsCustomMarker from './GoogleMapsCustomMarker';
 import '../Googlemap.css';
 
-
-
-//Export a childclass of parentclass 'component'
 export class MapContainer extends Component {
-    //States declared here
+    //States go here
     state = {
         showingInfoWindow: false,
         mapCenter: {
@@ -23,8 +20,9 @@ export class MapContainer extends Component {
     }
 
     render() {
-
+    //Functions go here
     return( 
+        //View goes here
         <>
         <Map className={this.state.styleClass}
             google={this.props.google}
@@ -39,10 +37,15 @@ export class MapContainer extends Component {
             zoom={12}
             mapTypeControl = {false}
         >
+            {/* Render busted cargobikes */}
             {this.state.busted_cb.map((bike)=>
                 <GoogleMapsCustomMarker
                     id = {bike.id}
                     position={{lat: bike.lat, lng: bike.lng}}
+                    nr = {bike.nr}
+                    cond = {bike.conditie}
+                    rad = {bike.radius}
+                    type = {bike.type}
                 ></GoogleMapsCustomMarker>                
             )}
             
