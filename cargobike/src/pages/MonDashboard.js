@@ -20,7 +20,6 @@ import { auth, db } from "../components/firebase/Firebase";
 import CargobikeStatus from '../components/CargobikeStatusOne';
 import CargobikeStatusTwo from '../components/CargobikeStatusTwo';
 
-
 // import { db } from '../components/firebase/Firebase';
 
 

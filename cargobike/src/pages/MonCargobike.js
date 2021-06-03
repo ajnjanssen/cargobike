@@ -53,8 +53,8 @@ function CargobikePage() {
             </Row>
             <Row style={{padding: 16}}>
                 <Col xs={12} md={8} >
-                    <h1 className="Dashgreeting">Nummer 3 - Online</h1>
-                    <h2 className="MonDashgreeting">Standaard Cargobike - C2</h2>
+                    <h1 className="Dashgreeting"  style={{fontSize: 26}}>Nummer 3 - Online</h1>
+                    <h2 className="MonDashgreeting" style={{fontSize: 22}}>Standaard Cargobike - C2</h2>
                 </Col>
             </Row>
             {/* List */} 
