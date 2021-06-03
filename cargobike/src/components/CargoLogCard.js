@@ -51,11 +51,11 @@ export default function CargoLogCard() {
             <Grid item  xs={12}sm container>
               <Grid item xs={6} container direction="row">
                 <Grid item xs>
-                  <Typography gutterBottom variant="subtitle1" style={{color: '#96cc63', fontSize: 18, fontWeight: 500}}>
-                    Nr 3 - Reparatie
+                  <Typography gutterBottom variant="subtitle1" style={{color: '#96cc63', fontSize: 16, fontWeight: 400}}>
+                    NR 3 - Online
                   </Typography>
                   <Typography gutterBottom style={{fontSize: 14, marginTop: -6}}>
-                    LOGBOEK - Conditie 2
+                    LOGBOEK - Conditie C2
                   </Typography>
                 </Grid>
               </Grid>

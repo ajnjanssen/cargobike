@@ -46,14 +46,15 @@ function CargobikePage() {
         <Container>
             {/* Dashboard greeting */}
             <Row style={{paddingLeft:14}}>
-                <Col xs={12} md={12} >
+                <Col xs={12} md={12} ><a href={'../MonDashboard'}>
                     <Button onclick="goBack()" style={{color:'white'}}><ArrowBackIcon/> Terug</Button>
+                    </a>
                 </Col>
             </Row>
             <Row style={{padding: 16}}>
                 <Col xs={12} md={8} >
                     <h1 className="Dashgreeting">Nummer 3 - Online</h1>
-                    <h2 className="MonDashgreeting">Standaard Cargobike - C8</h2>
+                    <h2 className="MonDashgreeting">Standaard Cargobike - C2</h2>
                 </Col>
             </Row>
             {/* List */} 

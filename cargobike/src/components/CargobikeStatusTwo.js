@@ -56,21 +56,23 @@ const Info_image = styled.img`
 export default function CargobikeStatusTwo(props){
     return(
         <div className="CargobikeStatus">  
+        <a href={'../MonCargobike'}>
             <Contentbox>
-                <ContentBox_h1>Nr 3 - Aanvraag</ContentBox_h1>
-                <ContentBox_h2>Hoi</ContentBox_h2>
+                <ContentBox_h1>Nr 3 - Online</ContentBox_h1>
+                <ContentBox_h2>Standaard Cargobike</ContentBox_h2>
                 <Row>
                     <Info_box>
-                        <Info_label>Aankomst</Info_label>
-                        <Info_data>2 dag(en)</Info_data>
+                        <Info_label>Radius</Info_label>
+                        <Info_data><strong>82%</strong> | 100%</Info_data>
                     </Info_box>
                     <Info_box>
-                        <Info_label>Prijs</Info_label>
-                        <Info_data>2 euro</Info_data>
+                        <Info_label>Conditie</Info_label>
+                        <Info_data>C2</Info_data>
                     </Info_box>
                     <Info_image src={ph_img}/>
                 </Row>
             </Contentbox>
+            </a>
         </div>
     )
 }

@@ -46,13 +46,15 @@ function CargobikePage() {
             {/* Dashboard greeting */}
             <Row style={{paddingLeft:14}}>
                 <Col xs={12} md={12} >
+                    <a href={'../MonDashboard'}>
                     <Button onclick="goBack()" style={{color:'white'}}><ArrowBackIcon/> Terug</Button>
+                    </a>
                 </Col>
             </Row>
             <Row style={{padding: 16}}>
                 <Col xs={12} md={8} >
-                    <h1 className="Dashgreeting">Nummer 12 - Repair</h1>
-                    <h2 className="MonDashgreeting">Standaard Cargobike - C1</h2>
+                    <h1 className="Dashgreeting" style={{fontSize: 26}}>Nummer 12 - Reparatie</h1>
+                    <h2 className="MonDashgreeting" style={{fontSize: 22}}>Standaard Cargobike - C1</h2>
                 </Col>
             </Row>
             {/* List */} 
