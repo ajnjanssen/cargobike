@@ -43,7 +43,7 @@
 .container1{
     margin-right:auto;
     margin-left:auto;
-    width:350px;
+    /* width:350px; */
     display:flex;
     align-items:center; 
 }

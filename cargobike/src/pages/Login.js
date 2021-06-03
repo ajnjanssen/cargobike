@@ -117,8 +117,26 @@ function Login() {
   const classes = useStyles();
   const history = useHistory();
   const [value, setValue] = React.useState(0);
+
+
+
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    if(newValue === 0){
+      laatAfbeeldingzien().destroy();
+      laatAfbeeldingzien();
+    }
+
+    if(newValue === 1){
+      laatAfbeeldingzien2().destroy();
+      laatAfbeeldingzien2();
+    }
+
+    if(newValue === 2){
+      laatAfbeeldingzien3().destroy();
+      laatAfbeeldingzien3();
+    }
   };
 
   useEffect(() => {
@@ -145,39 +163,71 @@ function Login() {
   const container = useRef(null);
   const container1 = useRef(null);
   const container2 = useRef(null);
+  
 
   useEffect(() => {
-    lottie.loadAnimation({
+  
+    laatAfbeeldingzien();
+      
+    
+  }, []);
+
+  const laatAfbeeldingzien = () => {
+    return lottie.loadAnimation({
       container: container.current,
       renderer: "svg",
       loop: true,
+      name: "bullshit",
       autoplay: true,
       aspectRatio: 2,
       animationData: require("../img/lottie/deliver.json"),
     });
-  }, []);
-
-  useEffect(() => {
-    lottie.loadAnimation({
+  }
+  const laatAfbeeldingzien2 = () => {
+    return lottie.loadAnimation({
       container: container1.current,
       renderer: "svg",
       loop: true,
+      name: "bullshit",
       autoplay: true,
-      aspectRatio: 1,
+      aspectRatio: 2,
       animationData: require("../img/lottie/man.json"),
     });
-  });
+  }
 
-  useEffect(() => {
-    lottie.loadAnimation({
+  const laatAfbeeldingzien3 = () => {
+    return lottie.loadAnimation({
       container: container2.current,
       renderer: "svg",
       loop: true,
+      name: "bullshit",
       autoplay: true,
-      aspectRatio: 1,
+      aspectRatio: 2,
       animationData: require("../img/lottie/mechanic.json"),
     });
-  });
+  }
+
+  // useEffect(() => {
+  //   lottie.loadAnimation({
+  //     container: container1.current,
+  //     renderer: "svg",
+  //     loop: true,
+  //     autoplay: true,
+  //     aspectRatio: 1,
+  //     animationData: require("../img/lottie/man.json"),
+  //   });
+  // });
+
+  // useEffect(() => {
+  //   lottie.loadAnimation({
+  //     container: container2.current,
+  //     renderer: "svg",
+  //     loop: true,
+  //     autoplay: true,
+  //     aspectRatio: 1,
+  //     animationData: require("../img/lottie/mechanic.json"),
+  //   });
+  // });
 
   const signIn = (event) => {
     event.preventDefault();
@@ -235,12 +285,13 @@ function Login() {
                   required
                   fullWidth
                   id="email"
-                  label="Email Adres"
+                  label="haaaaaaaaaaaaaaai"
                   name="email"
                   autoComplete="email"
                   autoFocus
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  
                 />
                 <TextField
                   variant="outlined"
@@ -291,6 +342,7 @@ function Login() {
 
             <TabPanel value={value} index={1}>
               <div className="lottieContainer">
+              {/* {laatAfbeeldingzien()} */}
                 <div className="container1" ref={container1}></div>
               </div>
 
