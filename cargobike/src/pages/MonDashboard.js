@@ -17,7 +17,9 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
 import { makeStyles } from '@material-ui/core/styles';
 import { auth, db } from "../components/firebase/Firebase";
 
-import OnderdeelStatus from '../components/OnderdeelStatus';
+import CargobikeStatus from '../components/CargobikeStatusOne';
+import CargobikeStatusTwo from '../components/CargobikeStatusTwo';
+
 
 // import { db } from '../components/firebase/Firebase';
 
@@ -280,11 +282,8 @@ function OndDashboard() {
             </Container>
 
             <Scrollbar>
-                <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
-                <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
-                <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
-                <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
-                <Scrollbar_item><OnderdeelStatus/></Scrollbar_item>
+                <Scrollbar_item><CargobikeStatus/></Scrollbar_item>
+                <Scrollbar_item><CargobikeStatusTwo/></Scrollbar_item>
             </Scrollbar>
         </div>  
     )
