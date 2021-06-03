@@ -25,7 +25,6 @@ export class MapContainer extends Component {
 
     return( 
         <>
-
         <Map className={this.state.styleClass}
             google={this.props.google}
             initialCenter={{
