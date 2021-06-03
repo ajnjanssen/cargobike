@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from "styled-components";
-import ph_img from "../img/Placeholder.png";
+import Monteur2_img from "../img/Monteur2.png";
 
 const Contentbox = styled.div`
     background-color: white;
@@ -69,7 +69,7 @@ export default function CargobikeStatusTwo(props){
                         <Info_label>Conditie</Info_label>
                         <Info_data>C2</Info_data>
                     </Info_box>
-                    <Info_image src={ph_img}/>
+                    <Info_image src={Monteur2_img}/>
                 </Row>
             </Contentbox>
             </a>
