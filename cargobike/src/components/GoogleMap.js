@@ -7,6 +7,7 @@ import '../Googlemap.css';
 
 //Export a childclass of parentclass 'component'
 export class MapContainer extends Component {
+    //States declared here
     state = {
         showingInfoWindow: false,
         mapCenter: {
@@ -17,8 +18,8 @@ export class MapContainer extends Component {
         lat: this.props.locationMarkerlat,
         lng: this.props.locationMarkerlng,
         },
-        styleClass: this.props.styleclassname,
-
+        styleClass: this.props.styleclassname || 'MonHalteMap',
+        busted_cb: this.props.busted_cb || [],
     }
 
     render() {
@@ -38,13 +39,12 @@ export class MapContainer extends Component {
             zoom={12}
             mapTypeControl = {false}
         >
-
-            {/* Test marker 
-            <GoogleMapsCustomMarker
-                foo="bar"
-                name={'halte'}
-                position={{lat: this.state.busted_cb[0][3], lng: this.state.busted_cb[0][4] }} 
-            />*/}
+            {this.state.busted_cb.map((bike)=>
+                <GoogleMapsCustomMarker
+                    id = {bike.id}
+                    position={{lat: bike.lat, lng: bike.lng}}
+                ></GoogleMapsCustomMarker>                
+            )}
             
             {/* P+R Kardinge 
             <GoogleMapsCustomMarker
