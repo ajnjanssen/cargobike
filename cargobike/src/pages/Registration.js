@@ -20,6 +20,9 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import Tab from '@material-ui/core/Tab';
 
+const event = new Event('showLogdOutHeader');
+window.dispatchEvent(event);
+
 function Registration() {
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");

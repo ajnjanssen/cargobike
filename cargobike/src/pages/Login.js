@@ -285,7 +285,7 @@ function Login() {
                   required
                   fullWidth
                   id="email"
-                  label="haaaaaaaaaaaaaaai"
+                  label="E-mailadres"
                   name="email"
                   autoComplete="email"
                   autoFocus
@@ -353,7 +353,7 @@ function Login() {
                   required
                   fullWidth
                   id="email"
-                  label="Email Adres"
+                  label="E-mailadres"
                   name="email"
                   autoComplete="email"
                   autoFocus
@@ -419,7 +419,7 @@ function Login() {
                   required
                   fullWidth
                   id="email"
-                  label="Email Adres"
+                  label="E-mailadres"
                   name="email"
                   autoComplete="email"
                   autoFocus
