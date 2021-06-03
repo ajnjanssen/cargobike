@@ -89,7 +89,6 @@ function Registration() {
   return (
     <div className="registration">
 
-
       <Container>
         <div>
           <Row>
