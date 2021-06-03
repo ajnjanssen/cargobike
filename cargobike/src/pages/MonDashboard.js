@@ -4,11 +4,12 @@ import React, { useState } from 'react'
 // import React, {useEffect, useState} from 'react'
 import CurrentRoute from '../components/CurrentRoute';
 import SaleModels from '../components/SaleModels';
-import DashboardGreeting from '../components/user/DashboardGreeting';
+import MonDashboardGreeting from '../components/user/MonDashboardGreeting';
 import { Button } from '@material-ui/core';
 import { Row, Col } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
 
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -364,7 +365,14 @@ function OndDashboard() {
       </Dialog>
 
             {/* Dashboard begroeting voor de gebruiker met reserveringen */}
-            <DashboardGreeting />
+            <MonDashboardGreeting />
+
+            <Col xs={12} md={8}>
+              <h1 className="RecentActivity"><ArrowForwardIosIcon style={{ fontSize: 14, color:'white' }} />Bezorgroute voor 23-10-25, 11:15 Sontplein</h1>
+              <h2 className="RecentActivity_Desc">Route 54 pakketten</h2>
+            </Col>
+
+
         
             {/* Card met Actuele route */}
              <CurrentRoute />

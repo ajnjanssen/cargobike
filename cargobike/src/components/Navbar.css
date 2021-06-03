@@ -125,6 +125,14 @@ li{
     color: white;
 }
 
+.Header_desc_greet {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 11px;
+    color: white;
+}
+
 .Dash_greet {
     margin-top: 80px;
 }

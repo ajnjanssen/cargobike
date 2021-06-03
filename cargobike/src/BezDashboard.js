@@ -146,6 +146,7 @@ function BezDashboard() {
 
             <DashboardGreeting/>
             
+            
             <Col xs={12} md={8}>
               <h1 className="RecentActivity"><ArrowForwardIosIcon style={{ fontSize: 14, color:'white' }} />Bezorgroute voor 23-10-25, 11:15 Sontplein</h1>
               <h2 className="RecentActivity_Desc">Route 54 pakketten</h2>
