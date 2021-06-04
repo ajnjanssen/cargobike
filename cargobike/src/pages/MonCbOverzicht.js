@@ -48,12 +48,14 @@ export default function MonCbOverzicht(){
                     </Row>
                     <Row>
                         <Col xs={12} md={12} >
-                            <CbStatCard nr="14" afstand="220" />
-                            <CbStatCard nr="42" afstand="899" />
-                            <CbStatCard nr="47" afstand="100" />
-                            <CbStatCard nr="23" afstand="230" />
-                            <CbStatCard nr="75" afstand="2500" />
-                            <CbStatCard nr="61" afstand="120" />
+                            <CbStatCard nr="1" afstand="220" />
+                            <CbStatCard nr="2" afstand="899" />
+                            <CbStatCard nr="3" afstand="100" />
+                            <CbStatCard nr="4" afstand="230" />
+                            <CbStatCard nr="5" afstand="2500" />
+                            <CbStatCard nr="6" afstand="120" />
+                            <CbStatCard nr="7" afstand="420" />
+                            <CbStatCard nr="8" afstand="890" />
                         </Col>
                     </Row>
                 </div>
