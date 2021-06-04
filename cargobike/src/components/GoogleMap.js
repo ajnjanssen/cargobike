@@ -1,10 +1,11 @@
 import React, {Component} from 'react'; 
-import {Map, GoogleApiWrapper} from 'google-maps-react';
+import {Map, GoogleApiWrapper, Marker} from 'google-maps-react';
 import GoogleMapsCustomMarker from './GoogleMapsCustomMarker';
+import GoogleMapsHalteMarker from './GoogleMapsHalteMarker';
 import '../Googlemap.css';
 
-//Export a childclass of parentclass 'component'
 export class MapContainer extends Component {
+    //States go here
     state = {
         showingInfoWindow: false,
         mapCenter: {
@@ -14,13 +15,18 @@ export class MapContainer extends Component {
         markerLocation: {
         lat: this.props.locationMarkerlat,
         lng: this.props.locationMarkerlng,
-        }
+        },
+        styleClass: this.props.styleclassname || 'MonHalteMap',
+        busted_cb: this.props.busted_cb || [],
+        haltes: this.props.haltes_locaties || [],
     }
 
     render() {
-
+    //Functions go here
     return( 
-        <Map className="map"
+        //View goes here
+        <>
+        <Map className={this.state.styleClass}
             google={this.props.google}
             initialCenter={{
                 lat: this.state.mapCenter.lat,
@@ -31,7 +37,29 @@ export class MapContainer extends Component {
                 lng: this.state.mapCenter.lng,
             }}
             zoom={12}
-        >
+            mapTypeControl = {false}
+        >   
+
+            {/* Render busted cargobikes */}
+            {this.state.busted_cb.map((bike)=>
+                <GoogleMapsCustomMarker
+                    id = {bike.id}
+                    position={{lat: bike.lat, lng: bike.lng}}
+                    nr = {bike.nr}
+                    cond = {bike.conditie}
+                    rad = {bike.radius}
+                    type = {bike.type}
+                ></GoogleMapsCustomMarker>                
+            )}
+
+            {/* Render haltes */}
+            {this.state.haltes.map((halte)=>
+                <GoogleMapsHalteMarker
+                    position={{lat: halte.lat, lng: halte.lng}}
+                />
+            )}
+            
+
             {/* P+R Kardinge 
             <GoogleMapsCustomMarker
                 foo="bar"
@@ -46,12 +74,12 @@ export class MapContainer extends Component {
             position={{lat: 53.19762858868361, lng: 6.513166262838857}} 
             />*/}
 
-            {/* P+R Hoofdstation */}
+            {/* P+R Hoofdstation 
             <GoogleMapsCustomMarker
-            foo="bla"
-            name={'halte'}
-            position={{lat: 53.211712978442634, lng: 6.561086218719561 }} 
-            />
+                foo="bla"
+                name={'halte'}
+                position={{lat: 53.211712978442634, lng: 6.561086218719561 }} 
+            />*/}
 
             {/* P+R Euroborg 
             <GoogleMapsCustomMarker
@@ -67,6 +95,7 @@ export class MapContainer extends Component {
             position={{lat: 53.2448297264615, lng: 6.528572957354985 }} 
             />*/}
             </Map>
+        </>
     );
     }
 }

@@ -6,7 +6,7 @@ import UpdateIcon from '@material-ui/icons/Update';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
 import RoomIcon from '@material-ui/icons/Room';
-import BrokenImageIcon from '@material-ui/icons/BrokenImage';
+import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 export const SidebarData = [
@@ -33,8 +33,8 @@ export const SidebarData = [
        cName: 'nav-text'
     },{
         title: 'Te repareren',
-        path: '/MonHaltekaart',
-        icon: <BrokenImageIcon/>,
+        path: '/MonKapotteCargobikes',
+        icon: <AssignmentTurnedInIcon/>,
         cName: 'nav-text'
      }, 
      //{

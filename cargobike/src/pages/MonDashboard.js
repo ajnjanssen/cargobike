@@ -12,7 +12,7 @@ import { Button } from '@material-ui/core';
 import { Row, Col } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { auth, db } from "../components/firebase/Firebase";

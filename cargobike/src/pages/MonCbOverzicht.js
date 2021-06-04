@@ -5,6 +5,7 @@ import CbStatCard from '../components/CbStatCard';
 //Button styling
 import { Button } from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { Link } from "react-router-dom";
 
 export default function MonCbOverzicht(){
     return(
@@ -13,7 +14,9 @@ export default function MonCbOverzicht(){
                 {/* Dashboard greeting */}
                 <Row>
                     <Col xs={12} md={12} >
-                        <Button color="primary" ><ArrowBackIcon/> Terug</Button>
+                        <Link to="/MonDashboard">
+                            <Button color="primary" ><ArrowBackIcon/> Terug</Button>
+                        </Link>
                     </Col>
                 </Row>
                 <Row>

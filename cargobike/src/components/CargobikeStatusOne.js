@@ -56,7 +56,7 @@ const Info_image = styled.img`
 export default function CargobikeStatus(props){
     return(
         <div className="CargobikeStatus">  
-            <a href={'../MonCargobikeBroken'}>
+            <a href={'../MonCargobike'}>
             <Contentbox>
                 <ContentBox_h1>NR 12 - Reparatie</ContentBox_h1>
                 <ContentBox_h2>Standaard Cargobike</ContentBox_h2>
