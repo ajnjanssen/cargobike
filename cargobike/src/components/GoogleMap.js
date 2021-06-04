@@ -17,6 +17,7 @@ export class MapContainer extends Component {
         },
         styleClass: this.props.styleclassname || 'MonHalteMap',
         busted_cb: this.props.busted_cb || [],
+        haltes: this.props.haltes_locaties || [],
     }
 
     render() {
@@ -36,7 +37,9 @@ export class MapContainer extends Component {
             }}
             zoom={12}
             mapTypeControl = {false}
-        >
+        >   
+
+{console.log(this.state.haltes)}
             {/* Render busted cargobikes */}
             {this.state.busted_cb.map((bike)=>
                 <GoogleMapsCustomMarker
@@ -48,7 +51,15 @@ export class MapContainer extends Component {
                     type = {bike.type}
                 ></GoogleMapsCustomMarker>                
             )}
+
+            {/* Render haltes */}
+            {this.state.haltes.map((halte)=>
+                <GoogleMapsCustomMarker
+                    position={{lat: halte.lat, lng: halte.lng}}
+                />
+            )}
             
+
             {/* P+R Kardinge 
             <GoogleMapsCustomMarker
                 foo="bar"
@@ -63,12 +74,12 @@ export class MapContainer extends Component {
             position={{lat: 53.19762858868361, lng: 6.513166262838857}} 
             />*/}
 
-            {/* P+R Hoofdstation */}
+            {/* P+R Hoofdstation 
             <GoogleMapsCustomMarker
                 foo="bla"
                 name={'halte'}
                 position={{lat: 53.211712978442634, lng: 6.561086218719561 }} 
-            />
+            />*/}
 
             {/* P+R Euroborg 
             <GoogleMapsCustomMarker

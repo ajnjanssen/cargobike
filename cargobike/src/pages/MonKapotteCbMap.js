@@ -62,16 +62,6 @@ const Scrollbar_item = styled.div`
 `
 
 export default function MonKapotteCbMap(){
-    class bustedCB {
-        constructor(busted_radius, busted_nr, busted_conditie, busted_lat, busted_lang){
-            this.busted_radius = busted_radius;
-            this.busted_nr = busted_nr;
-            this.busted_conditie = busted_conditie;
-            this.busted_lat = busted_lat;
-            this.busted_lang = busted_lang;
-        }
-    }
-
     //Busted cargobikes generator
     var busted_cb = new Array;
     var busted_types = ['Standard', 'Deluxe'];
