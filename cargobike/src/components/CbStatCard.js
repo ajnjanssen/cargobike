@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Container, Row, Col } from 'react-bootstrap';
-import '../CbStatCard.css';
+import styled from "styled-components";
 
 //Switch styling
 import { withStyles } from "@material-ui/core/styles";
@@ -26,16 +26,64 @@ const CbSwitch = withStyles({
       '&$checked $thumb': {
         backgroundColor: "#3F51B8"
       },
+      '&$checked :hover':{
+        backgroundColor: "#3F51B8",
+        width: 41,
+        height: 41,
+        padding: 6,
+        borderRadius: 20,
+      },
+      '&:hover':{
+          backgroundColor: "#88C053",
+          width: 41,
+          height: 41,
+          padding: 6,
+          borderRadius: 20,
+      },
     },
     thumb: {
+      backgroundColor: "#3F51B8",
       width: 40,
       height: 40,
       borderRadius: 0,
       boxShadow: 'none',
+      '&$checked :hover':{
+        backgroundColor: "#3F51B8"
+      },
     },
     checked: {},
-    track: {backgroundColor: "#FFFFFF"}
+    track: {backgroundColor: "#FFFFFF"},
   })(Switch);
+
+const Stat_h1 = styled.h1`
+    font-weight: 600;
+    font-size: 28;
+    color: #838383;
+`
+
+const Stat_h2 = styled.h2`
+    font-weight: 400;
+    font-size: 28;
+    color: #838383;
+`
+
+const Stat_h3 = styled.h3`
+    color: #3F51B8;
+    font-weight: 600;
+`
+
+const CbStatContainer = styled.div`
+    margin-top: 2vh;
+`
+
+const Sw_container = styled.div`
+    border: 3px solid #838383;
+    border-radius: 15px;
+    padding-left: 12px;
+    text-align: right;
+    width: 70px;
+    height: 50px;
+`
 
 export default function CbStatcard(props){
     const{nr, afstand} = props;
@@ -55,16 +103,16 @@ export default function CbStatcard(props){
     const[status, setStatus] = useState('Ontgrendeld');
 
     return(
-        <div className="cbStatCard">  
+        <CbStatContainer>  
             <Container>
                 <Row>
                     <Col xs={8} md={8}>
-                        <h1>Nummer {nr}</h1>
-                        <h2>{afstand} m</h2>
-                        <h3>Status: {status}</h3>
+                        <Stat_h1>Nummer {nr}</Stat_h1>
+                        <Stat_h2>{afstand} m</Stat_h2>
+                        <Stat_h3>Status: {status}</Stat_h3>
                     </Col>
                     <Col xs={4} md={4}>
-                        <div className="sw_container">
+                        <Sw_container>
                             <FormGroup>
                                 <FormControlLabel
                                     control={
@@ -78,10 +126,10 @@ export default function CbStatcard(props){
                                     }
                                 />
                             </FormGroup>
-                        </div>
+                        </Sw_container>
                     </Col>
                 </Row>
             </Container>
-        </div>
+        </CbStatContainer>
     )
 }

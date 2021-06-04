@@ -87,6 +87,10 @@ function App() {
               <Route path='/MonDashboard' exact component={MonDashboard}/>
               <Route path='/MonCargobike' exact component={MonCargobike}/>
               <Route path='/MonCargobikeBroken' exact component={MonCargobikeBroken}/>
+              <Route path='/MonHalte' exact component={MonHalte}/>
+              <Route path='/MonCargobikeOverzicht' exact component={MonCbOverzicht}/>
+              <Route path='/MonHaltekaart' exact component={OndZending}/>
+
             {/* End monteur scherm routes */}
             <Route path='/UserInformation' exact component={UserInformation}/>
             <Route path='/UserInformationData' exact component={UserInformationData}/>
