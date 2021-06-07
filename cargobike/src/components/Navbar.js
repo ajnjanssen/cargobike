@@ -4,13 +4,40 @@ import "./Navbar.css";
 import { CgMenuLeft } from "react-icons/cg";
 import { IconContext } from "react-icons";
 import { Link } from "react-router-dom";
-import { SidebarData } from "./SidebarData";
+import { SidebarDataOnd } from "./SidebarDataOnd";
+import { SidebarDataMon } from "./SidebarDataMon";
+import { SidebarDataBez } from "./SidebarDataBez";
 import CloseIcon from "@material-ui/icons/Close";
 
+function DefineNavbar() {
+  let [NavbarId, setEnableNavBarId] = React.useState('');
+
+  window.addEventListener('showNavbarMon', function (e) {
+    setEnableNavBarId("MonteurNav");
+  }, 'OndernemerNav');  
+  
+  window.addEventListener('showNavbarBez', function (e) {
+    setEnableNavBarId("BezorgerNav");
+  }, 'OndernemerNav');
+
+  if (NavbarId === "MonteurNav") { 
+    return SidebarDataMon;
+  }
+
+  if (NavbarId === "BezorgerNav") { 
+    return SidebarDataBez;
+  }
+
+  return SidebarDataOnd;
+}
 
 function Navbar() {
+
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
+
+  const SideBarData  = DefineNavbar();
+
   return (
     <div>
       <div className="navbarCargo">
@@ -30,7 +57,7 @@ function Navbar() {
                 <CloseIcon color="#FFFFFF" />
               </Link>
             </li>
-            {SidebarData.map((item, index) => {
+            {SideBarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>

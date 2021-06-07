@@ -83,6 +83,10 @@ export default function MonHalteMap(){
     const [halteLat, setHalteLat ] = useState(53.2448297264615);
     const [halteLen, setHalteLen ] = useState(6.528572957354985);
 
+            // this event dispatcher gives the event listner the news we want a certain navigation for this user.
+            const event = new Event('showNavbarMon');
+            window.dispatchEvent(event);
+
     return(
         <>
         <Container>

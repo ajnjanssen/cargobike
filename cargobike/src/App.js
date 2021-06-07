@@ -48,7 +48,7 @@ function App() {
     setEnableHeader(false);
     setEnableNavBar(false);
   }, false);
-
+  
     return ( 
       <div>
       <Router>

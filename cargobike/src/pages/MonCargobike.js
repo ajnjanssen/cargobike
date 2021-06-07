@@ -36,6 +36,10 @@ const ContentBox_h1 = styled.h1`
 
 function CargobikePage() {
 
+        // this event dispatcher gives the event listner the news we want a certain navigation for this user.
+        const event = new Event('showNavbarMon');
+        window.dispatchEvent(event);
+
         //Hoofdstation
         const [halteLat, setHalteLat ] = useState(53.2448297264615);
         const [halteLen, setHalteLen ] = useState(6.528572957354985);

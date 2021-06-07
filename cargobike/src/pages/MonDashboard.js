@@ -22,7 +22,6 @@ import CargobikeStatusTwo from '../components/CargobikeStatusTwo';
 
 // import { db } from '../components/firebase/Firebase';
 
-
 const AddbuttonReservering = styled.div`
     position: fixed;
     bottom: 0;
@@ -44,7 +43,6 @@ const ContentBottom = styled.div`
     display: inline-block;
     color: black;
 `
-
 
 const Scrollbar_item = styled.div`
     margin: 20px;
@@ -199,6 +197,11 @@ const ButtonContainer = styled.div`
 `
 
 function OndDashboard() {
+
+            // this event dispatcher gives the event listner the news we want a certain navigation for this user.
+            const event = new Event('showNavbarMon');
+            window.dispatchEvent(event);
+
     const history = useHistory();
 
     // const [routes,
@@ -270,8 +273,6 @@ function OndDashboard() {
               <h2 className="RecentActivity_Desc">Laatst bijgewerkt: 36 sec. geleden</h2>
             </Col>
 
-
-        
             {/* Card met monteur route */}
              <MonteurRoute />
         

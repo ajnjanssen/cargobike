@@ -4,7 +4,7 @@ import UpdateIcon from '@material-ui/icons/Update';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-export const SidebarData = [
+export const SidebarDataOnd = [
     // {
     //     title: 'Test',
     //     path: '/Test',

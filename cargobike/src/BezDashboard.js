@@ -134,6 +134,10 @@ const Info_image = styled.img`
 
 function BezDashboard() {
 
+    // this event dispatcher gives the event listner the news we want a certain navigation for this user.
+    const event = new Event('showNavbarBez');
+    window.dispatchEvent(event);
+
     const handleClick = () => {
         history.push("/OndDashboard");
     }

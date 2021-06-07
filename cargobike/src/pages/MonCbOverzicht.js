@@ -7,6 +7,11 @@ import { Button } from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 export default function MonCbOverzicht(){
+
+        // this event dispatcher gives the event listner the news we want a certain navigation for this user.
+        const event = new Event('showNavbarMon');
+        window.dispatchEvent(event);
+
     return(
         <div className="MonCbOverzicht">
             <Container>
