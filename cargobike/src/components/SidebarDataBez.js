@@ -62,12 +62,6 @@ export const SidebarDataBez = [
         icon: <AccountCircleIcon/>,
         cName: 'nav-text'
     }, 
-    {
-        title: 'Probleem melden',
-        path: '../',
-        icon: <CallIcon/>,
-        cName: 'nav-text'
-    }, 
     // {
     //     title: 'Registreren',
     //     path: '/Registration',
