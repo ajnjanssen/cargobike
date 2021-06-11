@@ -119,24 +119,47 @@ function Login() {
   const [value, setValue] = React.useState(0);
 
 
+  useEffect(() => {
+    
+    if(value === 0){
+        
+    laatAfbeeldingzien().destroy();
+    laatAfbeeldingzien();
+    }
 
+    if(value === 1){
+    laatAfbeeldingzien2().destroy();
+    laatAfbeeldingzien2();
+    }
+
+    if(value === 2){
+    laatAfbeeldingzien3().destroy();
+    laatAfbeeldingzien3();
+    }
+    
+  }, [value]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+
+    
+
     if(newValue === 0){
-      laatAfbeeldingzien().destroy();
-      laatAfbeeldingzien();
+        
+    laatAfbeeldingzien().destroy();
+    laatAfbeeldingzien();
     }
 
     if(newValue === 1){
-      laatAfbeeldingzien2().destroy();
-      laatAfbeeldingzien2();
+    laatAfbeeldingzien2().destroy();
+    laatAfbeeldingzien2();
     }
 
     if(newValue === 2){
-      laatAfbeeldingzien3().destroy();
-      laatAfbeeldingzien3();
+    laatAfbeeldingzien3().destroy();
+    laatAfbeeldingzien3();
     }
+    
   };
 
   useEffect(() => {
@@ -166,7 +189,6 @@ function Login() {
   
 
   useEffect(() => {
-  
     laatAfbeeldingzien();
       
     
