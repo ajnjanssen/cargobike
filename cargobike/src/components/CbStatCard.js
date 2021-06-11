@@ -16,25 +16,43 @@ const CbSwitch = withStyles({
     switchBase: {
       color: "#FFFFFF",
       backgroundColor: "#88C053",
+      width: 38,
+      height: 41,
+      paddingLeft: 15,
+      borderRadius: 20,
       "&$checked": {
         color: "#FFFFFF",
-        backgroundColor: "#3F51B8"
+        backgroundColor: "#3F51B8",
+        width: 38,
+        height: 41,
+        paddingLeft: 15,
+        padding: 10,
+        borderRadius: 20,
       },
       "&$checked + $track": {
         backgroundColor: "#FFFFFF"
       },
       '&$checked $thumb': {
-        backgroundColor: "#3F51B8"
+        backgroundColor: "#3F51B8",
+      },
+      '&$checked :hover':{
+        backgroundColor: "#3F51B8",
+        width: 38,
+        height: 41,
+        paddingLeft: 6,
+        marginRight: 6,
+        borderRadius: 20,
+      },
+      '&:hover':{
+          backgroundColor: "#88C053",
       },
     },
     thumb: {
-      width: 40,
-      height: 40,
-      borderRadius: 0,
-      boxShadow: 'none',
+        width: 81,
+        height: 41,
     },
     checked: {},
-    track: {backgroundColor: "#FFFFFF"}
+    track: {backgroundColor: "#FFFFFF"},
   })(Switch);
 
 export default function CbStatcard(props){
