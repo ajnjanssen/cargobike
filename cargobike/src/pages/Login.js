@@ -140,6 +140,7 @@ function Login() {
   }, [value]);
 
   const handleChange = (event, newValue) => {
+    
     setValue(newValue);
 
     
@@ -188,11 +189,11 @@ function Login() {
   const container2 = useRef(null);
   
 
-  useEffect(() => {
-    laatAfbeeldingzien();
+  // useEffect(() => {
+  //   laatAfbeeldingzien();
       
     
-  }, []);
+  // }, []);
 
   const laatAfbeeldingzien = () => {
     return lottie.loadAnimation({
