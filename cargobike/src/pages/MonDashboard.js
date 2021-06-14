@@ -1,6 +1,6 @@
 // css apart maken voor dit component
 import '../OndReservering.css';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from "styled-components";
 
 // import React, {useEffect, useState} from 'react'
@@ -196,6 +196,51 @@ const ButtonContainer = styled.div`
     margin-top:20px;
 `
 
+const Contentbox = styled.div`
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    padding-bottom: 0px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    color: black;
+    min-width: 300px;
+    max-width: 500px;
+`
+
+
+const ContentBox_h2 = styled.h2`
+    color: #88C053;
+    font-weight: 400;
+    font-size: 20;
+`
+const Info_box = styled.div`
+    background-color: #F5FAF1;
+    border-radius: 15px;
+    padding: 10px;
+    width: 6.5em;
+    margin: 10px;
+    overflow: hidden;
+`
+const Info_label = styled.p`
+    color: #838383;
+    font-weight: 600;
+    font-size: 18;
+    margin: 0px;
+`
+
+const Info_data = styled.p`
+    color: #88C053;
+    font-weight: 400;
+    font-size: 16;
+    margin: 0px;
+`
+
+const Info_image = styled.img`
+    width: 100%;
+`
+
 function OndDashboard() {
 
             // this event dispatcher gives the event listner the news we want a certain navigation for this user.
@@ -203,19 +248,6 @@ function OndDashboard() {
             window.dispatchEvent(event);
 
     const history = useHistory();
-
-    // const [routes,
-    //     setRoutes] = useState([]);
-    //         useEffect(() => {
-    //          db
-    //         .collection('routes')
-    //         .onSnapshot(snapshot => {
-    //             setRoutes(snapshot.docs.map(doc => ({
-    //                 id: doc.id,
-    //                 route: doc.data()
-    //             })));
-    //         })
-    // }, []);
 
     const handleNewDelivery = () => {
         history.push("/OndSend")
@@ -262,6 +294,20 @@ function OndDashboard() {
    
        const classes = useStyles();
 
+       const [meldingen, setMeldingen] = useState([])
+
+       useEffect(() => {
+          db
+              .collection('meldingen')
+              .onSnapshot(snapshot => {
+                  setMeldingen(snapshot.docs.map(doc => ({
+                      melding : doc.data()
+                      
+                  })));
+              })
+      }, []);
+     
+
     return (
         
         <div className='OndDashboard'>
@@ -280,10 +326,35 @@ function OndDashboard() {
             <Container>
                 <ContentBox_h1>Bekijk status van Cargobikes</ContentBox_h1>
             </Container>
-
+            
             <Scrollbar>
-                <Scrollbar_item><CargobikeStatus/></Scrollbar_item>
-                <Scrollbar_item><CargobikeStatusTwo/></Scrollbar_item>
+            {meldingen.map(({melding}) => (
+                <Scrollbar_item>
+
+                <div className="CargobikeStatus">  
+                <a href={'../MonCargobikeBroken'}>
+                <Contentbox>
+                    <ContentBox_h1>NR 12 - {melding.desc}</ContentBox_h1>
+                    <ContentBox_h2>Standaard Cargobike</ContentBox_h2>
+                    <Row>
+                        <Info_box>
+                            <Info_label>Radius</Info_label>
+                            <Info_data><strong>12%</strong> | 100%</Info_data>
+                        </Info_box>
+                        <Info_box>
+                            <Info_label>Conditie</Info_label>
+                            <Info_data>C1</Info_data>
+                        </Info_box>
+                        <Info_image src={melding.afbeelding}/>
+                    </Row>
+                </Contentbox>
+                </a>
+            </div>
+                </Scrollbar_item>
+            
+                           ))
+                        }
+                {/* // <Scrollbar_item><CargobikeStatusTwo/></Scrollbar_item> */}
             </Scrollbar>
         </div>  
     )

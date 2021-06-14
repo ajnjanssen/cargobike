@@ -225,7 +225,7 @@ const db = firebase.firestore()
         afbeelding: fileUrl,
         desc: omschrijving,
         batterij: true,
-        banden: false
+        banden: "C1"
         });
       
       setOpen(false);
