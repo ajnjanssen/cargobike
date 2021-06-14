@@ -120,6 +120,10 @@
     color: #838383;
 }
 
-.MuiSvgIcon-root {
+/* .MuiSvgIcon-root {
+    margin-right: 7px;
+} */
+
+.Icon_Margin {
     margin-right: 7px;
 }

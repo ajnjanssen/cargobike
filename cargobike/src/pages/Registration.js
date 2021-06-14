@@ -67,6 +67,7 @@ function Registration() {
     avatar: {
       margin: theme.spacing(1),
       backgroundColor: theme.palette.secondary.main,
+      marginRight: 0
     },
     form: {
       width: "100%", // Fix IE 11 issue.

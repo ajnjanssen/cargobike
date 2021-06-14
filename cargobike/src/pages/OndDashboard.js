@@ -446,12 +446,12 @@ function OndDashboard() {
             <DashboardGreeting />
 
             <Col xs={12} md={8}>
-              <h1 className="RecentActivity"><ArrowForwardIosIcon style={{ fontSize: 14, color:'white' }} />Reservering voor 23-10-25, 13:15 Stationsweg</h1>
+              <h1 className="RecentActivity"><ArrowForwardIosIcon className="Icon_Margin" style={{ fontSize: 14, color:'white' }} />Reservering voor 23-10-25, 13:15 Stationsweg</h1>
               <h2 className="RecentActivity_Desc">36 pakketten</h2>
             </Col>
 
             <Col xs={12} md={8}>
-              <h1 className="RecentActivity2"><ArrowForwardIosIcon style={{ fontSize: 14, color:'white' }} />Reservering voor 18-09-25, 14:45 Zernike</h1>
+              <h1 className="RecentActivity2"><ArrowForwardIosIcon className="Icon_Margin" style={{ fontSize: 14, color:'white' }} />Reservering voor 18-09-25, 14:45 Zernike</h1>
               <h2 className="RecentActivity_Desc2">42 pakketten</h2>
             </Col>
         

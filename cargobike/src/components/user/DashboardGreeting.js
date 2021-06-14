@@ -61,7 +61,7 @@ function DashboardGreeting() {
                     </Col>
                     <Col xs={12} md={8}>
                         <h1 className="Header_desc_greet">
-                            <b><DirectionsBikeIcon style={{ fontSize: 20, color:'white' }} />Recente activiteit</b>
+                            <b><DirectionsBikeIcon className="Icon_Margin" style={{ fontSize: 20, color:'white' }} />Recente activiteit</b>
                         </h1>
                         <Row>
                             <IconContext.Provider

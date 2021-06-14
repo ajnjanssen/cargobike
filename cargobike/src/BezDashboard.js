@@ -263,7 +263,7 @@ const [meldingen, setMeldingen] = useState([]);
 
       <Col xs={12} md={8}>
         <h1 className="RecentActivity">
-          <ArrowForwardIosIcon style={{ fontSize: 14, color: "white" }} />
+          <ArrowForwardIosIcon className="Icon_Margin" style={{ fontSize: 14, color: "white" }} />
           Bezorgroute voor 23-10-25, 11:15 Sontplein
         </h1>
   
@@ -273,7 +273,7 @@ const [meldingen, setMeldingen] = useState([]);
 
       <Col xs={12} md={8}>
         <h1 className="RecentActivity2">
-          <ArrowForwardIosIcon style={{ fontSize: 14, color: "white" }} />
+          <ArrowForwardIosIcon className="Icon_Margin" style={{ fontSize: 14, color: "white" }} />
           Bezorgroute voor 18-09-25, 13:55 Zernike
         </h1>
         <h2 className="RecentActivity_Desc2">Route 31 pakketten</h2>
@@ -295,7 +295,7 @@ const [meldingen, setMeldingen] = useState([]);
             <Row>
               <Col xs={10}>
                 <h1 className="Card_title_Bez">
-                  <EventNoteIcon style={{ fontSize: 22, color: "#88C053" }} />
+                  <EventNoteIcon className="Icon_Margin" style={{ fontSize: 22, color: "#88C053" }} />
                   Agenda
                 </h1>
               </Col>
@@ -319,7 +319,7 @@ const [meldingen, setMeldingen] = useState([]);
             <Row>
               <Col xs={12}>
                 <h1 className="Card_title_Bez">
-                  <DirectionsBikeIcon
+                  <DirectionsBikeIcon className="Icon_Margin"
                     style={{ fontSize: 22, color: "#88C053" }}
                   />
                   Mijn Cargobike
@@ -353,7 +353,7 @@ const [meldingen, setMeldingen] = useState([]);
               <Col>
                 <h3 className="TextRes_Wijzigen">
                   Cargobike bekijken{" "}
-                  <ArrowForwardIcon
+                  <ArrowForwardIcon 
                     style={{ fontSize: 20, color: "#88C053" }}
                   />
                 </h3>
