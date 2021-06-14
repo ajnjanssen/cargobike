@@ -1,10 +1,3 @@
-import { Col, Container, Row, Tabs } from "react-bootstrap";
-import "../Registration.css";
-import React, { useState } from "react";
-import { auth } from "../components/firebase/Firebase";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { useHistory } from "react-router";
-import { db } from "../components/firebase/Firebase";
 import {
   Avatar,
   Box,
@@ -13,12 +6,17 @@ import {
   FormControlLabel,
   Grid,
   Link,
-  Paper,
+
   TextField,
-  Typography,
+  Typography
 } from "@material-ui/core";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
-import Tab from '@material-ui/core/Tab';
+import React, { useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { useHistory } from "react-router";
+import { auth, db } from "../components/firebase/Firebase";
+import "../Registration.css";
 
 const event = new Event('showLogdOutHeader');
 window.dispatchEvent(event);
@@ -29,12 +27,12 @@ function Registration() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   // const [user, setUser] = useState(null);
-  const [datum, setDatum] = useState("");
-  const [locatie, setLocatie] = useState("");
-  const [pakketten, setPakketten] = useState("");
-  const [tijd, setTijd] = useState("");
+  // const [datum, setDatum] = useState("");
+  // const [locatie, setLocatie] = useState("");
+  // const [pakketten, setPakketten] = useState("");
+  // const [tijd, setTijd] = useState("");
 
-  const [userId, setUserId] = useState("");
+  // const [userId, setUserId] = useState("");
 
   const history = useHistory();
 

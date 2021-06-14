@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react'
-import {Card, Col, Container, Row} from 'react-bootstrap'
+import React, { useEffect, useState } from 'react';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import placeholder from '../../img/Map.png';
-import {db} from '../firebase/Firebase'
+import { db } from '../firebase/Firebase';
 
 function CurrenRoute() {
 

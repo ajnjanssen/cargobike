@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable react/jsx-pascal-case */
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useHistory } from "react-router";
 
@@ -7,7 +8,7 @@ import "./BezDashboard.css";
 import DashboardGreeting from "./components/user/DashboardGreeting";
 import CurrentAgenda from "./components/employee/CurrentAgenda";
 import ActRouteBez from "./components/ActRouteBez";
-import SaleModels from "./components/SaleModels";
+
 
 //Styling
 import styled from "styled-components";

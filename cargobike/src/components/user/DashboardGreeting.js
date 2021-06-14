@@ -1,13 +1,12 @@
-import React, {useEffect, useState} from 'react'
-import {Col, Container, Row} from 'react-bootstrap'
-import {IconContext} from 'react-icons/lib'
-import {db} from '../firebase/Firebase'
-
-import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
+import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import { IconContext } from 'react-icons/lib';
+import { db } from '../firebase/Firebase';
+
 
 function DashboardGreeting() {
-    var corneId = 'lRiJdDyoWRUHMw82dp1G';
+    // var corneId = 'lRiJdDyoWRUHMw82dp1G';
     const [ondernemers,
         setOndernemers] = useState([]);
 

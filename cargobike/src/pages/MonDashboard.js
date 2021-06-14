@@ -1,48 +1,43 @@
+/* eslint-disable react/jsx-pascal-case */
 // css apart maken voor dit component
-import '../OndReservering.css';
-import React, { useEffect, useState } from 'react'
+import { makeStyles } from '@material-ui/core/styles';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import styled from "styled-components";
-
+import { auth, db } from "../components/firebase/Firebase";
 // import React, {useEffect, useState} from 'react'
 import MonteurRoute from '../components/MonteurRoute';
-import { Container } from 'react-bootstrap';
-import SaleModels from '../components/SaleModels';
 import MonDashboardGreeting from '../components/user/MonDashboardGreeting';
-import { Button } from '@material-ui/core';
-import { Row, Col } from 'react-bootstrap';
-import { useHistory } from 'react-router';
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
+import '../OndReservering.css';
 
-import { makeStyles } from '@material-ui/core/styles';
-import { auth, db } from "../components/firebase/Firebase";
 
-import CargobikeStatus from '../components/CargobikeStatusOne';
-import CargobikeStatusTwo from '../components/CargobikeStatusTwo';
+
 
 // import { db } from '../components/firebase/Firebase';
 
-const AddbuttonReservering = styled.div`
-    position: fixed;
-    bottom: 0;
-    z-index: 2;
-    margin-left: 80%;
-    margin-bottom: 10%;
+// const AddbuttonReservering = styled.div`
+//     position: fixed;
+//     bottom: 0;
+//     z-index: 2;
+//     margin-left: 80%;
+//     margin-bottom: 10%;
 
-    > .MuiFab-primary {
-        background-color: #796ff6;
-    }
-`;
+//     > .MuiFab-primary {
+//         background-color: #796ff6;
+//     }
+// `;
 
-const ContentBottom = styled.div`
-    margin-top: 5vh;
-    background-color: white;
-    padding: 15px;
-    width: 100%;
-    margin-bottom: 10px;
-    display: inline-block;
-    color: black;
-`
+// const ContentBottom = styled.div`
+//     margin-top: 5vh;
+//     background-color: white;
+//     padding: 15px;
+//     width: 100%;
+//     margin-bottom: 10px;
+//     display: inline-block;
+//     color: black;
+// `
 
 const Scrollbar_item = styled.div`
     margin: 20px;
@@ -76,125 +71,125 @@ const useStyles = makeStyles({
     }
   });
 
-const Send__delivery = styled.div`
-  width:400px;
-  overflow-x: hidden;
-`;
+// const Send__delivery = styled.div`
+//   width:400px;
+//   overflow-x: hidden;
+// `;
 
-const HeaderContainer = styled.div`
-    /* display:flex; */
-    align-items:center;
-    width:80%;
-`
+// const HeaderContainer = styled.div`
+//     /* display:flex; */
+//     align-items:center;
+//     width:80%;
+// `
 
-const ThisCol = styled.div`
-  display: flex;
-  justify-content: safe-center;
-  padding-right: 100px;
-  border-radius: 15px;
-  :hover {
-    background-color: #83b555;
-    width: 80px;
-    border-radius: 15px;
-    cursor:pointer;
-  }
-`;
+// const ThisCol = styled.div`
+//   display: flex;
+//   justify-content: safe-center;
+//   padding-right: 100px;
+//   border-radius: 15px;
+//   :hover {
+//     background-color: #83b555;
+//     width: 80px;
+//     border-radius: 15px;
+//     cursor:pointer;
+//   }
+// `;
 
-const ThisRow = styled.div`
-  margin-left: 35px;
-  > h1 {
-    color: white !important;
-  }
-`;
+// const ThisRow = styled.div`
+//   margin-left: 35px;
+//   > h1 {
+//     color: white !important;
+//   }
+// `;
 
-const ThatRow = styled.div`
-  margin-left: 36px;
-  > h3 {
-    color: white !important;
-    font-weight:100;
-  }
-`;
+// const ThatRow = styled.div`
+//   margin-left: 36px;
+//   > h3 {
+//     color: white !important;
+//     font-weight:100;
+//   }
+// `;
 
-const MakeSendOrder = styled.div`
-    display:flex;
-    flex-direction: column;
+// const MakeSendOrder = styled.div`
+//     display:flex;
+//     flex-direction: column;
     
-    align-items:flex-start;
+//     align-items:flex-start;
     
-    /* flex-wrap: wrap; */
-    /* justify-content:center; */
-    /* align-items:center; */
-    border-radius:25px;
-    margin-top:10px;
-    margin-bottom: 30px;
-    width:100%;
-    height:420px;
-    margin-left:25px;
-    background:white;
-    overflow: hidden;
+//     /* flex-wrap: wrap; */
+//     /* justify-content:center; */
+//     /* align-items:center; */
+//     border-radius:25px;
+//     margin-top:10px;
+//     margin-bottom: 30px;
+//     width:100%;
+//     height:420px;
+//     margin-left:25px;
+//     background:white;
+//     overflow: hidden;
 
-    > Row {
-        padding:25px;
-    }
+//     > Row {
+//         padding:25px;
+//     }
 
-    > Row > h1 {
-        font-size: 24px;
-        font-weight 600;
-        color: #9cd06b;
-    }
+//     > Row > h1 {
+//         font-size: 24px;
+//         font-weight: 600;
+//         color: #9cd06b;
+//     }
 
-    > Row date {
-        margin-left:140px;
-        padding-left:100px;
-    }
+//     > Row date {
+//         margin-left:140px;
+//         padding-left:100px;
+//     }
 
-    > Row > .MuiInputBase-input {
-        font: inherit;
-        color: currentColor;
-        width: 290px;
-        border: 0;
-        height: 1.1876em;
-        margin: 0;
-        display: block;
-        padding: 6px 0 7px;
-        min-width: 0;
-        background: none;
-        box-sizing: content-box;
-        animation-name: mui-auto-fill-cancel;
-        letter-spacing: inherit;
-        animation-duration: 10ms;
-        -webkit-tap-highlight-color: transparent;
-    }
-`;
+//     > Row > .MuiInputBase-input {
+//         font: inherit;
+//         color: currentColor;
+//         width: 290px;
+//         border: 0;
+//         height: 1.1876em;
+//         margin: 0;
+//         display: block;
+//         padding: 6px 0 7px;
+//         min-width: 0;
+//         background: none;
+//         box-sizing: content-box;
+//         animation-name: mui-auto-fill-cancel;
+//         letter-spacing: inherit;
+//         animation-duration: 10ms;
+//         -webkit-tap-highlight-color: transparent;
+//     }
+// `;
 
-const TimePicker = styled.div`
-    margin-top: 20px;
-    margin-left: 25px;
-    width: 85%;
-    display:flex;
-    flex-direction:column;
-    align-items:stretch;
+// const TimePicker = styled.div`
+//     margin-top: 20px;
+//     margin-left: 25px;
+//     width: 85%;
+//     display:flex;
+//     flex-direction:column;
+//     align-items:stretch;
     
-`
+// `
 
-const TextCol = styled.div`
-    width:100%;
-    height:100%;
-    display:table;
-    margin-top:10px;
-`
+// const TextCol = styled.div`
+//     width:100%;
+//     height:100%;
+//     display:table;
+//     margin-top:10px;
+// `
 
-const TextCol2 = styled.div`
-    width:100%;
-    height:100%;
-    display:table;
-    margin-top:27px;
-`
+// const TextCol2 = styled.div`
+//     width:100%;
+//     height:100%;
+//     display:table;
+//     margin-top:27px;
+// `
 
-const ButtonContainer = styled.div`
-    padding-left:25px;
-    margin-top:20px;
-`
+// const ButtonContainer = styled.div`
+//     padding-left:25px;
+//     margin-top:20px;
+// `
 
 const Contentbox = styled.div`
     background-color: white;
