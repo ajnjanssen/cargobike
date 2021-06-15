@@ -11,16 +11,12 @@ import '../MonCbOverzicht.css';
 import CbStatCard from '../components/CbStatCard';
 //Button styling
 import { Button } from '@material-ui/core';
-import GoogleMap from '../components/GoogleMap';
 
 //icons for the page
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import PhoneForwardedIcon from '@material-ui/icons/PhoneForwarded';
 
-var cargobikeId = 12;
-var cargobikeSoort = 'Standaard Cargobike';
-var cargobikeStatus = 'C2';
 var CargobikeStatus = 0;
 
 const ButtonContainer = styled.div`
