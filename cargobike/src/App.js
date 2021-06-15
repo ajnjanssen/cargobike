@@ -31,6 +31,8 @@ import MonCargobikeBroken from './pages/MonCargobikeBroken';
 import MonDashboard from './pages/MonDashboard';
 import MonHalte from './pages/MonHalte';
 import MonCbOverzicht from './pages/MonCbOverzicht';
+import MonCargobikeBrokenMap from './pages/MonCargobikeBrokenMap';
+import MonHaltesMap from './pages/MonHalteMap';
 
 import OndCbWijzigen from './pages/OndCbWijzigen';
 import OndSend from './pages/OndSend';
@@ -87,13 +89,14 @@ function App() {
               <Route path='/MonDashboard' exact component={MonDashboard}/>
               <Route path='/MonCargobike' exact component={MonCargobike}/>
               <Route path='/MonCargobikeBroken' exact component={MonCargobikeBroken}/>
+              <Route path='/MonHalte' exact component={MonHalte}/>
+              <Route path='/MonCbOverzicht' exact component={MonCbOverzicht}/>
+              <Route path='/MonCargobikeBrokenMap' exact component={MonCargobikeBrokenMap}/>
+              <Route path='/MonHaltesMap' exact component={MonHaltesMap}/>
             {/* End monteur scherm routes */}
             <Route path='/UserInformation' exact component={UserInformation}/>
             <Route path='/UserInformationData' exact component={UserInformationData}/>
             <Route path='/OndCbWijzigen' exact component={OndCbWijzigen}/>
-
-            <Route path='/Test' exact component={MonHalte}/>
-            <Route path='/Test2' exact component={MonCbOverzicht}/>
         </Switch>
       </Router>
       {/* <OndDashboard /> */}

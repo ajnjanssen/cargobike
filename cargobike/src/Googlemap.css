@@ -1,6 +1,13 @@
-.map{
+.MonHalteMap{
     z-index: -10;
     position: absolute;
     margin-top: -50vh;
     height: 10vh;
+}
+
+.MonHaltesMap{
+    z-index: -1;
+    position: absolute;
+    margin-top: 8vh;
+    height: 72vh;
 }

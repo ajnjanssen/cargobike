@@ -2,18 +2,15 @@ import React, { useState} from 'react';
 import {Marker} from 'google-maps-react';
 import { Link } from "react-router-dom";
 
-export default function GoogleMapsCustomMarker(props){
-
-    const test = props.foo;
+export default function GoogleMapsHalteMarker(props){
     
-    function onMarkerClick(){
-        console.log({test});
+    function onclick(){
+        console.log('hier');
     };
 
     return (
-        <Link>
+        <Link to="/MonHalte">
             <Marker
-                onClick={onMarkerClick}
                 {...props}
             />
         </Link>

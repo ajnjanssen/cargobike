@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Dropdown() {
+export default function LocationDropdown() {
   const classes = useStyles();
 
   //location-dropdown

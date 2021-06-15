@@ -5,8 +5,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Button } from '@material-ui/core';
 
 //Component import
-import CBTypeDropdown from '../components/dropdown_cargobiketype';
-import LocationDropdown from '../components/dropdown_location';
+import CBTypeDropdown from '../components/dropdownCargobiketype';
+import LocationDropdown from '../components/dropdownLocation';
 import DateTimePicker from '../components/DateTimePicker';
 
 export default function OndCbWijzigen(){
