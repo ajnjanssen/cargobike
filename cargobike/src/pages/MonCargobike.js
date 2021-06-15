@@ -18,9 +18,6 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import PhoneForwardedIcon from '@material-ui/icons/PhoneForwarded';
 
-var cargobikeId = 12;
-var cargobikeSoort = 'Standaard Cargobike';
-var cargobikeStatus = 'C2';
 var CargobikeStatus = 6;
 
 const ButtonContainer = styled.div`
@@ -50,8 +47,9 @@ function CargobikePage() {
         <Container>
             {/* Dashboard greeting */}
             <Row style={{paddingLeft:14}}>
-                <Col xs={12} md={12} ><a href={'../MonDashboard'}>
-                    <Button onclick="goBack()" style={{color:'white'}}><ArrowBackIcon/> Terug</Button>
+                <Col xs={12} md={12} className="BackButtonCargobike">
+                    <a>
+                    <Button onclick="goBack()"><ArrowBackIcon/> Terug</Button>
                     </a>
                 </Col>
             </Row>

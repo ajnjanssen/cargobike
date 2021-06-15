@@ -45,9 +45,9 @@ function CargobikePage() {
         <Container>
             {/* Dashboard greeting */}
             <Row style={{paddingLeft:14}}>
-                <Col xs={12} md={12} >
-                    <a href={'../MonDashboard'}>
-                    <Button onclick="goBack()" style={{color:'white'}}><ArrowBackIcon/> Terug</Button>
+                <Col xs={12} md={12} className="BackButtonCargobike">
+                    <a>
+                    <Button onclick="goBack()"><ArrowBackIcon/> Terug</Button>
                     </a>
                 </Col>
             </Row>

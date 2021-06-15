@@ -89,3 +89,8 @@ button.location_button{
 button.location_button:hover{
     background-color: #3445a3;
 }
+
+.BackButtonCargobike button {
+    text-decoration: none;
+    color: white;
+}
