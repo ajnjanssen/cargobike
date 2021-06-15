@@ -32,6 +32,7 @@ import MonDashboard from './pages/MonDashboard';
 import MonHalte from './pages/MonHalte';
 import MonCbOverzicht from './pages/MonCbOverzicht';
 import MonCargobikeBrokenMap from './pages/MonCargobikeBrokenMap';
+import MonHaltesMap from './pages/MonHalteMap';
 
 import OndCbWijzigen from './pages/OndCbWijzigen';
 import OndSend from './pages/OndSend';
@@ -91,6 +92,7 @@ function App() {
               <Route path='/MonHalte' exact component={MonHalte}/>
               <Route path='/MonCbOverzicht' exact component={MonCbOverzicht}/>
               <Route path='/MonCargobikeBrokenMap' exact component={MonCargobikeBrokenMap}/>
+              <Route path='/MonHaltesMap' exact component={MonHaltesMap}/>
             {/* End monteur scherm routes */}
             <Route path='/UserInformation' exact component={UserInformation}/>
             <Route path='/UserInformationData' exact component={UserInformationData}/>

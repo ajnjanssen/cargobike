@@ -1,7 +1,7 @@
 import React, {Component} from 'react'; 
 import {Map, GoogleApiWrapper, Marker} from 'google-maps-react';
 import GoogleMapsCustomMarker from './GoogleMapsCustomMarker';
-//import GoogleMapsHalteMarker from './GoogleMapsHalteMarker';
+import GoogleMapsHalteMarker from './GoogleMapsHalteMarker';
 import '../Googlemap.css';
 
 export class MapContainer extends Component {
@@ -18,7 +18,7 @@ export class MapContainer extends Component {
         },
         styleClass: this.props.styleclassname || 'MonHalteMap',
         bustedCb: this.props.bustedCb || [],
-        haltes: this.props.haltesLocaties || [],
+        haltesLocations: this.props.haltes || [],
     }
 
     render() {
@@ -53,8 +53,8 @@ export class MapContainer extends Component {
             )}
 
             {/* Render haltes */}
-            {this.state.haltes.map((halte)=>
-                <GoogleMapsCustomMarker
+            {this.state.haltesLocations.map((halte)=>
+                <GoogleMapsHalteMarker
                     position={{lat: halte.lat, lng: halte.lng}}
                 />
             )}

@@ -62,6 +62,10 @@ const Scrollbar_item = styled.div`
 `
 
 export default function MonCargobikeBrokenMap(){
+    // this event dispatcher gives the event listner the news we want a certain navigation for this user.
+    const event = new Event('showNavbarMon');
+    window.dispatchEvent(event);
+    
     //Busted cargobikes generator
     var bustedCb = new Array;
     var bustedTypes = ['Standard', 'Deluxe'];

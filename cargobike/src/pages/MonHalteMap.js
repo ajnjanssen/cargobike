@@ -1,8 +1,6 @@
 import React from 'react';
 import GoogleMap from '../components/GoogleMap';
 import { withStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import styled from 'styled-components';
 import IconButton from '@material-ui/core/IconButton';
 import { Link } from "react-router-dom";
 
@@ -16,37 +14,12 @@ const CbSearchBtn = withStyles({
     }
 })(IconButton);
 
-const CbInput = styled(TextField)`
-    label.Mui-focused {
-        color: #88C053;
-    }
-    .MuiOutlinedInput-root {
-        fieldset {
-            border-color: #88C053;
-        }
-        &:hover fieldset {
-            border-color: yellow;
-        }
-        &.Mui-focused fieldset {
-            border-color: red;
-            text-decoration: none;
-        }
-    border-bottom: none;
-`
+export default function MonHaltesMap(){
 
-const Contentbox = styled.div`
-    margin-top: 12vh;
-    background-color: white;
-    border-radius: 15px;
-    width: 18rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-    color: black;
-    position: relative;
-    text-align: center;
-    float: right;
-    z-radius: 12;
-`
-export default function MonHalteMap(){
+    // this event dispatcher gives the event listner the news we want a certain navigation for this user.
+    const event = new Event('showNavbarMon');
+    window.dispatchEvent(event);
+
     var haltes = new Array;
     haltes.push(
         //P+R Kardinge
@@ -69,11 +42,11 @@ export default function MonHalteMap(){
         {id: 5, naam: 'P+R Zernike', lat: 53.2448297264615, lng: 6.528572957354985}
     );
 
-    return(
-        <div className="MonKapotteCbMap">
+    return( 
+        <>
              <Link to="/MonHalte">
-                <GoogleMap styleclassname = {"MonHaltesMap"} haltes_locaties = {haltes} />
+                <GoogleMap styleclassname = {"MonHaltesMap"}  haltes={haltes}/>
             </Link>
-        </div>
+        </>
     )
 }
