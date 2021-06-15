@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Dropdown() {
+export default function CBTypeDropdown() {
   const classes = useStyles();
 
   //cargobiketype-dropdown
