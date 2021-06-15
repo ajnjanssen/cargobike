@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
 import {Marker} from 'google-maps-react';
+import { Link } from "react-router-dom";
 
 export default function GoogleMapsCustomMarker(props){
 
@@ -10,9 +11,11 @@ export default function GoogleMapsCustomMarker(props){
     };
 
     return (
-        <Marker
-            onClick={onMarkerClick}
-            {...props}
-        />
+        <Link>
+            <Marker
+                onClick={onMarkerClick}
+                {...props}
+            />
+        </Link>
     );
 };
