@@ -3,6 +3,7 @@ import {Container, Row, Col } from 'react-bootstrap';
 import '../MonCbOverzicht.css';
 import CbStatCard from '../components/CbStatCard';
 //Button styling
+import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
@@ -18,13 +19,15 @@ export default function MonCbOverzicht(){
                 {/* Dashboard greeting */}
                 <Row>
                     <Col xs={12} md={12} >
-                        <Button color="primary" ><ArrowBackIcon/> Terug</Button>
+                        <Link to="/MonDashboard">
+                            <Button style={{color: 'white'}} ><ArrowBackIcon/> Terug</Button>
+                        </Link>
                     </Col>
                 </Row>
                 <Row>
                     <Col xs={12} md={8} >
                         <h1 className="Dashgreeting">Cargobikes overzicht</h1>
-                        <h2 className="Dashgreeting">Gebruik deze knoppen i.p.v. sleutels</h2>
+                        <h2 className="Dashgreeting">Alle cargobikes in Groningen</h2>
                     </Col>
                 </Row>
 

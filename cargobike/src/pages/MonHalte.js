@@ -93,11 +93,11 @@ export default function MonHalteMap(){
             <Page_Header>
                 <Button><Navigation_p> <ArrowBackIcon/> Terug </Navigation_p> </Button>
                 <Navigation_h1>Halte 4 - Hoofdstation Groningen</Navigation_h1>
-                <Navigation_p>6 oplaadplekken en reparatie voorzieningen</Navigation_p>
+                <Navigation_p>6 oplaadplekken en halte beschikt over reparatie voorzieningen</Navigation_p>
             </Page_Header>
             <Contentbox>
-                <ContentBox_h1>Aanwezige Cargobikes</ContentBox_h1>
-                <ContentBox_p >4 van de 6 plekken bezet</ContentBox_p>
+                <ContentBox_h1>Opgeslagen cargobikes</ContentBox_h1>
+                <ContentBox_p >4 / 6 oplaadplekken nu bezet</ContentBox_p>
                 <CbStatCard nr="12" afstand="96"/>
                 <CbStatCard nr="14" afstand="2"/>
                 <CbStatCard nr="4" afstand="45"/>

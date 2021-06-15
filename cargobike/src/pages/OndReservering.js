@@ -19,7 +19,7 @@ function OndReservering() {
                 <Row style={{paddingLeft: '15px'}}>
                     <Col xs={12} md={8}>
                         <div className="Dash_greet">
-                        <h1 className="Header_title">Mijn bezorgingen</h1>
+                            <h1 className="Header_title">Mijn bezorgingen</h1>
                         </div>
                     </Col>
                     <Col xs={12} md={8}>
@@ -32,12 +32,12 @@ function OndReservering() {
             <FirstInQueueDelivery />
 
             <Container className="Title_dash">
-            <Row style={{paddingLeft : '15px'}}>
-                  <Col xs={12} md={8}>
+                <Row style={{paddingLeft : '15px'}}>
+                    <Col xs={12} md={8}>
                         <h1 className="Bezorging_title">Al uw gemaakte bezorgingen</h1>
-                  </Col>
-            </Row>
-      </Container>
+                    </Col>
+                </Row>
+            </Container>
 
             {/* For Loop voor alle bezorgingen gekoppeld aan user */}
             <NextInQueueDelivery />
