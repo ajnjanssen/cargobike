@@ -34,8 +34,8 @@ export default function MonCbOverzicht(){
                 {/* List */}
                 <div className="contentbox">
                     <Row>
-                        <Col xs={6} md={6} >
-                            <h1 className="content">Cargobikes ontgrendelen</h1>        
+                        <Col xs={12} md={12} >
+                            <h2 className="content">Hieronder ziet u een overzicht van alle aanwezige cargobikes in Groningen, wat hun status is en wat de afstand is tot uw vestiging.</h2>        
                         </Col>
                     </Row>
                     <Row>

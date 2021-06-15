@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import styled from 'styled-components';
 import SearchIcon from '@material-ui/icons/Search';
 import IconButton from '@material-ui/core/IconButton';
-import MonKapotteCbCard from '../components/MonKapotteCbCard';
+import MonCargobikeBrokenCard from '../components/MonCargobikeBrokenCard';
 import { Row } from 'react-bootstrap';
 
 const CbSearchBtn = withStyles({
@@ -97,9 +97,9 @@ export default function MonCargobikeBrokenMap(){
             
             <Row>
                 <Scrollbar>
-                    {busted_cb.map((bike) =>
+                    {bustedCb.map((bike) =>
                         <Scrollbar_item>
-                            <MonKapotteCbCard
+                            <MonCargobikeBrokenCard
                                 id= {bike.id}
                                 type= {bike.type}
                                 rad = {bike.radius}
