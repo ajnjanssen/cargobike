@@ -1,13 +1,12 @@
-import React, {useEffect, useState} from 'react'
-import {Col, Container, Row} from 'react-bootstrap'
-import {IconContext} from 'react-icons/lib'
-import {db} from '../firebase/Firebase'
-
-import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
+import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import { IconContext } from 'react-icons/lib';
+import { db } from '../firebase/Firebase';
+
 
 function DashboardGreeting() {
-    var corneId = 'lRiJdDyoWRUHMw82dp1G';
+    // var corneId = 'lRiJdDyoWRUHMw82dp1G';
     const [ondernemers,
         setOndernemers] = useState([]);
 
@@ -62,7 +61,7 @@ function DashboardGreeting() {
                     </Col>
                     <Col xs={12} md={8}>
                         <h1 className="Header_desc_greet">
-                            <b><DirectionsBikeIcon style={{ fontSize: 20, color:'white' }} />Recente activiteit</b>
+                            <b><DirectionsBikeIcon className="Icon_Margin" style={{ fontSize: 20, color:'white' }} />Recente activiteit</b>
                         </h1>
                         <Row>
                             <IconContext.Provider

@@ -5,7 +5,7 @@
     border-radius: 20px;
     height: 300px;
     background-color: white;
-    width: 375px;
+    width: 100%;
 }
 
 .Route_img {
@@ -120,6 +120,10 @@
     color: #838383;
 }
 
-.MuiSvgIcon-root {
+/* .MuiSvgIcon-root {
+    margin-right: 7px;
+} */
+
+.Icon_Margin {
     margin-right: 7px;
 }

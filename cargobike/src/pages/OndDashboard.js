@@ -158,8 +158,6 @@ const MakeSendOrder = styled.div`
         -webkit-tap-highlight-color: transparent;
 
     } 
- 
-
 `;
 
 const TimePicker = styled.div`
@@ -200,7 +198,6 @@ const Scrollbar_item = styled.div`
     margin: 20px;
 `
 
-
 const Contentbox = styled.div`
     margin-top: 5vh;
     background-color: white;
@@ -237,7 +234,6 @@ const ContentBottom = styled.div`
     color: black;
 `
 
-
 const Info_box = styled.div`
     background-color: #F5FAF1;
     border-radius: 13px;
@@ -249,6 +245,7 @@ const Info_box = styled.div`
     margin-top: 6px;
     height: 63px;
 `
+
 const Info_label = styled.p`
     color: #838383;
     font-weight: 600;
@@ -267,8 +264,6 @@ const Info_data = styled.p`
 const Info_image = styled.img`
     width: 100%;
 `
-
-
 
 function OndDashboard() {
     const history = useHistory();
@@ -451,12 +446,12 @@ function OndDashboard() {
             <DashboardGreeting />
 
             <Col xs={12} md={8}>
-              <h1 className="RecentActivity"><ArrowForwardIosIcon style={{ fontSize: 14, color:'white' }} />Reservering voor 23-10-25, 13:15 Stationsweg</h1>
+              <h1 className="RecentActivity"><ArrowForwardIosIcon className="Icon_Margin" style={{ fontSize: 14, color:'white' }} />Reservering voor 23-10-25, 13:15 Stationsweg</h1>
               <h2 className="RecentActivity_Desc">36 pakketten</h2>
             </Col>
 
             <Col xs={12} md={8}>
-              <h1 className="RecentActivity2"><ArrowForwardIosIcon style={{ fontSize: 14, color:'white' }} />Reservering voor 18-09-25, 14:45 Zernike</h1>
+              <h1 className="RecentActivity2"><ArrowForwardIosIcon className="Icon_Margin" style={{ fontSize: 14, color:'white' }} />Reservering voor 18-09-25, 14:45 Zernike</h1>
               <h2 className="RecentActivity_Desc2">42 pakketten</h2>
             </Col>
         

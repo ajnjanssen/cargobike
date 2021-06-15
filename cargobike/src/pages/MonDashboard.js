@@ -1,48 +1,43 @@
+/* eslint-disable react/jsx-pascal-case */
 // css apart maken voor dit component
-import '../OndReservering.css';
-import React, { useState } from 'react'
+import { makeStyles } from '@material-ui/core/styles';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import styled from "styled-components";
-
+import { auth, db } from "../components/firebase/Firebase";
 // import React, {useEffect, useState} from 'react'
 import MonteurRoute from '../components/MonteurRoute';
-import { Container } from 'react-bootstrap';
-import SaleModels from '../components/SaleModels';
 import MonDashboardGreeting from '../components/user/MonDashboardGreeting';
-import { Button } from '@material-ui/core';
-import { Row, Col } from 'react-bootstrap';
-import { useHistory } from 'react-router';
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
+import '../OndReservering.css';
 
-import { makeStyles } from '@material-ui/core/styles';
-import { auth, db } from "../components/firebase/Firebase";
 
-import CargobikeStatus from '../components/CargobikeStatusOne';
-import CargobikeStatusTwo from '../components/CargobikeStatusTwo';
+
 
 // import { db } from '../components/firebase/Firebase';
 
-const AddbuttonReservering = styled.div`
-    position: fixed;
-    bottom: 0;
-    z-index: 2;
-    margin-left: 80%;
-    margin-bottom: 10%;
+// const AddbuttonReservering = styled.div`
+//     position: fixed;
+//     bottom: 0;
+//     z-index: 2;
+//     margin-left: 80%;
+//     margin-bottom: 10%;
 
-    > .MuiFab-primary {
-        background-color: #796ff6;
-    }
-`;
+//     > .MuiFab-primary {
+//         background-color: #796ff6;
+//     }
+// `;
 
-const ContentBottom = styled.div`
-    margin-top: 5vh;
-    background-color: white;
-    padding: 15px;
-    width: 100%;
-    margin-bottom: 10px;
-    display: inline-block;
-    color: black;
-`
+// const ContentBottom = styled.div`
+//     margin-top: 5vh;
+//     background-color: white;
+//     padding: 15px;
+//     width: 100%;
+//     margin-bottom: 10px;
+//     display: inline-block;
+//     color: black;
+// `
 
 const Scrollbar_item = styled.div`
     margin: 20px;
@@ -76,124 +71,169 @@ const useStyles = makeStyles({
     }
   });
 
-const Send__delivery = styled.div`
-  width:400px;
-  overflow-x: hidden;
-`;
+// const Send__delivery = styled.div`
+//   width:400px;
+//   overflow-x: hidden;
+// `;
 
-const HeaderContainer = styled.div`
-    /* display:flex; */
-    align-items:center;
-    width:80%;
-`
+// const HeaderContainer = styled.div`
+//     /* display:flex; */
+//     align-items:center;
+//     width:80%;
+// `
 
-const ThisCol = styled.div`
-  display: flex;
-  justify-content: safe-center;
-  padding-right: 100px;
-  border-radius: 15px;
-  :hover {
-    background-color: #83b555;
-    width: 80px;
+// const ThisCol = styled.div`
+//   display: flex;
+//   justify-content: safe-center;
+//   padding-right: 100px;
+//   border-radius: 15px;
+//   :hover {
+//     background-color: #83b555;
+//     width: 80px;
+//     border-radius: 15px;
+//     cursor:pointer;
+//   }
+// `;
+
+// const ThisRow = styled.div`
+//   margin-left: 35px;
+//   > h1 {
+//     color: white !important;
+//   }
+// `;
+
+// const ThatRow = styled.div`
+//   margin-left: 36px;
+//   > h3 {
+//     color: white !important;
+//     font-weight:100;
+//   }
+// `;
+
+// const MakeSendOrder = styled.div`
+//     display:flex;
+//     flex-direction: column;
+    
+//     align-items:flex-start;
+    
+//     /* flex-wrap: wrap; */
+//     /* justify-content:center; */
+//     /* align-items:center; */
+//     border-radius:25px;
+//     margin-top:10px;
+//     margin-bottom: 30px;
+//     width:100%;
+//     height:420px;
+//     margin-left:25px;
+//     background:white;
+//     overflow: hidden;
+
+//     > Row {
+//         padding:25px;
+//     }
+
+//     > Row > h1 {
+//         font-size: 24px;
+//         font-weight: 600;
+//         color: #9cd06b;
+//     }
+
+//     > Row date {
+//         margin-left:140px;
+//         padding-left:100px;
+//     }
+
+//     > Row > .MuiInputBase-input {
+//         font: inherit;
+//         color: currentColor;
+//         width: 290px;
+//         border: 0;
+//         height: 1.1876em;
+//         margin: 0;
+//         display: block;
+//         padding: 6px 0 7px;
+//         min-width: 0;
+//         background: none;
+//         box-sizing: content-box;
+//         animation-name: mui-auto-fill-cancel;
+//         letter-spacing: inherit;
+//         animation-duration: 10ms;
+//         -webkit-tap-highlight-color: transparent;
+//     }
+// `;
+
+// const TimePicker = styled.div`
+//     margin-top: 20px;
+//     margin-left: 25px;
+//     width: 85%;
+//     display:flex;
+//     flex-direction:column;
+//     align-items:stretch;
+    
+// `
+
+// const TextCol = styled.div`
+//     width:100%;
+//     height:100%;
+//     display:table;
+//     margin-top:10px;
+// `
+
+// const TextCol2 = styled.div`
+//     width:100%;
+//     height:100%;
+//     display:table;
+//     margin-top:27px;
+// `
+
+// const ButtonContainer = styled.div`
+//     padding-left:25px;
+//     margin-top:20px;
+// `
+
+const Contentbox = styled.div`
+    background-color: white;
     border-radius: 15px;
-    cursor:pointer;
-  }
-`;
+    padding: 15px;
+    padding-bottom: 0px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    color: black;
+    min-width: 300px;
+    max-width: 500px;
+`
 
-const ThisRow = styled.div`
-  margin-left: 35px;
-  > h1 {
-    color: white !important;
-  }
-`;
 
-const ThatRow = styled.div`
-  margin-left: 36px;
-  > h3 {
-    color: white !important;
-    font-weight:100;
-  }
-`;
-
-const MakeSendOrder = styled.div`
-    display:flex;
-    flex-direction: column;
-    
-    align-items:flex-start;
-    
-    /* flex-wrap: wrap; */
-    /* justify-content:center; */
-    /* align-items:center; */
-    border-radius:25px;
-    margin-top:10px;
-    margin-bottom: 30px;
-    width:100%;
-    height:420px;
-    margin-left:25px;
-    background:white;
+const ContentBox_h2 = styled.h2`
+    color: #88C053;
+    font-weight: 400;
+    font-size: 20;
+`
+const Info_box = styled.div`
+    background-color: #F5FAF1;
+    border-radius: 15px;
+    padding: 10px;
+    width: 6.5em;
+    margin: 10px;
     overflow: hidden;
-
-    > Row {
-        padding:25px;
-    }
-
-    > Row > h1 {
-        font-size: 24px;
-        font-weight 600;
-        color: #9cd06b;
-    }
-
-    > Row date {
-        margin-left:140px;
-        padding-left:100px;
-    }
-
-    > Row > .MuiInputBase-input {
-        font: inherit;
-        color: currentColor;
-        width: 290px;
-        border: 0;
-        height: 1.1876em;
-        margin: 0;
-        display: block;
-        padding: 6px 0 7px;
-        min-width: 0;
-        background: none;
-        box-sizing: content-box;
-        animation-name: mui-auto-fill-cancel;
-        letter-spacing: inherit;
-        animation-duration: 10ms;
-        -webkit-tap-highlight-color: transparent;
-    }
-`;
-
-const TimePicker = styled.div`
-    margin-top: 20px;
-    margin-left: 25px;
-    width: 85%;
-    display:flex;
-    flex-direction:column;
-    align-items:stretch;
-    
+`
+const Info_label = styled.p`
+    color: #838383;
+    font-weight: 600;
+    font-size: 18;
+    margin: 0px;
 `
 
-const TextCol = styled.div`
-    width:100%;
-    height:100%;
-    display:table;
-    margin-top:10px;
+const Info_data = styled.p`
+    color: #88C053;
+    font-weight: 400;
+    font-size: 16;
+    margin: 0px;
 `
 
-const TextCol2 = styled.div`
-    width:100%;
-    height:100%;
-    display:table;
-    margin-top:27px;
-`
-
-const ButtonContainer = styled.div`
-    padding-left:25px;
-    margin-top:20px;
+const Info_image = styled.img`
+    width: 100%;
 `
 
 function OndDashboard() {
@@ -203,19 +243,6 @@ function OndDashboard() {
             window.dispatchEvent(event);
 
     const history = useHistory();
-
-    // const [routes,
-    //     setRoutes] = useState([]);
-    //         useEffect(() => {
-    //          db
-    //         .collection('routes')
-    //         .onSnapshot(snapshot => {
-    //             setRoutes(snapshot.docs.map(doc => ({
-    //                 id: doc.id,
-    //                 route: doc.data()
-    //             })));
-    //         })
-    // }, []);
 
     const handleNewDelivery = () => {
         history.push("/OndSend")
@@ -262,6 +289,20 @@ function OndDashboard() {
    
        const classes = useStyles();
 
+       const [meldingen, setMeldingen] = useState([])
+
+       useEffect(() => {
+          db
+              .collection('meldingen')
+              .onSnapshot(snapshot => {
+                  setMeldingen(snapshot.docs.map(doc => ({
+                      melding : doc.data()
+                      
+                  })));
+              })
+      }, []);
+     
+
     return (
         
         <div className='OndDashboard'>
@@ -280,10 +321,35 @@ function OndDashboard() {
             <Container>
                 <ContentBox_h1>Bekijk status van Cargobikes</ContentBox_h1>
             </Container>
-
+            
             <Scrollbar>
-                <Scrollbar_item><CargobikeStatus/></Scrollbar_item>
-                <Scrollbar_item><CargobikeStatusTwo/></Scrollbar_item>
+            {meldingen.map(({melding}) => (
+                <Scrollbar_item>
+
+                <div className="CargobikeStatus">  
+                <a href={'../MonCargobikeBroken'}>
+                <Contentbox>
+                    <ContentBox_h1>NR 12 - {melding.desc}</ContentBox_h1>
+                    <ContentBox_h2>Standaard Cargobike</ContentBox_h2>
+                    <Row>
+                        <Info_box>
+                            <Info_label>Radius</Info_label>
+                            <Info_data><strong>12%</strong> | 100%</Info_data>
+                        </Info_box>
+                        <Info_box>
+                            <Info_label>Conditie</Info_label>
+                            <Info_data>C1</Info_data>
+                        </Info_box>
+                        <Info_image src={melding.afbeelding}/>
+                    </Row>
+                </Contentbox>
+                </a>
+            </div>
+                </Scrollbar_item>
+            
+                           ))
+                        }
+                {/* // <Scrollbar_item><CargobikeStatusTwo/></Scrollbar_item> */}
             </Scrollbar>
         </div>  
     )
