@@ -61,29 +61,30 @@ const Scrollbar_item = styled.div`
     margin: 20px;
 `
 
-export default function MonKapotteCbMap(){
+export default function MonCargobikeBrokenMap(){
     //Busted cargobikes generator
-    var busted_cb = new Array;
-    var busted_types = ['Standard', 'Deluxe'];
-    var busted_amount = Math.floor(Math.random() * 8);
+    var bustedCb = new Array;
+    var bustedTypes = ['Standard', 'Deluxe'];
+    var bustedAmount = Math.floor(Math.random() * 8);
     //Default stats
-    var busted_radius = 100;
-    var busted_nr = 10;
-    var busted_conditie = 8;
-    var busted_lat = 53.206008505814204; //Westerlijkste zijde stad
-    var busted_lang = 6.533303830516705; // Zuiderlijkste zijde stad
-    for(var i = 1; i < busted_amount + 1; i++){
-        var busted_radius = Math.floor(Math.random() * 100);
-        var busted_nr = Math.floor(Math.random() * 20);
-        var busted_conditie = Math.floor(Math.random() * 4) + 1; //cond = 0 bestaat niet
-        var busted_lat = 53.206008505814204 + (Math.random() * 0.03560893870131); //Oosterlijkste zijde van stad
-        var busted_lang = 6.533303830516705 + (Math.random() * 0.053901668477234); //Oosterlijkste zijde van stad
-        var type_nr = Math.floor(Math.random() * busted_types.length);
-        busted_cb.push(
-            {id: i, radius: busted_radius, nr: busted_nr, conditie: busted_conditie, lat: busted_lat, lng: busted_lang, type: busted_types[type_nr]}
+    var bustedRadius = 100;
+    var bustedNr = 10;
+    var bustedConditie = 8;
+    var bustedLat = 53.206008505814204; //Westerlijkste zijde stad
+    var bustedLang = 6.533303830516705; // Zuiderlijkste zijde stad
+    for(var i = 1; i < bustedAmount + 1; i++){
+        var bustedRadius = Math.floor(Math.random() * 100);
+        var bustedNr = Math.floor(Math.random() * 20);
+        var bustedConditie = Math.floor(Math.random() * 4) + 1; //cond = 0 bestaat niet
+        var bustedLat = 53.206008505814204 + (Math.random() * 0.03560893870131); //Oosterlijkste zijde van stad
+        var bustedLang = 6.533303830516705 + (Math.random() * 0.053901668477234); //Oosterlijkste zijde van stad
+        var typeNr = Math.floor(Math.random() * bustedTypes.length);
+        bustedCb.push(
+            {id: i, radius: bustedRadius, nr: bustedNr, conditie: bustedConditie, lat: bustedLat, lng: bustedLang, type: bustedTypes[typeNr]}
         );
-        var busted_lat = 53.206008505814204;
-        var busted_lang = 6.533303830516705;
+        //Reset lat and lang
+        var bustedLat = 53.206008505814204;
+        var bustedLang = 6.533303830516705;
     }
 
     return(
@@ -92,7 +93,7 @@ export default function MonKapotteCbMap(){
                 <CbInput id="standard-basic" label="Vul een cargobike#" InputProps={{disableUnderline: true}} > </CbInput>
                 <CbSearchBtn><SearchIcon/></CbSearchBtn>
             </Contentbox>
-            <GoogleMap styleclassname = {"MonHaltesMap"} busted_cb={busted_cb}/>
+            <GoogleMap styleclassname = {"MonHaltesMap"} bustedCb={bustedCb}/>
             
             <Row>
                 <Scrollbar>
