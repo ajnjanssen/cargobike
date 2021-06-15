@@ -17,8 +17,8 @@ export class MapContainer extends Component {
         lng: this.props.locationMarkerlng,
         },
         styleClass: this.props.styleclassname || 'MonHalteMap',
-        busted_cb: this.props.busted_cb || [],
-        haltes: this.props.haltes_locaties || [],
+        bustedCb: this.props.bustedCb || [],
+        haltes: this.props.haltesLocaties || [],
     }
 
     render() {
@@ -41,7 +41,7 @@ export class MapContainer extends Component {
         >   
 
             {/* Render busted cargobikes */}
-            {this.state.busted_cb.map((bike)=>
+            {this.state.bustedCb.map((bike)=>
                 <GoogleMapsCustomMarker
                     id = {bike.id}
                     position={{lat: bike.lat, lng: bike.lng}}
