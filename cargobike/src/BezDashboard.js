@@ -303,12 +303,11 @@ const [meldingen, setMeldingen] = useState([]);
               {/* For loop schrijven voor actuele data van bezorger */}
               <CurrentAgenda />
               <Col>
-                <h3 className="TextRes_Wijzigen">
-                  Agenda bekijken{" "}
-                  <ArrowForwardIcon
-                    style={{ fontSize: 20, color: "#88C053" }}
-                  />
-                </h3>
+              <h3>
+              <a href="NietBeschikbaar">
+                                <Button onclick="NietBeschikbaar">Agenda bekijken <ArrowForwardIcon style={{ fontSize: 20, color:'#88C053' }}/> </Button>
+                                </a>
+                                </h3>
               </Col>
             </Row>
           </div>
@@ -352,11 +351,10 @@ const [meldingen, setMeldingen] = useState([]);
               </Row>
               <Col>
                 <h3 className="TextRes_Wijzigen">
-                  Cargobike bekijken{" "}
-                  <ArrowForwardIcon 
-                    style={{ fontSize: 20, color: "#88C053" }}
-                  />
-                </h3>
+                <a href="NietBeschikbaar">
+                                <Button onclick="NietBeschikbaar">Cargobike bekijken <ArrowForwardIcon style={{ fontSize: 20, color:'#88C053' }}/> </Button>
+                                </a>
+                                </h3>
               </Col>
             </Row>
           </div>

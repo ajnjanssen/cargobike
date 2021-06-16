@@ -73,8 +73,8 @@ function MonteurRoute() {
                            <Col xs={8} className="Res_wijzigen">
                                 <h3>
                                 <a href="NietBeschikbaar">
-                    <Button onclick="NietBeschikbaar"> Planning bekijken <ArrowForwardIcon/></Button>
-                    </a>
+                                <Button onclick="NietBeschikbaar"> Planning bekijken <ArrowForwardIcon/></Button>
+                                </a>
                                 </h3>
                             </Col> 
                         </Row>

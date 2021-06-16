@@ -1,14 +1,13 @@
 /* eslint-disable react/jsx-pascal-case */
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { useHistory } from "react-router";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Button } from '@material-ui/core';
 
 function NietBeschikbaar() {
   
-  const event = new Event('showLogdOutHeader');
-  window.dispatchEvent(event);
+  // const event = new Event('showLogdOutHeader');
+  // window.dispatchEvent(event);
   
   return (
     <div className="bezDashboard">
