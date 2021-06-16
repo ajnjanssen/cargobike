@@ -123,9 +123,9 @@ function DashboardGreeting() {
                         <Row style={{paddingLeft: 0}}>
                       <Col xs={12} md={12} className="BackButtonCargobike">
                           <div className="Button_TrackTrace">
-                            <a>
-                            <Button onclick="goBack()"><ArrowBackIcon/> Terug</Button>
-                            </a>
+                          <a href="javascript: history.go(-1)">
+                    <Button onclick="javascript: history.go(-1)"><ArrowBackIcon/> Terug</Button>
+                    </a>
                             </div>
                      </Col>
                   </Row>
