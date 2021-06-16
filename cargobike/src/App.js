@@ -15,6 +15,8 @@ import BezDashboard from './BezDashboard'
 import Login from './pages/Login';
 import OndZending from './OndZending';
 
+
+
 // import Onboarding from './src/pages/onboarding/Onboarding'
 import Onboarding from './pages/onboarding/Onboarding';
 import Onboarding1 from './pages/onboarding/Onboarding-1';
@@ -42,7 +44,7 @@ import UserInformationData from './pages/UserInformationData';
 // import Track&Trace scherm from './src/pages'
 import TrackTrace from './pages/TrackTrace';
 
-
+import NietBeschikbaar from './pages/NietBeschikbaar';
 
 function App() {
 
@@ -104,6 +106,7 @@ function App() {
             <Route path='/OndCbWijzigen' exact component={OndCbWijzigen}/>
             {/* Track & Trace scherm routes */}
              <Route path='/TrackTrace' exact component={TrackTrace}/>
+             <Route path='/NietBeschikbaar' exact component={NietBeschikbaar}/>
         </Switch>
       </Router>
       {/* <OndDashboard /> */}
