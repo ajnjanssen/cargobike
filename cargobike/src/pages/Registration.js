@@ -25,7 +25,7 @@ import lottie from "lottie-web";
 
 function Registration() {
   const event = new Event('showLogdOutHeader');
-window.dispatchEvent(event);
+  window.dispatchEvent(event);
 
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
@@ -108,18 +108,18 @@ window.dispatchEvent(event);
 
       <Container>
         
-        <div className="card col-12 col-lg-12 login-card mt-2 hv-center regBlock">
+        <div className="col-12 col-lg-12 regBlock">
           <div className="makeAccount">
-            <CssBaseline />
+          <CssBaseline />
             <div className={classes.paper}>
-              <Avatar className={classes.avatar}>
-                {/* <LockOutlinedIcon /> */}
-              </Avatar>
-              <Typography component="h1" variant="h5">
-                Registratie
-                
+              <Typography class="RegTitel" component="h1" variant="h5">
+                Registreren voor CargoDelivery
               </Typography>
               <form className={classes.form} noValidate>
+                <div class="RegAanmaken">
+                <h2>Account aanmaken</h2>
+                    <br></br>
+                </div>
                 <Grid container spacing={2}>
                   <Grid item xs={12} sm={6}>
                     <TextField
@@ -184,7 +184,7 @@ window.dispatchEvent(event);
                       control={
                         <Checkbox value="allowExtraEmails" color="primary" />
                       }
-                      label="Ik wil inspiratie, marketingacties en updates ontvangen via e-mail."
+                      label="Ik ga akkoord met de algemene voorwaarden."
                     />
                   </Grid>
                 </Grid>
@@ -216,3 +216,4 @@ window.dispatchEvent(event);
 }
 
 export default Registration;
+

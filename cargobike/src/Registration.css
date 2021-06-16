@@ -17,7 +17,7 @@
 }
 
 .makeAccount{
-    margin-top: -30px;
+    margin-top: 210px;
     margin-bottom:15px;
 }
 
@@ -47,4 +47,17 @@
     /* width:350px; */
     display:flex;
     align-items:center; 
+}
+
+.RegTitel{
+    color: white;
+   text-align: center;
+    font-size: 24px;
+    padding-bottom: 120px;
+    margin-top: -130px;
+}
+
+.RegAanmaken h2{
+    font-size: 24px;
+    font-weight: 500;
 }
