@@ -9,9 +9,9 @@ import InformationScreen from '../../components/InformationScreen';
 import InformationScreenImage from '../../img/onboarding-image.png';
 
 // These variables are beforehand defined and can be changed in the progress of onboarding.
-var InformationScreenTitle = 'Cargobike';
+var InformationScreenTitle = 'CargoDelivery';
 var InformationScreenText = <text>
-                                De logistieke oplossing voor de duurzame ondernemer van onze Groningse binnenstad.
+                                De logistieke oplossing voor de duurzame ondernemer van onze Groningse binnenstad. Maak een keuze in het menu hieronder.
                             </text>;
 
 /**
@@ -41,6 +41,11 @@ function Onboarding() {
                     'text': 'Log In', 
                     'label': 'Ik heb al een account', 
                     'link': '/Login',
+                },
+                {
+                    'text': 'Pakket traceren', 
+                    'label': 'Ik wil mijn pakket traceren', 
+                    'link': '/TrackTrace'
                 },
             ]);
         
