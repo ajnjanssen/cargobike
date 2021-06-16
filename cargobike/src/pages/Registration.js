@@ -12,16 +12,21 @@ import {
 } from "@material-ui/core";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
-import React, { useState } from "react";
+import React, { useState} from "react";
+
 import { Col, Container, Row } from "react-bootstrap";
+
 import { useHistory } from "react-router";
 import { auth, db } from "../components/firebase/Firebase";
 import "../Registration.css";
 
-const event = new Event('showLogdOutHeader');
-window.dispatchEvent(event);
+import lottie from "lottie-web";
+
 
 function Registration() {
+  const event = new Event('showLogdOutHeader');
+window.dispatchEvent(event);
+
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
   const [email, setEmail] = useState("");
@@ -88,6 +93,7 @@ function Registration() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
   return (
     <div className="registration">
 
@@ -148,7 +154,7 @@ function Registration() {
                       required
                       fullWidth
                       id="email"
-                      label="Email Adres"
+                      label="E-mailadres"
                       name="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -170,6 +176,10 @@ function Registration() {
                     />
                   </Grid>
                   <Grid item xs={12}>
+                    <text>
+                      Velden met * zijn verplicht.
+                    </text>
+                    <br></br><br></br>
                     <FormControlLabel
                       control={
                         <Checkbox value="allowExtraEmails" color="primary" />
@@ -191,7 +201,7 @@ function Registration() {
                 <Grid container justify="flex-end">
                   <Grid item>
                     <Link href="#" onClick={handleClick} variant="body2">
-                      Heeft u al een account? Log in.
+                      Heeft u al een account? Log hier in.
                     </Link>
                   </Grid>
                 </Grid>

@@ -428,8 +428,6 @@ function Login() {
               </form>
             </TabPanel>
 
-
-
             <TabPanel value={value} index={2}>
             <div className="lottieContainer">
               <div className="container2" ref={container2}></div>
