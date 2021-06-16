@@ -39,6 +39,11 @@ import OndSend from './pages/OndSend';
 import UserInformation from './pages/UserInformation';
 import UserInformationData from './pages/UserInformationData';
 
+// import Track&Trace scherm from './src/pages'
+import TrackTrace from './pages/TrackTrace';
+
+
+
 function App() {
 
   // states are being set to show the header and navbar components
@@ -97,6 +102,8 @@ function App() {
             <Route path='/UserInformation' exact component={UserInformation}/>
             <Route path='/UserInformationData' exact component={UserInformationData}/>
             <Route path='/OndCbWijzigen' exact component={OndCbWijzigen}/>
+            {/* Track & Trace scherm routes */}
+             <Route path='/TrackTrace' exact component={TrackTrace}/>
         </Switch>
       </Router>
       {/* <OndDashboard /> */}
