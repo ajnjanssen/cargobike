@@ -12,15 +12,11 @@ import CbStatCard from '../components/CbStatCard';
 //Button styling
 import { Button } from '@material-ui/core';
 import GoogleMap from '../components/GoogleMap';
-
 //icons for the page
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import PhoneForwardedIcon from '@material-ui/icons/PhoneForwarded';
 
-var cargobikeId = 12;
-var cargobikeSoort = 'Standaard Cargobike';
-var cargobikeStatus = 'C2';
 var CargobikeStatus = 0;
 
 const ButtonContainer = styled.div`
@@ -40,18 +36,15 @@ function CargobikePage() {
         const event = new Event('showNavbarMon');
         window.dispatchEvent(event);
 
-        //Hoofdstation
-        const [halteLat, setHalteLat ] = useState(53.2448297264615);
-        const [halteLen, setHalteLen ] = useState(6.528572957354985);
-
     return (
         <div className="MonCbOverzicht">
+
         <Container>
             {/* Dashboard greeting */}
             <Row style={{paddingLeft:14}}>
-                <Col xs={12} md={12} >
-                    <a href={'../MonDashboard'}>
-                    <Button onclick="goBack()" style={{color:'white'}}><ArrowBackIcon/> Terug</Button>
+                <Col xs={12} md={12} className="BackButtonCargobike">
+                    <a>
+                    <Button onclick="goBack()"><ArrowBackIcon/> Terug</Button>
                     </a>
                 </Col>
             </Row>
@@ -75,13 +68,16 @@ function CargobikePage() {
                     </Col>
                 </Row>
             </div>
-            <ButtonContainer>
-            <a href="https://maps.google.com/?q=53.2109719,6.5619039">
-                <Button className="location_button">
-                    Ga naar locatie <ArrowForwardIcon/>
-                </Button>
-            </a>
-        </ButtonContainer>
+            <div className="position-relative">
+                <img class="card-img-top Route_img" src="/static/media/Map.dda3b0da.png"></img>
+                <ButtonContainer  className="position-absolute" style={{top:12, right:8}}>
+                    <a href="https://maps.google.com/?q=53.2109719,6.5619039">
+                        <Button className="location_button">
+                            Ga naar locatie <ArrowForwardIcon/>
+                        </Button>
+                    </a>
+                </ButtonContainer>
+            </div>
             <div>
             <CargoLogCard/>
         </div>

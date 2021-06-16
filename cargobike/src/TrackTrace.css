@@ -1,0 +1,44 @@
+.Title_VerNummer {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 45px;
+    color: white;
+}
+
+.Button_TrackTrace{
+    margin-left: -10px;
+    margin-bottom: 15px;
+}
+
+.Header_descTrack {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: white;
+    margin-top: -16px;
+}
+
+.Title_track {
+    margin-bottom: 20px;
+}
+
+.Card_track {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    min-height: 300px;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+}
+
+.Text_TrackKijk{
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 8px;
+    margin-left: -15px;
+};
+
