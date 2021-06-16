@@ -135,6 +135,22 @@ import Fade from '@material-ui/core/Fade';
                      
                     </ListItem>
                     <Divider />
+            {reserveringen.map(({id, reservering}) => (
+                  
+                  <>
+               <List component="nav" className={classes.root} aria-label="mailbox folders">
+                  <ListItem button>
+                  <ListItemText primary={reservering.adres} />
+                  <ListItemText secondary={reservering.tijd} />
+                  <ListItemText secondary={reservering.datum} />
+                  
+                  <IconContext.Provider value={{ color: "#838383", className: "Delete_icon", size: "1.5em" }}>
+                      <MdDelete onClick={handleDelete}/>
+                     </IconContext.Provider>
+
+                  </ListItem>
+                  <Divider />
+
                   </List>
                 </>
               ))}

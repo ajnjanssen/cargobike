@@ -36,7 +36,7 @@ function FirstInQueueDelivery() {
                        <div className="Card_First_Delivery box">
                       <Row>
                             <Col xs={8}>
-                               <h1 className="Card_title">Volgende bezorging</h1> 
+                               <h1 className="Card_title">Volgende zending</h1> 
                          </Col>
                               <div>
                                     <Row className="extra-padding-card">
@@ -49,7 +49,7 @@ function FirstInQueueDelivery() {
                                                 <h2>Gereserveerd op: 20-05-2021</h2> 
                                           </Col>
                                           <Col xs={8} className="Cargobike_res_details">
-                                                <h1 className="Dikgedrukt">{reserveringen[0].reservering.adres}</h1> 
+                                                <h1 className="Dikgedrukt">Naar {reserveringen[0].reservering.adres}</h1> 
                                                 <h2 className="Grey_text">{reserveringen[0].reservering.postcode}</h2>
                                                 <h3 className="Green_text">{reserveringen.length} pakketten</h3>  
                                           </Col>
@@ -59,7 +59,7 @@ function FirstInQueueDelivery() {
                                           </Col>
 
                                           <Col xs={8} className="Res_wijzigen">
-                                                <h3 className="TextRes_Wijzigen">Reservering wijzigen  <ArrowForwardIcon style={{ fontSize: 20, color:'#88C053' }} /></h3>
+                                                <h3 className="TextRes_Wijzigen">Zending wijzigen  <ArrowForwardIcon style={{ fontSize: 20, color:'#88C053' }} /></h3>
                                             </Col>
                                     </Row>
                               </div>

@@ -17,7 +17,7 @@ export const SidebarDataOnd = [
         icon: <DashboardIcon/>,
         cName: 'nav-text'
     },{
-        title: 'Reserveringen bekijken',
+        title: 'Zendingen bekijken',
         path: './OndReservering',
         icon: <UpdateIcon/>,
         cName: 'nav-text'
