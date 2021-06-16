@@ -265,6 +265,20 @@ const Info_image = styled.img`
     width: 100%;
 `
 
+const RentCargobike = styled.div`
+    padding: 20px;
+    padding-bottom: 0px;
+    overflow:hidden;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    width: 240px;
+    background-color: white;
+    margin-top: -20px;
+    min-height: 250px;
+ 
+`
+
 function OndDashboard() {
     const history = useHistory();
 
@@ -445,13 +459,13 @@ function OndDashboard() {
             {/* Dashboard begroeting voor de gebruiker met reserveringen */}
             <DashboardGreeting />
 
-            <Col xs={12} md={8}>
-              <h1 className="RecentActivity"><ArrowForwardIosIcon className="Icon_Margin" style={{ fontSize: 14, color:'white' }} />Reservering voor 23-10-25, 13:15 Stationsweg</h1>
+            <Col xs={12} md={12}>
+              <h1 className="RecentActivity"><ArrowForwardIosIcon className="Icon_Margin" style={{ fontSize: 14, color:'white' }} />Zending voor 23-10-25, 13:15 naar Stationsweg</h1> 
               <h2 className="RecentActivity_Desc">36 pakketten</h2>
             </Col>
 
-            <Col xs={12} md={8}>
-              <h1 className="RecentActivity2"><ArrowForwardIosIcon className="Icon_Margin" style={{ fontSize: 14, color:'white' }} />Reservering voor 18-09-25, 14:45 Zernike</h1>
+            <Col xs={12} md={12}>
+              <h1 className="RecentActivity2"><ArrowForwardIosIcon className="Icon_Margin" style={{ fontSize: 14, color:'white' }} />Zending voor 18-09-25, 14:45 naar Zernike</h1>
               <h2 className="RecentActivity_Desc2">42 pakketten</h2>
             </Col>
         
@@ -470,7 +484,7 @@ function OndDashboard() {
 
             <Scrollbar>
                 <Scrollbar_item>
-                <div className="Card_agenda box">
+                    <RentCargobike>
                         <Row>
                             <Col xs={10}>
                                 <h1 className="Card_title_Cargobike">Cargobike</h1>
@@ -490,11 +504,11 @@ function OndDashboard() {
                         </Row>
 
                         </Row>
-                    </div>
+                    </RentCargobike>
                 </Scrollbar_item>
 
                 <Scrollbar_item>
-                <div className="Card_agenda box">
+                    <RentCargobike>
                         <Row>
                             <Col xs={10}>
                                 <h1 className="Card_title_Cargobike">Cargobike</h1>
@@ -514,11 +528,11 @@ function OndDashboard() {
                         </Row>
 
                         </Row>
-                    </div>
+                    </RentCargobike>
                 </Scrollbar_item>
 
                 <Scrollbar_item>
-                <div className="Card_agenda box">
+                    <RentCargobike>
                         <Row>
                             <Col xs={10}>
                                 <h1 className="Card_title_Cargobike">Cargobike</h1>
@@ -527,18 +541,18 @@ function OndDashboard() {
 
                         <Row>
                             <Info_box>
-                             <Info_label>Radius</Info_label>
+                                <Info_label>Radius</Info_label>
                                 <Info_data>40 km</Info_data>
                             </Info_box>
                             <Info_box>
-                                    <Info_label>Capaciteit</Info_label>
-                                    <Info_data>120 Liter</Info_data>
-                                </Info_box>
+                                <Info_label>Capaciteit</Info_label>
+                                <Info_data>120 Liter</Info_data>
+                            </Info_box>
                             <Info_image src={ph_img}/>
                         </Row>
 
                         </Row>
-                    </div>
+                    </RentCargobike>
                 </Scrollbar_item>
                 
 

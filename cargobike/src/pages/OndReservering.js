@@ -19,11 +19,11 @@ function OndReservering() {
                 <Row style={{paddingLeft: '15px'}}>
                     <Col xs={12} md={8}>
                         <div className="Dash_greet">
-                            <h1 className="Header_title">Mijn bezorgingen</h1>
+                            <h1 className="Header_title">Mijn zendingen</h1>
                         </div>
                     </Col>
                     <Col xs={12} md={8}>
-                        <h1 className="Header_desc">Een overzicht van alle bezorgingen.</h1>
+                        <h1 className="Header_desc">Een overzicht van alle zendingen.</h1>
                     </Col>
                 </Row>
             </Container>
@@ -34,7 +34,7 @@ function OndReservering() {
             <Container className="Title_dash">
                 <Row style={{paddingLeft : '15px'}}>
                     <Col xs={12} md={8}>
-                        <h1 className="Bezorging_title">Al uw gemaakte bezorgingen</h1>
+                        <h1 className="Bezorging_title">Al uw gemaakte zendingen</h1>
                     </Col>
                 </Row>
             </Container>

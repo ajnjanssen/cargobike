@@ -12,9 +12,6 @@ import MonteurRoute from '../components/MonteurRoute';
 import MonDashboardGreeting from '../components/user/MonDashboardGreeting';
 import '../OndReservering.css';
 
-
-
-
 // import { db } from '../components/firebase/Firebase';
 
 // const AddbuttonReservering = styled.div`
@@ -52,7 +49,13 @@ const ContentBox_h1 = styled.h1`
     color: #88C053;
     font-size: 20px;
     font-weight: 600;
-    margin-top: 40px;
+`
+
+const CargoBikeStat_h1 = styled.h1`
+    color: #838383;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 3vh;
 `
 
 const useStyles = makeStyles({
@@ -202,9 +205,8 @@ const Contentbox = styled.div`
     color: black;
     min-width: 300px;
     max-width: 500px;
+    overflow: hidden;
 `
-
-
 const ContentBox_h2 = styled.h2`
     color: #88C053;
     font-weight: 400;
@@ -319,7 +321,7 @@ function OndDashboard() {
         
             {/* Cards met Cargobike modellen*/}
             <Container>
-                <ContentBox_h1>Bekijk status van Cargobikes</ContentBox_h1>
+                <CargoBikeStat_h1>Bekijk status van Cargobikes</CargoBikeStat_h1>
             </Container>
             
             <Scrollbar>

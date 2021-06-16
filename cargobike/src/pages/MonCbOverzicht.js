@@ -40,12 +40,12 @@ export default function MonCbOverzicht(){
                     </Row>
                     <Row>
                         <Col xs={3} md={3} className="cb_locked">
-                            <h1>Op slot</h1>
+                            <h1>Vergrendeld</h1>
                             <p>12</p>
                                   
                         </Col>
                         <Col xs={3} md={3} className="cb_open">
-                            <h1>Open</h1>
+                            <h1>Ontgrendeld</h1>
                             <p>8</p>
                         </Col>
                         <Col xs={3} md={3} className="cb_unavailable">

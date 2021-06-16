@@ -56,7 +56,7 @@ function DashboardGreeting() {
 
                     </Col>
                     <Col xs={12} md={8}>
-                        <h1 className="Header_desc">Laten we iets verzenden</h1>
+                        <h1 className="Header_desc">Laten we iets repareren</h1>
                     </Col>
                     <Col xs={12} md={8}>
                         <h1 className="Header_desc_greet">

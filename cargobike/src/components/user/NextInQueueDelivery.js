@@ -42,9 +42,6 @@ function NextInQueueDelivery() {
             <Container>
              <div className="Card_bezorgingen box">
             <Row>
-                  <Col xs={12}>
-                     <h1 className="Card_title">Volgende bezorging</h1> 
-               </Col>
             {reserveringen.map(({id, reservering}) => (
                   
                   <>
