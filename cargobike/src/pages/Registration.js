@@ -196,7 +196,7 @@ function Registration() {
                   className={classes.submit}
                   onClick={signUp}
                 >
-                  Registreren
+                 Account aanmaken
                 </Button>
                 <Grid container justify="flex-end">
                   <Grid item>

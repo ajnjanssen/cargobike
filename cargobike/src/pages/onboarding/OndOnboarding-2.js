@@ -10,7 +10,7 @@ import InformationScreenImage from '../../img/onboarding-image.png';
 // These variables are beforehand defined and can be changed in the progress of onboarding.
 var InformationScreenTitle = '2. Huur een cargobike voor elke vracht';
 var InformationScreenText = <text>
-                                Wanneer u een bezorgtijd heeft uigekozen, kunt u de cargobike huren om zelf aan de slag te gaan. Of je laat een bezorger je pakketten rondbrengen. <br/><br/>Onbeperkt pakketten bezorgen in Groningen!
+                                Wanneer u een bezorgtijd heeft uigekozen, kunt u de cargobike huren om zelf aan de slag te gaan. Of je laat een bezorger je pakketten rondbrengen. <br/><br/>Duurzaam pakketten bezorgen in Groningen!
                             </text>;
 
 /**

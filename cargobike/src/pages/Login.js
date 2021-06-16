@@ -202,7 +202,7 @@ function Login() {
       loop: true,
       name: "Ondernemer",
       autoplay: true,
-      aspectRatio: 2,
+      aspectRatio: 1,
       animationData: require("../img/lottie/deliver.json"),
     });
   }
@@ -213,7 +213,7 @@ function Login() {
       loop: true,
       name: "Bezorger",
       autoplay: true,
-      aspectRatio: 2,
+      aspectRatio: 1,
       animationData: require("../img/lottie/man.json"),
     });
   }
@@ -225,7 +225,7 @@ function Login() {
       loop: true,
       name: "Monteur",
       autoplay: true,
-      aspectRatio: 2,
+      aspectRatio: 1,
       animationData: require("../img/lottie/mechanic.json"),
     });
   }
@@ -286,7 +286,7 @@ function Login() {
         <Grid item xs={false} sm={4} md={7} className={classes.image} />
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <div className={classes.paper}>
-            <AppBar position="relative">
+            <AppBar position="relative" color="white">
               <Tabs
                 value={value}
                 onChange={handleChange}
