@@ -12,48 +12,46 @@ import LockOpenIcon from '@material-ui/icons/LockOpen';
 const CbSwitch = withStyles({
     root: {
       overflow: 'visible',
+      paddingLeft: 5,
     },
     switchBase: {
-      color: "#FFFFFF",
-      backgroundColor: "#88C053",
-      width: 38,
-      height: 41,
-      paddingLeft: 15,
-      borderRadius: 20,
-      "&$checked": {
         color: "#FFFFFF",
-        backgroundColor: "#3F51B8",
-        width: 38,
-        height: 41,
-        paddingLeft: 15,
-        padding: 10,
-        borderRadius: 20,
+        backgroundColor: "#88C053",
+        width: 40,
+        height: 40,
+        "&$checked": {
+          color: "#FFFFFF",
+          backgroundColor: "#3F51B8",
+          minWidth: 40,
+          minHeight: 40,
+          padding: 10,
+          borderRadius: 20,
+        },
+        "&$checked + $track": {
+          backgroundColor: "#FFFFFF"
+        },
+        '&$checked $thumb': {
+            backgroundColor: "#3F51B8",
+            transform: "none!important",
+        },
+        '&$checked :hover':{
+          backgroundColor: "#3F51B8",
+          padding: 5,
+          borderRadius: 20,
+        },
+        '&$checked :active':{
+            backgroundColor: "#3F51B8",
+            animation: "None !important",
+            transition: "None !important",
+          },
+        '&:hover':{
+            backgroundColor: "#88C053",
+        },
       },
-      "&$checked + $track": {
-        backgroundColor: "#FFFFFF"
-      },
-      '&$checked $thumb': {
-        backgroundColor: "#3F51B8",
-      },
-      '&$checked :hover':{
-        backgroundColor: "#3F51B8",
-        width: 38,
-        height: 41,
-        paddingLeft: 6,
-        marginRight: 6,
-        borderRadius: 20,
-      },
-      '&:hover':{
-          backgroundColor: "#88C053",
-      },
-    },
-    thumb: {
-        width: 81,
-        height: 41,
-    },
-    checked: {},
-    track: {backgroundColor: "#FFFFFF"},
-  })(Switch);
+      thumb: {},
+      checked: {},
+      track: {backgroundColor: "#FFFFFF"},
+})(Switch);
 
 export default function CbStatcard(props){
     const{nr, afstand} = props;
@@ -79,7 +77,7 @@ export default function CbStatcard(props){
                     <Col xs={8} md={8}>
                         <h1>Nummer {nr}</h1>
                         <h2>{afstand} m</h2>
-                        <h3>Status: {status}</h3>
+                        <h3>Status: Wordt momenteel gebruikt</h3>
                     </Col>
                     <Col xs={4} md={4}>
                         <div className="sw_container">
@@ -90,7 +88,7 @@ export default function CbStatcard(props){
                                         checked={setcbLockState.checkedA}
                                         onChange={handleChange}
                                         name="checkedA"
-                                        checkedIcon={<LockIcon color="white" fontsize="large"/>}
+                                        checkedIcon={<LockIcon color="white"/>}
                                         icon={<LockOpenIcon/>}
                                     />
                                     }

@@ -28,12 +28,17 @@ h3{ /* Status */
 .sw_container{
     border: 3px solid #838383;
     border-radius: 15px;
-    padding-left: 12px;
+    padding-left: 13px;
+    padding-top: 2px;
     text-align: right;
     width: 70px;
     height: 50px;
 }
 
+.MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-6 MuiSwitch-switchBase WithStyles(ForwardRef(Switch))-switchBase-16 MuiSwitch-colorSecondary{
+    width: 40px;
+    height: 40px;
+}
 /*
 .sw_icon{
     color: white;
