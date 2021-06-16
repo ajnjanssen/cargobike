@@ -264,19 +264,19 @@ const [meldingen, setMeldingen] = useState([]);
       <Col xs={12} md={8}>
         <h1 className="RecentActivity">
           <ArrowForwardIosIcon className="Icon_Margin" style={{ fontSize: 14, color: "white" }} />
-          Bezorgroute voor 23-10-25, 11:15 Sontplein
+          Bezorgroute voor 23-10-'21, 11:15 Sontplein 5
         </h1>
   
         {/* {console.log(meldingen[0].afbeelding)} */}
-        <h2 className="RecentActivity_Desc">Route 54 pakketten</h2>
+        <h2 className="RecentActivity_Desc">Aantal: 54 pakketten</h2>
       </Col>
 
       <Col xs={12} md={8}>
         <h1 className="RecentActivity2">
           <ArrowForwardIosIcon className="Icon_Margin" style={{ fontSize: 14, color: "white" }} />
-          Bezorgroute voor 18-09-25, 13:55 Zernike
+          Bezorgroute voor 24-10-'21, 13:55 Zernikeplein 11
         </h1>
-        <h2 className="RecentActivity_Desc2">Route 31 pakketten</h2>
+        <h2 className="RecentActivity_Desc2">Aantal: 31 pakketten</h2>
       </Col>
 
       <ActRouteBez />
