@@ -1,0 +1,67 @@
+.logoRegistration{
+    /* margin-top:200px; */
+    z-index:2;
+    color:white;
+    font-weight: bolder;
+}
+
+.RowLogo{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.regInput{
+    margin-top:20px;
+}
+
+.makeAccount{
+    margin-top: 210px;
+    margin-bottom:15px;
+}
+
+.regBlock{
+    padding-bottom: 15px;
+}
+
+.lottieContainer{
+    width:10vw;
+    width:350px;
+    /* margin-left:240px;
+    margin-right:auto;
+    display:flex;
+    align-items:center; */
+}
+.containerReg{
+    margin-bottom: -70px;
+    margin-right:auto;
+    /* margin-left:10vw; */
+    /* display:flex; */
+    align-items:center; 
+}
+
+.container1{
+    margin-right:auto;
+    margin-left:auto;
+    /* width:350px; */
+    display:flex;
+    align-items:center; 
+}
+
+.RegTitel{
+    color: white;
+   text-align: center;
+    font-size: 24px;
+    padding-bottom: 120px;
+    margin-top: -130px;
+}
+
+.RegAanmaken h2{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.registration{
+    margin-top: -160px;
+}

@@ -1,0 +1,72 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.OndCbWijzigen{
+    padding-top: 15vh;
+}
+
+h1.Dashgreeting{
+    color: white;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+h2.Dashgreeting{
+    font-weight: 200;
+    font-size: 24px;
+    color: white;
+}
+
+/* CARD */ 
+.card{
+    z-index:1;
+    position: relative;
+    margin: auto;
+    width: 90%;
+    padding: 15px;
+    margin-top: 8vh;
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.datefield{
+    border-radius: 15px;
+    padding: 5;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-partition{
+    padding: 10px;
+}
+
+.dropdown{
+    right: 0;
+    position: absolute;
+}
+
+h1.card-partition{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+h2.card-partition{
+    font-weight: 600;
+    font-size: 16px;
+    color: #838383;
+}
+
+.bottom-button{
+    z-index: 1;
+    position: absolute;
+    bottom: 5vh;
+    margin: 0 auto;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

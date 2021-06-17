@@ -1,7 +1,7 @@
 .Header {
     position:absolute;
     margin-bottom: -120px;
-
+    z-index:-9;
     
 }
 
@@ -20,7 +20,7 @@
 
 .Header_logo {
     width: 150px;
-    margin-top: 1.75rem;
+    padding-left: 25px;
 }
 
 .Menu_icon {
@@ -48,3 +48,4 @@
 .Dash_greet {
     margin-top: 80px;
 }
+

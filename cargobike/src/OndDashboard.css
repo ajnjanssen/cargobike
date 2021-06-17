@@ -33,13 +33,15 @@
 }
 
 .RentItemsDesc{
-    margin-left:15px;
+    margin-left:20px;
 }
 
 .placeholder{
     margin-top:20px;
-    width:100%;
+    width: 100%;
     border-radius: 5%;
+    padding: 10px;
+
 }
 
 .cta{
@@ -50,3 +52,87 @@
     z-index:999;
 }
 
+.Card_bikes {
+    padding: 20px;
+    position:relative;
+    z-index:1;
+    border-radius: 20px;
+    height: 300px;
+    background-color: white;
+    margin-top: 20px;
+    width: 375px;
+}
+
+.box2 {
+    padding-left: 25px;
+    padding-top: 5px;
+    margin-top: 10px;
+    width: 120px;
+    height: 60px;
+    background-color: rgba(136, 192, 83, 0.080);
+    border-radius: 10px;
+}
+
+
+.card {
+    border-radius: 20px;
+    border: none;
+}
+
+.Cargo_specs {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 15px;
+    background-color: rgba(136, 192, 83, 0.080);
+    border-radius: 10px;
+}
+
+.Cargo_spec_text {
+    color: #5D5D5D; 
+    font-weight: 600;
+}
+
+.Cargo_spec_det {
+    color: #88C053;
+}
+
+.card-img, .card-img-top {
+    border-radius: 20px;
+    height: 140px;
+}
+
+.Cargobike_spec_box {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.Cargobike_title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: #838383;
+        margin-top: 10px;
+}
+
+.Cargobike_box {
+    margin-top: 50px;
+}
+
+.routeWrapper{
+    /* margin-left:15px; */
+}
+
+.d-flex.justify-content-center {
+    margin-left: 50px;
+}
+
+.TextRes_Wijzigen {
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedSecondary {
+    background-color: #796FF6;
+}

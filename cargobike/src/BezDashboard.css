@@ -1,0 +1,145 @@
+.Card_route {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    background-color: white;
+    width: 100%;
+}
+
+.Route_img {
+    width: 95%;
+    margin-left: 9px;
+    height: 60%;
+}
+
+.Res_wijzigen {
+    margin-top: 18px;
+
+}
+
+.Button_reswijzigen {
+    color: black;
+    text-transform: initial!important;
+}
+
+.Card_agenda {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    width: 240px;
+    background-color: white;
+    margin-top: -20px;
+    min-height: 250px;
+}
+
+.Card_agenda_Ond {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    width: 240px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.Card_agenda_mijncargo {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    width: 240px;
+    background-color: white;
+    margin-top: 20px;
+    height: 240px;
+}
+
+.iEqpqd {
+    width: 93%!important;
+    margin-left: 10px;
+    margin-bottom: -20px;
+}
+
+.LocSize{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.TimeSize{
+    font-size: 14px;
+    margin-top: -5px;
+    font-weight: 300;
+}
+
+.BezorgerTitles{
+    font-size: 26px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.NietBeschikbaar{
+    text-align: center;
+}
+
+.NietBeschikbaar button{
+    font-size: 20px;
+    padding-top: 15px;
+    color: white;
+}
+
+.NietBeschikbaarTitle{
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 100px;
+    color: white;
+}
+
+.Card_Under_Title {
+    margin-top: 0px;
+}
+
+.Agenda_punt {
+    margin-bottom: 18px;
+}
+
+.RecentActivity {
+    margin-left: 20px;
+    color: white;
+    font-weight: 600;
+    margin-top: -60px;
+}
+
+.RecentActivity_Desc {
+    margin-left: 42px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.RecentActivity2 {
+    margin-left: 20px;
+    color: white;
+    font-weight: 600;
+    margin-top: -35px;
+}
+
+.RecentActivity_Desc2 {
+    margin-left: 42px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.Card_title_Bez {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: #838383;
+}
+
+/* .MuiSvgIcon-root {
+    margin-right: 7px;
+} */
+
+.Icon_Margin {
+    margin-right: 7px;
+}

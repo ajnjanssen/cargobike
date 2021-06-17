@@ -1,0 +1,102 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.MonCbOverzicht{
+    padding-top: 15vh;
+}
+
+h1.Dashgreeting{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+}
+
+h2.Dashgreeting, h2.MonDashgreeting{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: white;
+}
+
+.contentbox{
+    margin-top: 5vh;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.contentbox_light{
+    background-color: white;
+    border-radius: 15px;
+    width: 331px;
+    margin: auto;
+    padding: 16px;
+}
+
+h1.content{
+    color: #88C053;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+h1.content_light{
+    color: #96cc63;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cb_open{
+    background-color: #F6FAF1;
+    border-radius: 15px;
+    margin: 15px;
+    padding-top: 15px;
+    padding-left: 5px;
+    text-align: center;
+    font-weight: 400;
+    color: #88C053;
+}
+
+.cb_locked{
+    background-color: #F4F3FE;
+    border-radius: 15px;
+    margin: 15px;
+    padding-top: 15px;
+    padding-left: 5px;
+    text-align: center;
+    font-weight: 400;
+    color: #3F51B8;
+}
+
+.cb_unavailable{
+    background-color: #F4F3FE;
+    border-radius: 15px;
+    margin: 15px;
+    padding-top: 15px;
+    padding-left: 5px;
+    text-align: center;
+    font-weight: 400;
+    color: #838383;
+}
+
+button.location_button{
+    border-radius: 6px;
+    background-color: #3F51B8;
+    color:white;
+    padding: 10px 22px;
+    text-transform: lowercase;
+}
+
+button.location_button:hover{
+    background-color: #3445a3;
+}
+
+.BackButtonCargobike button {
+    text-decoration: none;
+    color: white;
+}
