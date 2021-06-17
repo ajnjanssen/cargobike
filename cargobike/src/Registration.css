@@ -65,3 +65,7 @@
 .registration{
     margin-top: -160px;
 }
+
+.MuiTabs-flexContainer {
+    justify-content: space-around;
+}
