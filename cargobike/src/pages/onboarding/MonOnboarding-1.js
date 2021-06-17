@@ -5,7 +5,7 @@ import React from 'react'
 import InformationScreen from '../../components/InformationScreen';
 
 //this image is used to onboard the user, it's now a free to use image of Pixabay.com as a placeholder.
-import InformationScreenImage from '../../img/lottie/mechanic.gif';
+import InformationScreenImage from '../../img/onboarding-image-monteur.png';
 
 // These variables are beforehand defined and can be changed in the progress of onboarding.
 var InformationScreenTitle = 'Bedankt voor je inzet!';
@@ -25,8 +25,6 @@ var InformationScreenText = <text>
  */
 
 function Onboarding() {
-
-    
 
         // this event dispatcher gives the event listner the news we don't want an fully enabled header with logo, menu and information button.
         const event = new Event('showLogdOutHeader');

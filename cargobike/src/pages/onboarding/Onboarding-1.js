@@ -6,7 +6,7 @@ import React from 'react'
 import InformationScreen from '../../components/InformationScreen';
 
 //this image is used to onboard the user, it's now a free to use image of Pixabay.com as a placeholder.
-import InformationScreenImage from '../../img/onboarding-image.png';
+import InformationScreenImage from '../../img/onboarding-image-ondernemer.png';
 
 // These variables are beforehand defined and can be changed in the progress of onboarding.
 var InformationScreenTitle = 'Welkom!';
