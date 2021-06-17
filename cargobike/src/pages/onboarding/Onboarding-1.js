@@ -39,7 +39,8 @@ function Onboarding() {
                 },
                 {
                     'text': 'Track & Trace', 
-                    'label': 'Mijn pakket wordt verstuurd met CargoDelivery'
+                    'label': 'Mijn pakket wordt verstuurd met CargoDelivery',
+                    'link': '/TrackTrace'
                 },
                 {
                     'text': 'Andere opties', 

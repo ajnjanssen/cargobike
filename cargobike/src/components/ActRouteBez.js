@@ -52,7 +52,14 @@ function CurrenRoute() {
                             <Card.Img variant="top" src={placeholder} className="Route_img"/>
 
                             <Col xs={8} className="Res_wijzigen">
-                                <h3 className="TextRes_Wijzigen">Route bekijken  <ArrowForwardIcon style={{ fontSize: 20, color:'#88C053' }} /></h3>
+                                <h3 className="TextRes_Wijzgen"> 
+                                <a href="NietBeschikbaar">
+                                <Button onclick="NietBeschikbaar">Route bekijken <ArrowForwardIcon style={{ fontSize: 20, color:'#88C053' }}/> </Button>
+                                </a>
+                                </h3>
+                            
+                            
+                            
                             </Col>
                         </Row>
                     </div>

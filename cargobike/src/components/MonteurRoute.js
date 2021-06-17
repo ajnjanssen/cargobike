@@ -7,6 +7,8 @@ import {db} from './firebase/Firebase'
 import styled from "styled-components";
 
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+
 
 const CondP = styled.p`
     font-size: 16px;
@@ -69,7 +71,11 @@ function MonteurRoute() {
                         </Row>
                         <Row>
                            <Col xs={8} className="Res_wijzigen">
-                                <h3 className="TextRes_Wijzigen">Planning bekijken <ArrowForwardIcon style={{ fontSize: 20, color:'#88C053' }} /></h3>
+                                <h3>
+                                <a href="NietBeschikbaar">
+                                <Button onclick="NietBeschikbaar"> Planning bekijken <ArrowForwardIcon/></Button>
+                                </a>
+                                </h3>
                             </Col> 
                         </Row>
                     </div>

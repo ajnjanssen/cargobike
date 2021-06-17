@@ -39,7 +39,7 @@ export const SidebarDataMon = [
     // },
     {
         title: 'Onderdelen Opvragen',
-        path: '../',
+        path: './NietBeschikbaar',
         icon: <BuildIcon/>,
         cName: 'nav-text'
     }, 
@@ -61,13 +61,13 @@ export const SidebarDataMon = [
     // }, 
     {
         title: 'Mijn account',
-        path: '../UserInformation',
+        path: './NietBeschikbaar',
         icon: <AccountCircleIcon/>,
         cName: 'nav-text'
     }, 
     {
         title: 'Cargobike Leverancier',
-        path: '../',
+        path: './NietBeschikbaar',
         icon: <CallIcon/>,
         cName: 'nav-text'
     }, 
@@ -85,7 +85,7 @@ export const SidebarDataMon = [
     // },
     {
         title: 'Uitloggen',
-        path: '../',
+        path: './NietBeschikbaar',
         icon: <ExitToAppIcon/>,
         cName: 'nav-text'
     }

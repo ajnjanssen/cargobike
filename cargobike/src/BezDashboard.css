@@ -78,6 +78,23 @@
     margin-left: 20px;
 }
 
+.NietBeschikbaar{
+    text-align: center;
+}
+
+.NietBeschikbaar button{
+    font-size: 20px;
+    padding-top: 15px;
+    color: white;
+}
+
+.NietBeschikbaarTitle{
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 100px;
+    color: white;
+}
+
 .Card_Under_Title {
     margin-top: 0px;
 }

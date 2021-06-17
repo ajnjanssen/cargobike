@@ -27,17 +27,17 @@ export const SidebarDataBez = [
     }, 
      {
         title: 'Dagplanning',
-        path: '/',
+        path: './NietBeschikbaar',
         icon: <AssignmentIcon/>,
         cName: 'nav-text'
     }, {
         title: 'Routes',
-        path: '../',
+        path: './NietBeschikbaar',
         icon: <DirectionsIcon/>,
         cName: 'nav-text'
     }, {
         title: 'Probleem Melden',
-        path: '../',
+        path: './NietBeschikbaar',
         icon: <CallIcon/>,
         cName: 'nav-text'
     }, 
@@ -58,7 +58,7 @@ export const SidebarDataBez = [
     // }, 
     {
         title: 'Mijn account',
-        path: '../UserInformation',
+        path: './NietBeschikbaar',
         icon: <AccountCircleIcon/>,
         cName: 'nav-text'
     }, 
@@ -76,7 +76,7 @@ export const SidebarDataBez = [
     // },
     {
         title: 'Uitloggen',
-        path: '../',
+        path: './NietBeschikbaar',
         icon: <ExitToAppIcon/>,
         cName: 'nav-text'
     }

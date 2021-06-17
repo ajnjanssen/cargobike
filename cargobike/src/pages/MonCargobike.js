@@ -48,8 +48,8 @@ function CargobikePage() {
             {/* Dashboard greeting */}
             <Row style={{paddingLeft:14}}>
                 <Col xs={12} md={12} className="BackButtonCargobike">
-                    <a>
-                    <Button onclick="goBack()"><ArrowBackIcon/> Terug</Button>
+                <a href="javascript: history.go(-1)">
+                    <Button onclick="javascript: history.go(-1)"><ArrowBackIcon/> Terug</Button>
                     </a>
                 </Col>
             </Row>
