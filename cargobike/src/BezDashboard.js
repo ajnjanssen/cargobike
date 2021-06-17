@@ -225,7 +225,7 @@ const db = firebase.firestore()
     db.collection("meldingen").doc().set({
         afbeelding: fileUrl,
         desc: omschrijving,
-        batterij: true,
+        Spoed: true,
         banden: "C1"
         });
       
@@ -395,17 +395,17 @@ const [meldingen, setMeldingen] = useState([]);
                     
                     onChange={handleChange}
                     inputProps={{ "aria-label": "primary checkbox" }}
-                    label="test"
+                    label="Spoed"
                     
                   />
-                  <p>Batterij</p>
+                  <p>Spoed</p>
                 </IndBox>
 
                
               </CheckBoxes>
                 </Col>
                 <Col>
-              <CheckBoxes>
+              {/* <CheckBoxes>
                 <IndBox>
                   <Checkbox
                     
@@ -417,7 +417,7 @@ const [meldingen, setMeldingen] = useState([]);
                 </IndBox>
 
                
-              </CheckBoxes>
+              </CheckBoxes> */}
                 </Col>
 
                   </Row>

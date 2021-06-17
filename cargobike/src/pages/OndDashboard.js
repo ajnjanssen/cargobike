@@ -335,7 +335,7 @@ function OndDashboard() {
         <AddbuttonReservering>
             <Fab variant="extended" color="primary" onClick={handleClickOpen}>
                  <AddIcon />
-                Zending toevoegen
+                 Pakket Verzenden
             </Fab>
         </AddbuttonReservering>
 
@@ -345,7 +345,7 @@ function OndDashboard() {
 
           <MakeSendOrder>
             <row>
-                <h1>Zending reserveren</h1>
+                <h1>Pakket Verzenden</h1>
             </row>
 
             <Row style={{paddingLeft: 40, marginBottom: '30px', width: '100%'}}>
@@ -420,7 +420,7 @@ function OndDashboard() {
             <Row>
                 <Col>
                 <TextCol2>
-                <h3>Type cargobike</h3>
+                <h3>Wat wil je versturen?</h3>
                 </TextCol2>
                 </Col>
 
@@ -436,9 +436,17 @@ function OndDashboard() {
                     onClick={
                         (e) => setType(e.target.value)
                     }  >
-                    <MenuItem disabled value="">Selecteer type</MenuItem>
-                    <MenuItem value="Cargobike standard" onChange={(e) => setType(e.target.value)}><b>Cargobike Standaard</b></MenuItem>
-                    <MenuItem value="Cargobike Deluxe" onChange={(e) => setType(e.target.value)}><b>Cargobike Deluxe</b></MenuItem>
+                    <MenuItem disabled value="">Pakket grootte</MenuItem>
+                    <MenuItem 
+                    value="Past in een brievenbus" 
+                    onChange={(e) => setType(e.target.value)}>
+                        <b>Brievenbuspakje</b>
+                        </MenuItem>
+                    <MenuItem 
+                    value="Past niet in een brievenbus" 
+                    onChange={(e) => setType(e.target.value)}>
+                        <b>Pakket</b>
+                        </MenuItem>
                     
                 </Select>
                 </FormControl>
@@ -448,7 +456,7 @@ function OndDashboard() {
             <ButtonContainer>
 
                 <Button onClick={addNewReservation} variant="contained" min-width="300px" color="secondary">
-                            Deze zending reserveren
+                            Deze zending toevoegen
                 </Button>
             </ButtonContainer>
           </MakeSendOrder>
