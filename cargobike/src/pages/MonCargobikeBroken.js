@@ -48,10 +48,18 @@ function CargobikePage() {
                     </a>
                 </Col>
             </Row>
-            <Row style={{padding: 16}}>
-                <Col xs={12} md={8} >
+            <Row>
+                <Col xs={12} md={8} style={{margin:16}}>
                     <h1 className="Dashgreeting" style={{fontSize: 26}}>Nummer 12 - Reparatie</h1>
                     <h2 className="MonDashgreeting" style={{fontSize: 22}}>Standaard Cargobike - C1</h2>
+                </Col>
+            </Row>
+            <Row style={{position: 'relative', display: 'inline-block'}}>
+            <Col class="col-md-12 col-12">
+                        <h1 class="RecentActivity"
+                        style={{marginTop:0, marginLeft:16, fontWeight:400}}>
+                           De band is heel zacht, niet lek maar misschien versleten?<span style={{fontWeight:300}}> -  Jordi | 14.16, 18 juni</span>
+                        </h1>
                 </Col>
             </Row>
             {/* List */} 
